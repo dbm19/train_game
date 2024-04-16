@@ -9,15 +9,25 @@ var orientations = {
 var orientation
 
 func _ready():
-	#Setting initial rotations of each junction
-	if get_groups()[0] == "right_down":
+	# Setting initial rotations of each junction
+	if get_groups()[0] == "down_right" || get_groups()[0] == "down_left":
+		get_node("Sprite2D").rotation_degrees = 0
+	elif get_groups()[0] == "right_down" || get_groups()[0] == "right_up":
 		get_node("Sprite2D").rotation_degrees = -90
+	elif get_groups()[0] == "left_down" || get_groups()[0] == "left_up":	
+		get_node("Sprite2D").rotation_degrees = 90
+	else:
+		get_node("Sprite2D").rotation_degrees = 180
 	
-	#Setting initial orientations of each junction
-	if get_groups()[0] == "down_right":
+	# Setting initial orientations of each junction
+	if get_groups()[0] == "down_right" || get_groups()[0] == "down_left":
 		orientation = orientations["down"]
-	elif get_groups()[0] == "right_down":
+	elif get_groups()[0] == "right_down" || get_groups()[0] == "right_up":
 		orientation = orientations["right"]
+	elif get_groups()[0] == "left_down" || get_groups()[0] == "left_up":	
+		orientation = orientations["left"]
+	else:
+		orientation = orientations["up"]
 
 func _process(delta):
 	pass
