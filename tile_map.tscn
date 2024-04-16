@@ -1,14 +1,59 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxh0hc2oam53x"]
+[gd_scene load_steps=19 format=3 uid="uid://bxh0hc2oam53x"]
 
 [ext_resource type="Texture2D" uid="uid://ibdm47vkoj4a" path="res://art_assets/green_tile.png" id="1_g5yxl"]
-[ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://down_tile.tscn" id="2_5fo4m"]
+[ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://down_right_junction.tscn" id="2_5fo4m"]
 [ext_resource type="PackedScene" uid="uid://dihecvdguuo7g" path="res://sprite.tscn" id="2_e08rs"]
-[ext_resource type="PackedScene" uid="uid://bklflk0e4br2f" path="res://right_tile.tscn" id="2_tp0ug"]
+[ext_resource type="Texture2D" uid="uid://be8v3p1sxglf3" path="res://art_assets/down_tile.png" id="2_gpl6c"]
 [ext_resource type="Script" path="res://TileMap.gd" id="2_v4kiv"]
+[ext_resource type="PackedScene" uid="uid://blckcooogvd6y" path="res://down_left_junction.tscn" id="3_t8kl6"]
+[ext_resource type="PackedScene" uid="uid://cbhb5rqlqobs2" path="res://left_down_junction.tscn" id="4_5d4q5"]
+[ext_resource type="PackedScene" uid="uid://dexyaq8gdjgt6" path="res://left_up_junction.tscn" id="5_wl0fy"]
+[ext_resource type="PackedScene" uid="uid://dp6xpqxpo0fat" path="res://right_down_junction.tscn" id="6_244w5"]
+[ext_resource type="PackedScene" uid="uid://cmwuu1yq0cq8j" path="res://right_up_junction.tscn" id="7_2fqa5"]
+[ext_resource type="PackedScene" uid="uid://bvng67bvd01sf" path="res://up_left_junction.tscn" id="8_gpbep"]
+[ext_resource type="PackedScene" uid="uid://g4rilokafyfj" path="res://up_right_junction.tscn" id="9_pd41r"]
+
+[sub_resource type="GDScript" id="GDScript_f1ltp"]
+script/source = "extends Area2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _on_area_entered(area):
+	get_tree().call_group(\"train_sprite\", \"go_right\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
+size = Vector2(14, 0)
+
+[sub_resource type="PackedScene" id="PackedScene_clksk"]
+_bundled = {
+"conn_count": 2,
+"conns": PackedInt32Array(0, 0, 11, 10, 2, 0, 0, 0, 0, 13, 12, 2, 0, 0),
+"editable_instances": [],
+"names": PackedStringArray("Area2D", "script", "Sprite2D", "position", "rotation", "scale", "texture", "flip_v", "CollisionShape2D", "shape", "_on_area_entered", "area_entered", "_on_area_exited", "area_exited"),
+"node_count": 3,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 0, 0, -1, 1, 1, 0, 0, 0, 0, 2, 2, -1, 5, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 0, 0, 0, 8, 8, -1, 2, 3, 6, 9, 7, 0),
+"variants": [SubResource("GDScript_f1ltp"), Vector2(1.125, 1.25), -1.5708, Vector2(0.875, 0.861111), ExtResource("2_gpl6c"), true, Vector2(1, 1), SubResource("RectangleShape2D_liejn")],
+"version": 3
+}
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_wdv22"]
 scenes/1/scene = ExtResource("2_5fo4m")
-scenes/2/scene = ExtResource("2_tp0ug")
+scenes/2/scene = SubResource("PackedScene_clksk")
+scenes/3/scene = ExtResource("3_t8kl6")
+scenes/4/scene = ExtResource("4_5d4q5")
+scenes/5/scene = ExtResource("5_wl0fy")
+scenes/6/scene = ExtResource("6_244w5")
+scenes/7/scene = ExtResource("7_2fqa5")
+scenes/8/scene = ExtResource("8_gpbep")
+scenes/9/scene = ExtResource("9_pd41r")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k677j"]
 texture = ExtResource("1_g5yxl")
@@ -26,7 +71,7 @@ position = Vector2(345.319, 306.86)
 scale = Vector2(-3.60196, -3.52761)
 tile_set = SubResource("TileSet_28vtv")
 format = 2
-layer_0/tile_data = PackedInt32Array(131077, 2, 0, 5, 1, 65536, 4, 2, 0, 3, 2, 0, 2, 2, 0, 1, 2, 0, 0, 2, 0, 65535, 2, 0, 65541, 2, 0)
+layer_0/tile_data = PackedInt32Array(131077, 2, 0, 5, 1, 65536, 4, 2, 0, 65541, 2, 0, 2, 1, 393216, 3, 2, 0)
 script = ExtResource("2_v4kiv")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_e08rs")]
@@ -37,4 +82,6 @@ wait_time = 2.0
 
 [connection signal="area_entered" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_area_entered"]
 [connection signal="area_exited" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMap/@Area2D@443583" to="TileMap/@Area2D@443583" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMap/@Area2D@443583" to="TileMap/@Area2D@443583" method="_on_area_exited"]
 [connection signal="timeout" from="Timer" to="TileMap" method="_on_timer_timeout"]

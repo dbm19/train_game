@@ -8,3 +8,6 @@ res://down_tile.gd
 res://test.gd
 res://right_tile.tscn
 res://right_tile.gd
+res://down_right_junction.tscn
+res://right_down_junction.tscn
+res://junction.gd
