@@ -14,3 +14,6 @@ res://purple_terminus.tscn
 res://junction.gd
 res://main_menu.tscn
 res://NewGameButton.gd
+res://TileMap.gd
+res://orange_terminus.tscn
+res://orange_train.tscn

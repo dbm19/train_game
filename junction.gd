@@ -37,8 +37,10 @@ func _on_area_entered(area):
 		_change_train_orientation("train_index_1")
 	elif area.is_in_group("train_index_2"):
 		_change_train_orientation("train_index_2") 
-	else:
+	elif area.is_in_group("train_index_3"):
 		_change_train_orientation("train_index_3")
+	else:
+		_change_train_orientation("train_index_4")
 
 func _on_button_pressed():
 	if get_groups()[0] == "down_right":
