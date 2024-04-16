@@ -84,6 +84,6 @@ autostart = true
 
 [connection signal="area_entered" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_area_entered"]
 [connection signal="area_exited" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMap/@Area2D@75894" to="TileMap/@Area2D@75894" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMap/@Area2D@75894" to="TileMap/@Area2D@75894" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMap/@Area2D@133896" to="TileMap/@Area2D@133896" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMap/@Area2D@133896" to="TileMap/@Area2D@133896" method="_on_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

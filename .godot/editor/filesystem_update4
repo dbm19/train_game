@@ -12,3 +12,5 @@ res://train.gd
 res://yellow_terminus.tscn
 res://purple_terminus.tscn
 res://junction.gd
+res://main_menu.tscn
+res://NewGameButton.gd

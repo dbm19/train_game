@@ -13,7 +13,6 @@ var yellow_train = preload("res://yellow_train.tscn")
 var purple_train = preload("res://purple_train.tscn")
 
 func _ready():
-	spawn_rng = rng.randi_range(1.0, 3.0)
 	if spawn_rng == 1:
 		trains[train_index] = blue_train.instantiate()
 	elif spawn_rng == 2:
@@ -40,6 +39,14 @@ func _on_timer_timeout():
 		train_index += 1
 	else:
 		train_index = 1
+	
+	if spawn_rng == 1:
+		spawn_rng = rng.randi_range(2.0, 3.0)
+	elif spawn_rng == 2:
+		spawn_rng = rng.randi_range(1.0, 3.0)
+	else:
+		spawn_rng = rng.randi_range(1.0, 2.0)
+		
 	_ready()
 	
 	
