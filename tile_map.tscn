@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=3 uid="uid://bxh0hc2oam53x"]
+
+[ext_resource type="Texture2D" uid="uid://ibdm47vkoj4a" path="res://art_assets/green_tile.png" id="1_g5yxl"]
+[ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://down_tile.tscn" id="2_5fo4m"]
+[ext_resource type="PackedScene" uid="uid://dihecvdguuo7g" path="res://sprite.tscn" id="2_e08rs"]
+[ext_resource type="PackedScene" uid="uid://bklflk0e4br2f" path="res://right_tile.tscn" id="2_tp0ug"]
+[ext_resource type="Script" path="res://TileMap.gd" id="2_v4kiv"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_wdv22"]
+scenes/1/scene = ExtResource("2_5fo4m")
+scenes/2/scene = ExtResource("2_tp0ug")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k677j"]
+texture = ExtResource("1_g5yxl")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_28vtv"]
+sources/1 = SubResource("TileSetScenesCollectionSource_wdv22")
+sources/2 = SubResource("TileSetAtlasSource_k677j")
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(1.04251, 1.02653)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(344.36, 306.86)
+scale = Vector2(-3.60196, -3.52761)
+tile_set = SubResource("TileSet_28vtv")
+format = 2
+layer_0/tile_data = PackedInt32Array(131077, 2, 0, 196613, 1, 65536, 5, 1, 131072, 4, 2, 0, 3, 2, 0, 2, 2, 0, 1, 2, 0, 0, 2, 0, 65535, 2, 0, 65541, 2, 0)
+script = ExtResource("2_v4kiv")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_e08rs")]
+position = Vector2(23.9805, 41.8889)
+
+[connection signal="area_entered" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMap/@Area2D@293963" to="TileMap/@Area2D@293963" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMap/@Area2D@293963" to="TileMap/@Area2D@293963" method="_on_area_exited"]

@@ -1,0 +1,13 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1713236434
+icon.svg::CompressedTexture2D::4502396510237591135::1711767375::1711850803::1::::<><>::
+down_tile.tscn::PackedScene::3792579921235588508::1713236434::0::1::::<><>::res://down_tile.gd<>uid://be8v3p1sxglf3::::res://art_assets/down_tile.png
+down_tile.gd::GDScript::-1::1713235642::0::1::::<>Area2D<>::
+right_tile.tscn::PackedScene::3111341068139035767::1713236474::0::1::::<><>::res://down_tile.gd<>uid://be8v3p1sxglf3::::res://art_assets/down_tile.png
+TileMap.gd::GDScript::-1::1713234847::0::1::::<>TileMap<>::
+sprite.gd::GDScript::-1::1713235657::0::1::::<>Area2D<>::
+sprite.tscn::PackedScene::7735470991945765214::1713236434::0::1::::<><>::uid://b5e82vq7v86w6::::res://icon.svg<>res://sprite.gd
+tile_map.tscn::PackedScene::4016745304415782951::1713236434::0::1::::<><>::uid://ibdm47vkoj4a::::res://art_assets/green_tile.png<>uid://bubficg50scye::::res://down_tile.tscn<>uid://dihecvdguuo7g::::res://sprite.tscn<>res://TileMap.gd
+::res://art_assets/::1713235452
+down_tile.png::CompressedTexture2D::2736626412070625106::1713235450::1713235452::1::::<><>::
+green_tile.png::CompressedTexture2D::563780280942441390::1712098816::1712098872::1::::<><>::

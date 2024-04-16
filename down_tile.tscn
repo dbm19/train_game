@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bubficg50scye"]
+
+[ext_resource type="Script" path="res://down_tile.gd" id="1_c7lcg"]
+[ext_resource type="Texture2D" uid="uid://be8v3p1sxglf3" path="res://art_assets/down_tile.png" id="2_s5efr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
+size = Vector2(14, 13)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_c7lcg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.125, 1.25)
+scale = Vector2(0.875, 0.861111)
+texture = ExtResource("2_s5efr")
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_liejn")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
