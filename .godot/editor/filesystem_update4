@@ -17,3 +17,6 @@ res://NewGameButton.gd
 res://TileMap.gd
 res://orange_terminus.tscn
 res://orange_train.tscn
+res://pink_train.tscn
+res://pink_terminus.tscn
+res://right_up_junction.tscn

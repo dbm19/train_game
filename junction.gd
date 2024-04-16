@@ -39,8 +39,10 @@ func _on_area_entered(area):
 		_change_train_orientation("train_index_2") 
 	elif area.is_in_group("train_index_3"):
 		_change_train_orientation("train_index_3")
-	else:
+	elif area.is_in_group("train_index_4"):
 		_change_train_orientation("train_index_4")
+	else:
+		_change_train_orientation("train_index_5")
 
 func _on_button_pressed():
 	if get_groups()[0] == "down_right":
@@ -56,6 +58,14 @@ func _on_button_pressed():
 		if get_node("Sprite2D").rotation_degrees == -90:
 			orientation = orientations["down"]
 			get_node("Sprite2D").rotation_degrees = 0
+		else:
+			orientation = orientations["right"]
+			get_node("Sprite2D").rotation_degrees = -90
+	elif get_groups()[0] == "right_up":
+		get_node("Sprite2D").flip_h = !get_node("Sprite2D").flip_h
+		if get_node("Sprite2D").rotation_degrees == -90:
+			orientation = orientations["up"]
+			get_node("Sprite2D").rotation_degrees = 180
 		else:
 			orientation = orientations["right"]
 			get_node("Sprite2D").rotation_degrees = -90

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6k34rfau138b"]
+
+[ext_resource type="Texture2D" uid="uid://b08yt43pr2qbo" path="res://art_assets/pink_terminus.png" id="1_yiaay"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8vqw"]
+size = Vector2(14, 6)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v8vqw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yiaay")
