@@ -33,14 +33,12 @@ func _process(delta):
 	pass
 
 func _on_area_entered(area):
-	if orientation == orientations["down"]:
-		get_tree().call_group("train_sprite", "go_down")
-	elif orientation == orientations["right"]:
-		get_tree().call_group("train_sprite", "go_right")
-	elif orientation == orientations["left"]:
-		get_tree().call_group("train_sprite", "go_left")
+	if area.is_in_group("train_index_1"):
+		_change_train_orientation("train_index_1")
+	elif area.is_in_group("train_index_2"):
+		_change_train_orientation("train_index_2") 
 	else:
-		get_tree().call_group("train_sprite", "go_up")
+		_change_train_orientation("train_index_3")
 
 func _on_button_pressed():
 	if get_groups()[0] == "down_right":
@@ -59,3 +57,13 @@ func _on_button_pressed():
 		else:
 			orientation = orientations["right"]
 			get_node("Sprite2D").rotation_degrees = -90
+			
+func _change_train_orientation(train_index_group):
+	if orientation == orientations["down"]:
+		get_tree().call_group(train_index_group, "go_down")
+	elif orientation == orientations["right"]:
+		get_tree().call_group(train_index_group, "go_right")
+	elif orientation == orientations["left"]:
+		get_tree().call_group(train_index_group, "go_left")
+	else:
+		get_tree().call_group(train_index_group, "go_up")

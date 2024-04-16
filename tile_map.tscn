@@ -1,9 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://bxh0hc2oam53x"]
+[gd_scene load_steps=27 format=3 uid="uid://bxh0hc2oam53x"]
 
 [ext_resource type="Texture2D" uid="uid://ibdm47vkoj4a" path="res://art_assets/green_tile.png" id="1_g5yxl"]
+[ext_resource type="Script" path="res://game.gd" id="1_vodik"]
 [ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://down_right_junction.tscn" id="2_5fo4m"]
-[ext_resource type="PackedScene" uid="uid://dihecvdguuo7g" path="res://sprite.tscn" id="2_e08rs"]
-[ext_resource type="Texture2D" uid="uid://be8v3p1sxglf3" path="res://art_assets/down_tile.png" id="2_gpl6c"]
 [ext_resource type="Script" path="res://TileMap.gd" id="2_v4kiv"]
 [ext_resource type="PackedScene" uid="uid://blckcooogvd6y" path="res://down_left_junction.tscn" id="3_t8kl6"]
 [ext_resource type="PackedScene" uid="uid://cbhb5rqlqobs2" path="res://left_down_junction.tscn" id="4_5d4q5"]
@@ -13,41 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://bvng67bvd01sf" path="res://up_left_junction.tscn" id="8_gpbep"]
 [ext_resource type="PackedScene" uid="uid://g4rilokafyfj" path="res://up_right_junction.tscn" id="9_pd41r"]
 [ext_resource type="Texture2D" uid="uid://bd3020v00awdm" path="res://art_assets/background_tile.png" id="11_o2m1a"]
-
-[sub_resource type="GDScript" id="GDScript_f1ltp"]
-script/source = "extends Area2D
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func _on_area_entered(area):
-	get_tree().call_group(\"train_sprite\", \"go_right\")
-"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
-size = Vector2(14, 0)
-
-[sub_resource type="PackedScene" id="PackedScene_clksk"]
-_bundled = {
-"conn_count": 2,
-"conns": PackedInt32Array(0, 0, 11, 10, 2, 0, 0, 0, 0, 13, 12, 2, 0, 0),
-"editable_instances": [],
-"names": PackedStringArray("Area2D", "script", "Sprite2D", "position", "rotation", "scale", "texture", "flip_v", "CollisionShape2D", "shape", "_on_area_entered", "area_entered", "_on_area_exited", "area_exited"),
-"node_count": 3,
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 0, 0, -1, 1, 1, 0, 0, 0, 0, 2, 2, -1, 5, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 0, 0, 0, 8, 8, -1, 2, 3, 6, 9, 7, 0),
-"variants": [SubResource("GDScript_f1ltp"), Vector2(1.125, 1.25), -1.5708, Vector2(0.875, 0.861111), ExtResource("2_gpl6c"), true, Vector2(1, 1), SubResource("RectangleShape2D_liejn")],
-"version": 3
-}
+[ext_resource type="PackedScene" uid="uid://cokn71hbgsjcy" path="res://blue_terminus.tscn" id="13_0hfp2"]
+[ext_resource type="PackedScene" uid="uid://cwnrrxck8acnw" path="res://purple_terminus.tscn" id="13_4t2so"]
+[ext_resource type="Texture2D" uid="uid://cd1sjm508aynv" path="res://art_assets/yellow_terminus.png" id="13_78q6n"]
+[ext_resource type="PackedScene" uid="uid://d1moe2frr5ond" path="res://yellow_terminus.tscn" id="14_4wh8u"]
+[ext_resource type="Texture2D" uid="uid://djdcbq8gkgxyd" path="res://art_assets/purple_terminus.png" id="14_quemc"]
+[ext_resource type="PackedScene" uid="uid://dg5a5horef5qv" path="res://spawn.tscn" id="15_gfiqi"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_wdv22"]
 scenes/1/scene = ExtResource("2_5fo4m")
-scenes/2/scene = SubResource("PackedScene_clksk")
 scenes/3/scene = ExtResource("3_t8kl6")
 scenes/4/scene = ExtResource("4_5d4q5")
 scenes/5/scene = ExtResource("5_wl0fy")
@@ -64,30 +37,53 @@ texture = ExtResource("1_g5yxl")
 texture = ExtResource("11_o2m1a")
 0:0/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mrtgv"]
+scenes/1/scene = ExtResource("13_0hfp2")
+scenes/2/scene = ExtResource("13_4t2so")
+scenes/3/scene = ExtResource("14_4wh8u")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8lmrg"]
+texture = ExtResource("13_78q6n")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yv5tw"]
+texture = ExtResource("14_quemc")
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_kf4yd"]
+scenes/2/scene = ExtResource("15_gfiqi")
+
 [sub_resource type="TileSet" id="TileSet_28vtv"]
 sources/1 = SubResource("TileSetScenesCollectionSource_wdv22")
 sources/2 = SubResource("TileSetAtlasSource_k677j")
 sources/3 = SubResource("TileSetAtlasSource_xea50")
+sources/4 = SubResource("TileSetScenesCollectionSource_mrtgv")
+sources/5 = SubResource("TileSetAtlasSource_8lmrg")
+sources/6 = SubResource("TileSetAtlasSource_yv5tw")
+sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
 
-[node name="Node2D" type="Node2D"]
+[node name="Game" type="Node2D"]
 scale = Vector2(1.04251, 1.02653)
+script = ExtResource("1_vodik")
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(347.239, 227.952)
-scale = Vector2(-3.60196, -3.52761)
+position = Vector2(258.031, 321.471)
+scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_28vtv")
 format = 2
-layer_0/tile_data = PackedInt32Array(131077, 2, 0, 5, 1, 65536, 4, 2, 0, 65541, 2, 0, 2, 1, 393216, 3, 2, 0, 131076, 3, 0, 65540, 3, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 196612, 3, 0, 196610, 3, 0, 131074, 3, 0, 65538, 3, 0, -65531, 3, 0, -65532, 3, 0, -65533, 3, 0, -65534, 3, 0, -131070, 3, 0, -196606, 3, 0, -196605, 3, 0, -196604, 3, 0, -131068, 3, 0, -131067, 3, 0, -131069, 3, 0, -196603, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 3, 0, -262142, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 131072, 3, 0, 131073, 3, 0, 196607, 3, 0, 196606, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -196607, 3, 0, -262143, 3, 0, -262144, 3, 0, -196608, 3, 0, -131072, 3, 0, -65536, 3, 0, 0, 3, 0, 65535, 3, 0, -1, 3, 0, -65537, 3, 0, -131073, 3, 0, -196609, 3, 0, -131074, 3, 0, -65538, 3, 0, -2, 3, 0, 65534, 3, 0, -196610, 3, 0, -196611, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -327675, 3, 0, -196612, 3, 0, -131076, 3, 0, -131075, 3, 0, -65539, 3, 0, -3, 3, 0, 65533, 3, 0, 131069, 3, 0, 196605, 3, 0, 262141, 3, 0, 262140, 3, 0, 196604, 3, 0, 131068, 3, 0, 65532, 3, 0, -4, 3, 0, -65540, 3, 0, -262148, 3, 0)
+layer_0/name = "Track"
+layer_0/tile_data = PackedInt32Array(-2, 1, 393216, -4, 1, 65536, -196612, 2, 0, -131076, 2, 0, -65540, 2, 0, -3, 2, 0, 65532, 2, 0, 131068, 2, 0, 196604, 4, 65536, 131070, 2, 0, 65534, 2, 0, -1, 2, 0, 196606, 6, 0, -65536, 5, 0, -262148, 7, 131072)
+layer_1/name = "Background"
+layer_1/z_index = -1
+layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 196612, 3, 0, 196610, 3, 0, 131074, 3, 0, 65538, 3, 0, -65531, 3, 0, -65532, 3, 0, -65533, 3, 0, -65534, 3, 0, -131070, 3, 0, -196606, 3, 0, -196605, 3, 0, -196604, 3, 0, -131068, 3, 0, -131067, 3, 0, -131069, 3, 0, -196603, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 3, 0, -262142, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 131072, 3, 0, 131073, 3, 0, 196607, 3, 0, 196606, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -196607, 3, 0, -262143, 3, 0, -262144, 3, 0, -196608, 3, 0, -131072, 3, 0, -65536, 3, 0, 0, 3, 0, 65535, 3, 0, -1, 3, 0, -65537, 3, 0, -131073, 3, 0, -196609, 3, 0, -131074, 3, 0, -65538, 3, 0, 65534, 3, 0, -196610, 3, 0, -196611, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -131075, 3, 0, 131069, 3, 0, 196605, 3, 0, 262141, 3, 0, 262140, 3, 0, 131068, 3, 0, -262148, 3, 0, 196613, 3, 0, -327675, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 65540, 3, 0, 5, 3, 0, 65541, 3, 0, 131077, 3, 0, -196612, 3, 0, -131076, 3, 0, -65540, 3, 0, 65532, 3, 0, 65533, 3, 0, -3, 3, 0, 196604, 3, 0, -65539, 3, 0)
 script = ExtResource("2_v4kiv")
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_e08rs")]
-position = Vector2(28.7767, 28.2505)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
+autostart = true
 
-[connection signal="area_entered" from="TileMap/@Area2D@454087" to="TileMap/@Area2D@454087" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMap/@Area2D@454087" to="TileMap/@Area2D@454087" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMap/@Area2D@454088" to="TileMap/@Area2D@454088" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMap/@Area2D@454088" to="TileMap/@Area2D@454088" method="_on_area_exited"]
-[connection signal="timeout" from="Timer" to="TileMap" method="_on_timer_timeout"]
+[connection signal="area_entered" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMap/Area2D" to="TileMap/Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMap/@Area2D@75894" to="TileMap/@Area2D@75894" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMap/@Area2D@75894" to="TileMap/@Area2D@75894" method="_on_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
