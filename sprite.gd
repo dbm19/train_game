@@ -11,9 +11,15 @@ func _ready():
 func _process(delta):
 	position += velocity * delta
 
+func go_up():
+	velocity = Vector2(0, -speed)
+
 func go_down():
 	velocity = Vector2(0, speed)
 
 func go_right():
 	velocity = Vector2(speed, 0)
+
+func go_left():
+	velocity = Vector2(-speed, 0)
 
