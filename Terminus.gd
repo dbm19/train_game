@@ -9,7 +9,6 @@ func _process(delta):
 	pass
 
 func _on_area_entered(area):
-	print(get_groups()[0], area.get_groups()[0])
 	if area.get_groups()[0] == "colour_train_blue" && get_groups()[0] == "colour_blue_terminus":
 		get_tree().call_group("score", "_update_score")
 	elif area.get_groups()[0] == "colour_train_yellow" && get_groups()[0] == "colour_yellow_terminus":

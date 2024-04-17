@@ -18,7 +18,8 @@ var purple_train = preload("res://purple_train.tscn")
 var orange_train = preload("res://orange_train.tscn")
 var pink_train = preload("res://pink_train.tscn")
 var silver_train = preload("res://silver_train.tscn")
-var train_count = 20
+var train_count = 10
+var game_over = false
 
 func _ready():
 	if spawn_rng == 1:
@@ -56,15 +57,20 @@ func _process(delta):
 	
 func _on_timer_timeout():
 	train_count -= 1
-	if train_index < 6:
-		train_index += 1
+	print(train_count)
+	if train_count == 0:
+		game_over = true
+		get_node("Timer").one_shot = true
 	else:
-		train_index = 1
-		
-	current_spawn = spawn_rng
-	while spawn_rng == current_spawn:
-		spawn_rng = rng.randi_range(1, 6)
-		
-	_ready()
+		if train_index < 6:
+			train_index += 1
+		else:
+			train_index = 1
+			
+		current_spawn = spawn_rng
+		while spawn_rng == current_spawn:
+			spawn_rng = rng.randi_range(1, 6)
+			
+		_ready()
 
 	
