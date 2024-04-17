@@ -2,6 +2,7 @@ extends Node2D
 
 var rng = RandomNumberGenerator.new()
 var spawn_rng = rng.randi_range(1, 6)
+var current_spawn
 var train_index = 1
 var trains = {
 	"1": 0,
@@ -59,7 +60,11 @@ func _on_timer_timeout():
 		train_index += 1
 	else:
 		train_index = 1
-	spawn_rng = rng.randi_range(1, 6)
+		
+	current_spawn = spawn_rng
+	while spawn_rng == current_spawn:
+		spawn_rng = rng.randi_range(1, 6)
+		
 	_ready()
 
 	
