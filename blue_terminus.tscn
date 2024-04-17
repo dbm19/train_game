@@ -1,14 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://cokn71hbgsjcy"]
+[gd_scene load_steps=4 format=3 uid="uid://cokn71hbgsjcy"]
 
+[ext_resource type="Script" path="res://Terminus.gd" id="1_6omss"]
 [ext_resource type="Texture2D" uid="uid://y22dtheoid07" path="res://art_assets/blue_terminus.png" id="1_nb5us"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8vqw"]
 size = Vector2(14, 6)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["colour_blue_terminus"]]
+script = ExtResource("1_6omss")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_v8vqw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_nb5us")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

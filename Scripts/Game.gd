@@ -53,5 +53,5 @@ func _on_timer_timeout():
 	else:
 		train_index = 1
 	_ready()
-	
+
 	

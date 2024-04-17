@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dtujymrdmtqhh" path="res://art_assets/title.png" id="1_jn1px"]
 [ext_resource type="Texture2D" uid="uid://beeckipob8mxn" path="res://art_assets/new_game.png" id="2_ko1gu"]
-[ext_resource type="Script" path="res://NewGameButton.gd" id="3_1krpl"]
+[ext_resource type="Script" path="res://Scripts/NewGameButton.gd" id="3_1krpl"]
 
 [node name="MarginContainer" type="MarginContainer"]
 offset_left = 374.0
@@ -33,5 +33,13 @@ offset_top = -1.0
 offset_right = 404.0
 offset_bottom = 103.0
 script = ExtResource("3_1krpl")
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer/VBoxContainer/NewGame"]
+layout_mode = 0
+offset_left = -353.0
+offset_top = 193.0
+offset_right = 767.0
+offset_bottom = 228.0
+text = "Objective: Conduct each coloured train into their respective coloured terminal. Click on the track junctions to change the direction of the trains."
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGame/NewGameButton" to="HBoxContainer/VBoxContainer/NewGame/NewGameButton" method="_on_pressed"]

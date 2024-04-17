@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dp6xpqxpo0fat"]
 
-[ext_resource type="Script" path="res://junction.gd" id="1_inack"]
+[ext_resource type="Script" path="res://Scripts/Junction.gd" id="1_inack"]
 [ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_bctw7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]

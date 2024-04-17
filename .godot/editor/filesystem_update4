@@ -20,3 +20,7 @@ res://orange_train.tscn
 res://pink_train.tscn
 res://pink_terminus.tscn
 res://right_up_junction.tscn
+res://Terminus.gd
+res://Scripts/Game.gd
+res://Scripts/Train.gd
+res://Score.gd

@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmwuu1yq0cq8j"]
 
-[ext_resource type="Script" path="res://junction.gd" id="1_wj87x"]
+[ext_resource type="Script" path="res://Scripts/Junction.gd" id="1_oid30"]
 [ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_u45mi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
 size = Vector2(1.5, 1.75)
 
 [node name="Area2D" type="Area2D" groups=["right_up"]]
-script = ExtResource("1_wj87x")
+script = ExtResource("1_oid30")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
