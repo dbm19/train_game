@@ -1,7 +1,7 @@
 extends Node2D
 
 var rng = RandomNumberGenerator.new()
-var spawn_rng
+var spawn_rng = rng.randi_range(1, 6)
 var train_index = 1
 var trains = {
 	"1": 0,
@@ -9,15 +9,17 @@ var trains = {
 	"3": 0,
 	"4": 0,
 	"5": 0,
+	"6": 0
 }
 var blue_train = preload("res://blue_train.tscn")
 var yellow_train = preload("res://yellow_train.tscn")
 var purple_train = preload("res://purple_train.tscn")
 var orange_train = preload("res://orange_train.tscn")
 var pink_train = preload("res://pink_train.tscn")
+var silver_train = preload("res://silver_train.tscn")
+var train_count = 20
 
 func _ready():
-	spawn_rng = rng.randi_range(1, 5)
 	if spawn_rng == 1:
 		trains[train_index] = blue_train.instantiate()
 	elif spawn_rng == 2:
@@ -26,8 +28,10 @@ func _ready():
 		trains[train_index] = purple_train.instantiate()
 	elif spawn_rng == 4:
 		trains[train_index] = orange_train.instantiate()
-	else:
+	elif spawn_rng == 5:
 		trains[train_index] = pink_train.instantiate()
+	else:
+		trains[train_index] = silver_train.instantiate()
 	trains[train_index].position.x = 35
 	trains[train_index].position.y = 0
 	trains[train_index].scale.x = 1
@@ -40,18 +44,22 @@ func _ready():
 		trains[train_index].add_to_group("train_index_3")
 	elif train_index == 4:
 		trains[train_index].add_to_group("train_index_4")
-	else:
+	elif train_index == 5:
 		trains[train_index].add_to_group("train_index_5")
+	else:
+		trains[train_index].add_to_group("train_index_6")
 	self.add_child(trains[train_index])
 
 func _process(delta):
 	pass
 	
 func _on_timer_timeout():
-	if train_index < 5:
+	train_count -= 1
+	if train_index < 6:
 		train_index += 1
 	else:
 		train_index = 1
+	spawn_rng = rng.randi_range(1, 6)
 	_ready()
 
 	

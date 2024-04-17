@@ -24,3 +24,6 @@ res://Terminus.gd
 res://Scripts/Game.gd
 res://Scripts/Train.gd
 res://Score.gd
+res://silver_train.tscn
+res://silver_terminus.tscn
+res://Scripts/Junction.gd

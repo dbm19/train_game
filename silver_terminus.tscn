@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4c6jbq7i4fun"]
+
+[ext_resource type="Script" path="res://Terminus.gd" id="1_nr4sa"]
+[ext_resource type="Texture2D" uid="uid://c1st2woax68a5" path="res://art_assets/silver_terminus.png" id="2_6ce4e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8vqw"]
+size = Vector2(12, 6)
+
+[node name="Area2D" type="Area2D" groups=["colour_orange_terminus"]]
+script = ExtResource("1_nr4sa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v8vqw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6ce4e")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
