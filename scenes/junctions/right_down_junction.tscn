@@ -1,18 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://bubficg50scye"]
+[gd_scene load_steps=4 format=3 uid="uid://dp6xpqxpo0fat"]
 
-[ext_resource type="Script" path="res://Scripts/Junction.gd" id="1_31q5s"]
-[ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_byyo1"]
+[ext_resource type="Script" path="res://scripts/Junction.gd" id="1_inack"]
+[ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_bctw7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
 size = Vector2(1.5, 1.25)
 
-[node name="Area2D" type="Area2D" groups=["down_right"]]
-script = ExtResource("1_31q5s")
+[node name="Area2D" type="Area2D" groups=["right_down"]]
+position = Vector2(2.08165e-12, 2.08165e-12)
+script = ExtResource("1_inack")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.19209e-07, 1.42109e-14)
+position = Vector2(2.08165e-12, 2.08165e-12)
+rotation = -1.5708
 scale = Vector2(0.875, 0.861111)
-texture = ExtResource("2_byyo1")
+texture = ExtResource("2_bctw7")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)

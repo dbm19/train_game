@@ -12,14 +12,13 @@ var trains = {
 	"5": 0,
 	"6": 0
 }
-var blue_train = preload("res://blue_train.tscn")
-var yellow_train = preload("res://yellow_train.tscn")
-var purple_train = preload("res://purple_train.tscn")
-var orange_train = preload("res://orange_train.tscn")
-var pink_train = preload("res://pink_train.tscn")
-var silver_train = preload("res://silver_train.tscn")
+var blue_train = preload("res://scenes/train_scenes/blue_train.tscn")
+var yellow_train = preload("res://scenes/train_scenes/yellow_train.tscn")
+var purple_train = preload("res://scenes/train_scenes/purple_train.tscn")
+var orange_train = preload("res://scenes/train_scenes/orange_train.tscn")
+var pink_train = preload("res://scenes/train_scenes/pink_train.tscn")
+var silver_train = preload("res://scenes/train_scenes/silver_train.tscn")
 var train_count = 10
-var game_over = false
 
 func _ready():
 	if spawn_rng == 1:
@@ -57,9 +56,8 @@ func _process(delta):
 	
 func _on_timer_timeout():
 	train_count -= 1
-	print(train_count)
+
 	if train_count == 0:
-		game_over = true
 		get_node("Timer").one_shot = true
 	else:
 		if train_index < 6:

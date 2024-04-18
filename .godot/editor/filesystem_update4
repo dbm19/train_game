@@ -27,3 +27,10 @@ res://Score.gd
 res://silver_train.tscn
 res://silver_terminus.tscn
 res://Scripts/Junction.gd
+res://scenes/tile_map.tscn
+res://scenes/terminus_scenes/orange_terminus.tscn
+res://scenes/terminus_scenes/silver_terminus.tscn
+res://scenes/train_scenes/silver_train.tscn
+res://scripts/Game.gd
+res://scenes/tile_map_2.tscn
+res://scripts/NewGameButton.gd

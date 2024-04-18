@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dtujymrdmtqhh" path="res://art_assets/title.png" id="1_jn1px"]
 [ext_resource type="Texture2D" uid="uid://beeckipob8mxn" path="res://art_assets/new_game.png" id="2_ko1gu"]
-[ext_resource type="Script" path="res://Scripts/NewGameButton.gd" id="3_1krpl"]
+[ext_resource type="Script" path="res://scripts/NewGameButton.gd" id="3_1krpl"]
 
 [node name="MarginContainer" type="MarginContainer"]
 offset_left = 725.0
@@ -40,11 +40,11 @@ offset_left = -291.0
 offset_top = 320.0
 offset_right = 829.0
 offset_bottom = 496.0
-text = "Your objective is to make sure each train arrives at the correct terminal. 
+text = "Your objective is to conduct the trains toward the correct terminals. 
 
 Blue trains must arrive at the blue terminus, yellow trains at the yellow terminus, etc. 
 
-Click on the track junctions to change the direction of the ttracks in order to redirect the trains.
+Click on the track junctions to change the direction of the tracks in order to redirect the trains.
 Good luck"
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGame/NewGameButton" to="HBoxContainer/VBoxContainer/NewGame/NewGameButton" method="_on_pressed"]

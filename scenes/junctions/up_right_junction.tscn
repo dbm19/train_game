@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvng67bvd01sf"]
+[gd_scene load_steps=4 format=3 uid="uid://g4rilokafyfj"]
 
-[ext_resource type="Script" path="res://Scripts/Junction.gd" id="1_xgc6d"]
-[ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_bijru"]
+[ext_resource type="Script" path="res://scripts/Junction.gd" id="1_assv8"]
+[ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_7mjr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
 size = Vector2(1, 0.5)
 
 [node name="Area2D" type="Area2D"]
-script = ExtResource("1_xgc6d")
+script = ExtResource("1_assv8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.125, 1.25)
 scale = Vector2(0.875, 0.861111)
-texture = ExtResource("2_bijru")
+texture = ExtResource("2_7mjr7")
 flip_h = true
 flip_v = true
 
