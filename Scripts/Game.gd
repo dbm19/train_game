@@ -3,6 +3,7 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 var spawn_rng = rng.randi_range(1, 6)
 var current_spawn
+var spawn
 var train_index = 1
 var trains = {
 	"1": 0,
@@ -18,9 +19,11 @@ var purple_train = preload("res://scenes/train_scenes/purple_train.tscn")
 var orange_train = preload("res://scenes/train_scenes/orange_train.tscn")
 var pink_train = preload("res://scenes/train_scenes/pink_train.tscn")
 var silver_train = preload("res://scenes/train_scenes/silver_train.tscn")
-var train_count = 10
+var train_count = 10 
 
 func _ready():
+	spawn = get_node("Spawn")
+	
 	if spawn_rng == 1:
 		trains[train_index] = blue_train.instantiate()
 	elif spawn_rng == 2:
@@ -33,8 +36,8 @@ func _ready():
 		trains[train_index] = pink_train.instantiate()
 	else:
 		trains[train_index] = silver_train.instantiate()
-	trains[train_index].position.x = 35
-	trains[train_index].position.y = 0
+	trains[train_index].position.x = spawn.position.x
+	trains[train_index].position.y = spawn.position.y
 	trains[train_index].scale.x = 1
 	trains[train_index].scale.y = 1
 	if train_index == 1:
