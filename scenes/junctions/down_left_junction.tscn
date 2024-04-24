@@ -4,27 +4,25 @@
 [ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_ee6o7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
-size = Vector2(1, 0.5)
+size = Vector2(1.5, 1.25)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["down_left"]]
 script = ExtResource("1_ml88p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.125, 1.25)
+position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(0.875, 0.861111)
 texture = ExtResource("2_ee6o7")
 flip_h = true
-flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_liejn")
 
 [node name="Button" type="Button" parent="."]
-offset_left = -6.0
-offset_top = -6.0
-offset_right = 8.0
-offset_bottom = 9.0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 7.0
+offset_bottom = 8.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

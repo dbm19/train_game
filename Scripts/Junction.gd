@@ -55,6 +55,14 @@ func _on_button_pressed():
 		else:
 			orientation = orientations["down"]
 			get_node("Sprite2D").rotation_degrees = 0
+	if get_groups()[0] == "down_left":
+		get_node("Sprite2D").flip_h = !get_node("Sprite2D").flip_h
+		if get_node("Sprite2D").rotation_degrees == 0:
+			orientation = orientations["left"]
+			get_node("Sprite2D").rotation_degrees = 90
+		else:
+			orientation = orientations["down"]
+			get_node("Sprite2D").rotation_degrees = 0
 	elif get_groups()[0] == "right_down":
 		get_node("Sprite2D").flip_h = !get_node("Sprite2D").flip_h
 		if get_node("Sprite2D").rotation_degrees == -90:
@@ -71,6 +79,14 @@ func _on_button_pressed():
 		else:
 			orientation = orientations["right"]
 			get_node("Sprite2D").rotation_degrees = -90
+	elif get_groups()[0] == "left_up":
+		get_node("Sprite2D").flip_h = !get_node("Sprite2D").flip_h
+		if get_node("Sprite2D").rotation_degrees == 90:
+			orientation = orientations["up"]
+			get_node("Sprite2D").rotation_degrees = 180
+		else:
+			orientation = orientations["left"]
+			get_node("Sprite2D").rotation_degrees = 90
 			
 func _change_train_orientation(train_index_group):
 	if orientation == orientations["down"]:
