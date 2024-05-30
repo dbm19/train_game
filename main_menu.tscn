@@ -5,9 +5,9 @@
 [ext_resource type="Script" path="res://scripts/NewGameButton.gd" id="3_1krpl"]
 
 [node name="MarginContainer" type="MarginContainer"]
-offset_left = 725.0
+offset_left = 726.0
 offset_top = 169.0
-offset_right = 1125.0
+offset_right = 1126.0
 offset_bottom = 698.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

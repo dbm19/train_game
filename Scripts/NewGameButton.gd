@@ -1,5 +1,8 @@
 extends Button
 
+var rng = RandomNumberGenerator.new()
+var map_index
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -9,6 +12,10 @@ func _process(delta):
 	pass
 
 func _on_pressed():
-	get_tree().change_scene_to_file("res://scenes/tile_map.tscn")
+	map_index = rng.randi_range(1, 2)
+	if map_index == 1:
+		get_tree().change_scene_to_file("res://scenes/tile_map.tscn")
+	elif map_index == 2:
+		get_tree().change_scene_to_file("res://scenes/tile_map_2.tscn")
 
 

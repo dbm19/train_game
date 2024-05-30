@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg5a5horef5qv"]
+
+[ext_resource type="Script" path="res://scenes/Spawn.gd" id="1_h5f4k"]
+[ext_resource type="Texture2D" uid="uid://bbowt48fae5ej" path="res://art_assets/spawn.png" id="2_p7ql8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcovj"]
+size = Vector2(14, 14)
+
+[node name="Spawn" type="Area2D" groups=["spawn", "spawn_down"]]
+script = ExtResource("1_h5f4k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_p7ql8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hcovj")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -4,6 +4,7 @@ var rng = RandomNumberGenerator.new()
 var spawn_rng = rng.randi_range(1, 6)
 var current_spawn
 var spawn
+var spawn_orientation
 var train_index = 1
 var trains = {
 	"1": 0,
@@ -19,11 +20,10 @@ var purple_train = preload("res://scenes/train_scenes/purple_train.tscn")
 var orange_train = preload("res://scenes/train_scenes/orange_train.tscn")
 var pink_train = preload("res://scenes/train_scenes/pink_train.tscn")
 var silver_train = preload("res://scenes/train_scenes/silver_train.tscn")
-var train_count = 10 
+var train_count = 9 
 
 func _ready():
 	spawn = get_node("Spawn")
-	
 	if spawn_rng == 1:
 		trains[train_index] = blue_train.instantiate()
 	elif spawn_rng == 2:
@@ -52,6 +52,7 @@ func _ready():
 		trains[train_index].add_to_group("train_index_5")
 	else:
 		trains[train_index].add_to_group("train_index_6")
+
 	self.add_child(trains[train_index])
 
 func _process(delta):
@@ -74,4 +75,3 @@ func _on_timer_timeout():
 			
 		_ready()
 
-	

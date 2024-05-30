@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_tijyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kti70"]
-size = Vector2(0, 0.5)
+size = Vector2(3, 2.25)
 
 [node name="Area2D" type="Area2D" groups=["colour_train_blue", "train_sprite"]]
 script = ExtResource("1_tijyu")
@@ -15,3 +15,5 @@ shape = SubResource("RectangleShape2D_kti70")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.46875, 0.46875)
 texture = ExtResource("1_5g3kp")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
