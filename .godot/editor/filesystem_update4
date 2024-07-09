@@ -2,12 +2,4 @@ res://main_menu.tscn
 res://scenes/tile_map.tscn
 res://scenes/tile_map_2.tscn
 res://scenes/tile_map_3.tscn
-res://scenes/train_scenes/yellow_train.tscn
-res://scenes/train_scenes/pink_train.tscn
-res://scenes/spawn_up.tscn
-res://scripts/Train.gd
-res://scenes/Spawn.gd
-res://scenes/spawn_down.tscn
-res://scenes/train_scenes/silver_train.tscn
-res://scenes/spawn_up.gd
-res://scenes/train_scenes/purple_train.tscn
+res://scenes/junctions/up_left_junction.tscn
