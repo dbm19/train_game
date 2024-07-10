@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kti70"]
 size = Vector2(3, 2.25)
 
-[node name="Area2D" type="Area2D" groups=["colour_train_blue", "train_sprite"]]
+[node name="Area2D" type="Area2D" groups=["colour_train_red", "train_sprite"]]
 script = ExtResource("1_putsw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
