@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://16e6w8s25e5e"]
+[gd_scene load_steps=28 format=3 uid="uid://16e6w8s25e5e"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_qhbnw"]
 [ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://scenes/junctions/down_right_junction.tscn" id="2_soufb"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bd3020v00awdm" path="res://art_assets/background_tile.png" id="11_v3tlt"]
 [ext_resource type="PackedScene" uid="uid://cokn71hbgsjcy" path="res://scenes/terminus_scenes/blue_terminus.tscn" id="12_oxpgu"]
 [ext_resource type="PackedScene" uid="uid://b1qgf1s61ekaa" path="res://scenes/terminus_scenes/orange_terminus.tscn" id="13_5kjbv"]
+[ext_resource type="PackedScene" uid="uid://87tunir44fyr" path="res://scenes/terminus_scenes/red_terminus.tscn" id="13_rofy2"]
 [ext_resource type="PackedScene" uid="uid://cwnrrxck8acnw" path="res://scenes/terminus_scenes/purple_terminus.tscn" id="14_aqld3"]
 [ext_resource type="PackedScene" uid="uid://d1moe2frr5ond" path="res://scenes/terminus_scenes/yellow_terminus.tscn" id="15_iag2n"]
 [ext_resource type="PackedScene" uid="uid://b6k34rfau138b" path="res://scenes/terminus_scenes/pink_terminus.tscn" id="16_jy7f3"]
@@ -41,6 +42,7 @@ texture = ExtResource("11_v3tlt")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mrtgv"]
 scenes/1/scene = ExtResource("12_oxpgu")
+scenes/2/scene = ExtResource("13_rofy2")
 scenes/4/scene = ExtResource("13_5kjbv")
 scenes/6/scene = ExtResource("14_aqld3")
 scenes/7/scene = ExtResource("15_iag2n")
@@ -67,7 +69,7 @@ scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_28vtv")
 format = 2
 layer_0/name = "Track"
-layer_0/tile_data = PackedInt32Array(-262143, 2, 0, -196607, 2, 0, -131071, 2, 0, -65535, 1, 196608, -65536, 2, 0, -1, 1, 327680, 1, 2, 0, 65537, 1, 65536, -2, 2, 0, 65533, 2, 0, 131073, 2, 0, 65538, 2, 0, 65539, 1, 458752, 3, 2, 0, 65540, 2, 0, -3, 1, 196608, -4, 4, 65536, -131073, 4, 393216, 131069, 4, 589824, 196609, 4, 524288, -65533, 4, 262144, 65541, 4, 458752, -65537, 2, 0, -327679, 7, 131072)
+layer_0/tile_data = PackedInt32Array(-262143, 2, 0, -196607, 1, 65536, -131071, 2, 0, -65535, 1, 196608, -65536, 2, 0, -1, 1, 327680, 1, 2, 0, 65537, 1, 65536, -2, 2, 0, 65533, 2, 0, 131073, 2, 0, 65538, 2, 0, 65539, 1, 458752, 3, 2, 0, 65540, 2, 0, -3, 1, 196608, -4, 4, 65536, -131073, 4, 393216, 131069, 4, 589824, 196609, 4, 524288, -65533, 4, 262144, 65541, 4, 458752, -65537, 2, 0, -327679, 7, 131072, -196606, 2, 0, -196605, 4, 131072)
 layer_1/name = "Background"
 layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 196612, 3, 0, 196610, 3, 0, 131074, 3, 0, 65538, 3, 0, -65531, 3, 0, -65532, 3, 0, -65533, 3, 0, -65534, 3, 0, -131070, 3, 0, -196605, 3, 0, -196604, 3, 0, -131068, 3, 0, -131067, 3, 0, -131069, 3, 0, -196603, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 3, 0, -262142, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 131072, 3, 0, 131073, 3, 0, 196607, 3, 0, 196606, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -262143, 3, 0, -262144, 3, 0, -131072, 3, 0, -65536, 3, 0, 0, 3, 0, 65535, 3, 0, -1, 3, 0, -65537, 3, 0, -131073, 3, 0, -196609, 3, 0, -131074, 3, 0, -65538, 3, 0, 65534, 3, 0, -196610, 3, 0, -196611, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -131075, 3, 0, 131069, 3, 0, 196605, 3, 0, 262141, 3, 0, 262140, 3, 0, 131068, 3, 0, -262148, 3, 0, 196613, 3, 0, -327675, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 65540, 3, 0, 5, 3, 0, 65541, 3, 0, 131077, 3, 0, -196612, 3, 0, -131076, 3, 0, -65540, 3, 0, 65532, 3, 0, 65533, 3, 0, -3, 3, 0, 196604, 3, 0, -65539, 3, 0, -2, 3, 0, -4, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 262149, 3, 0, 327685, 3, 0, 327684, 3, 0, 327683, 3, 0, 327682, 3, 0, 327681, 3, 0, 327680, 3, 0, 393215, 3, 0, 393214, 3, 0, 393213, 3, 0, 393212, 3, 0, 458748, 3, 0, 458749, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, -196606, 3, 0, -196607, 3, 0, -196608, 3, 0, 393222, 3, 0, 327686, 3, 0, 262150, 3, 0, 196614, 3, 0, 131078, 3, 0, 65542, 3, 0, 6, 3, 0, -65530, 3, 0, -131066, 3, 0, -196602, 3, 0, -262138, 3, 0, -327674, 3, 0)
