@@ -22,7 +22,7 @@ var orange_train = preload("res://scenes/train_scenes/orange_train.tscn")
 var pink_train = preload("res://scenes/train_scenes/pink_train.tscn")
 var silver_train = preload("res://scenes/train_scenes/silver_train.tscn")
 var red_train = preload("res://scenes/train_scenes/red_train.tscn")
-var train_count = 9 
+var train_count = 15
 
 func _ready():
 	spawn = get_node("Spawn")

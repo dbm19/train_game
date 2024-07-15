@@ -1,10 +1,7 @@
-res://main_menu.tscn
 res://scenes/tile_map.tscn
+res://main_menu.tscn
 res://scenes/tile_map_2.tscn
 res://scenes/tile_map_3.tscn
 res://scenes/junctions/up_left_junction.tscn
 res://scenes/terminus_scenes/red_terminus.tscn
 res://scenes/train_scenes/red_train.tscn
-res://Terminus.gd
-res://scripts/Game.gd
-res://scripts/Junction.gd
