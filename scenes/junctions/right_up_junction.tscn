@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmwuu1yq0cq8j"]
 
 [ext_resource type="Script" path="res://scripts/Junction.gd" id="1_oid30"]
-[ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_u45mi"]
+[ext_resource type="Texture2D" uid="uid://cyty4ct4cq8wr" path="res://art_assets/horizontal_junction.png" id="2_ku82b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
 size = Vector2(1.5, 1.75)
@@ -11,8 +11,8 @@ script = ExtResource("1_oid30")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
-scale = Vector2(1, 0.984)
-texture = ExtResource("2_u45mi")
+scale = Vector2(1.00364, 0.984)
+texture = ExtResource("2_ku82b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_liejn")

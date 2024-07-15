@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvng67bvd01sf"]
 
 [ext_resource type="Script" path="res://scripts/Junction.gd" id="1_xgc6d"]
-[ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_bijru"]
+[ext_resource type="Texture2D" uid="uid://bdwtan5s4keeu" path="res://art_assets/vertical_junction.png" id="2_it38l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
 size = Vector2(1, 1)
@@ -12,7 +12,7 @@ script = ExtResource("1_xgc6d")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -3.14125
 scale = Vector2(0.875, 0.861111)
-texture = ExtResource("2_bijru")
+texture = ExtResource("2_it38l")
 flip_h = true
 flip_v = true
 
