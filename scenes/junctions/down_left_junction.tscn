@@ -13,7 +13,6 @@ script = ExtResource("1_ml88p")
 position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(0.875, 0.861111)
 texture = ExtResource("2_rj1nt")
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_liejn")

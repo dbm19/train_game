@@ -9,17 +9,6 @@ var orientations = {
 var orientation
 
 func _ready():
-	# Setting initial rotations of each junction
-	if get_groups()[0] == "down_right" || get_groups()[0] == "down_left":
-		get_node("Sprite2D").rotation_degrees = 0
-	elif get_groups()[0] == "right_down" || get_groups()[0] == "right_up":
-		#get_node("Sprite2D").rotation_degrees = -90
-		pass
-	elif get_groups()[0] == "left_down" || get_groups()[0] == "left_up":	
-		get_node("Sprite2D").rotation_degrees = 90
-	else:
-		get_node("Sprite2D").rotation_degrees = 180
-	
 	# Setting initial orientations of each junction
 	if get_groups()[0] == "down_right" || get_groups()[0] == "down_left":
 		orientation = orientations["down"]
@@ -51,61 +40,61 @@ func _on_area_entered(area):
 
 func _on_button_pressed():
 	if get_groups()[0] == "down_right":
-		get_node("Sprite2D").flip_h = !get_node("Sprite2D").flip_h
-		if get_node("Sprite2D").rotation_degrees == 0:
+		if orientation == orientations["down"]:
 			orientation = orientations["right"]
-			get_node("Sprite2D").rotation_degrees = -90
+			get_node("Sprite2D").texture = load("res://art_assets/down_right_junction.png")
 		else:
 			orientation = orientations["down"]
-			get_node("Sprite2D").rotation_degrees = 0
-	if get_groups()[0] == "down_left":
-		get_node("Sprite2D").flip_h = !get_node("Sprite2D").flip_h
-		if get_node("Sprite2D").rotation_degrees == 0:
+			get_node("Sprite2D").texture = load("res://art_assets/vertical_junction.png")
+	elif get_groups()[0] == "down_left":
+		if orientation == orientations["down"]:
 			orientation = orientations["left"]
-			get_node("Sprite2D").rotation_degrees = 90
+			get_node("Sprite2D").texture = load("res://art_assets/down_left_junction.png")
 		else:
 			orientation = orientations["down"]
-			get_node("Sprite2D").rotation_degrees = 0
+			get_node("Sprite2D").texture = load("res://art_assets/vertical_junction.png")
 	elif get_groups()[0] == "right_down":
-		get_node("Sprite2D").flip_h = !get_node("Sprite2D").flip_h
-		if get_node("Sprite2D").rotation_degrees == -90:
+		if orientation == orientations["right"]:
 			orientation = orientations["down"]
-			get_node("Sprite2D").rotation_degrees = 0
+			get_node("Sprite2D").texture = load("res://art_assets/up_left_junction.png")
 		else:
 			orientation = orientations["right"]
-			get_node("Sprite2D").rotation_degrees = -90
+			get_node("Sprite2D").texture = load("res://art_assets/horizontal_junction.png")
 	elif get_groups()[0] == "right_up":
-		if get_node("Sprite2D").rotation_degrees == -90:
+		if orientation == orientations["right"]:
 			orientation = orientations["up"]
-			get_node("Sprite2D").rotation_degrees = 180
+			get_node("Sprite2D").texture = load("res://art_assets/down_left_junction.png")
 		else:
 			orientation = orientations["right"]
-			get_node("Sprite2D").rotation_degrees = -90
+			get_node("Sprite2D").texture = load("res://art_assets/horizontal_junction.png")
 	elif get_groups()[0] == "left_up":
-		get_node("Sprite2D").flip_h = !get_node("Sprite2D").flip_h
-		if get_node("Sprite2D").rotation_degrees == 90:
+		if orientation == orientations["left"]:
 			orientation = orientations["up"]
-			get_node("Sprite2D").rotation_degrees = 180
+			get_node("Sprite2D").texture = load("res://art_assets/down_right_junction.png")
 		else:
 			orientation = orientations["left"]
-			get_node("Sprite2D").rotation_degrees = 90
+			get_node("Sprite2D").texture = load("res://art_assets/horizontal_junction.png")
+	elif get_groups()[0] == "left_down":
+		if orientation == orientations["left"]:
+			orientation = orientations["down"]
+			get_node("Sprite2D").texture = load("res://art_assets/up_right_junction.png")
+		else:
+			orientation = orientations["left"]
+			get_node("Sprite2D").texture = load("res://art_assets/horizontal_junction.png")
 	elif get_groups()[0] == "up_right":
-		if get_node("Sprite2D").rotation_degrees == 180:
+		if orientation == orientations["up"]:
 			orientation = orientations["right"]
-			get_node("Sprite2D").rotation_degrees = -90
+			get_node("Sprite2D").texture = load("res://art_assets/up_right_junction.png")
 		else:
-			print("what")
 			orientation = orientations["up"]
-			get_node("Sprite2D").rotation_degrees = 180
+			get_node("Sprite2D").texture = load("res://art_assets/vertical_junction.png")
 	elif get_groups()[0] == "up_left":
-		get_node("Sprite2D").flip_v = !get_node("Sprite2D").flip_v
-		if get_node("Sprite2D").rotation_degrees == 180:
-			orientation = orientations["right"]
-			get_node("Sprite2D").rotation_degrees = -90
+		if orientation == orientations["up"]:
+			orientation = orientations["left"]
+			get_node("Sprite2D").texture = load("res://art_assets/up_left_junction.png")
 		else:
-			print("what")
 			orientation = orientations["up"]
-			get_node("Sprite2D").rotation_degrees = 180
+			get_node("Sprite2D").texture = load("res://art_assets/vertical_junction.png")
 			
 func _change_train_orientation(train_index_group):
 	if orientation == orientations["down"]:

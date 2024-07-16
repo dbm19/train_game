@@ -12,3 +12,6 @@ res://scenes/junctions/up_right_junction.tscn
 res://scenes/junctions/right_down_junction.tscn
 res://scenes/junctions/left_up_junction.tscn
 res://scenes/junctions/down_left_junction.tscn
+res://scenes/junctions/left_down_junction.tscn
+res://scripts/Train.gd
+res://scenes/train_scenes/orange_train.tscn

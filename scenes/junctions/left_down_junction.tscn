@@ -1,30 +1,27 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbhb5rqlqobs2"]
 
 [ext_resource type="Script" path="res://scripts/Junction.gd" id="1_22nes"]
-[ext_resource type="Texture2D" uid="uid://d1wmbrfrm1ywa" path="res://art_assets/junction_tile.png" id="2_2x5vx"]
+[ext_resource type="Texture2D" uid="uid://cyty4ct4cq8wr" path="res://art_assets/horizontal_junction.png" id="2_u436s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
-size = Vector2(1, 0.5)
+size = Vector2(2, 3)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["left_down"]]
 script = ExtResource("1_22nes")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.125, 1.25)
+position = Vector2(1.19209e-07, 1.19209e-07)
 scale = Vector2(0.875, 0.861111)
-texture = ExtResource("2_2x5vx")
-flip_h = true
-flip_v = true
+texture = ExtResource("2_u436s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_liejn")
 
 [node name="Button" type="Button" parent="."]
-offset_left = -6.0
-offset_top = -6.0
-offset_right = 8.0
-offset_bottom = 9.0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 7.0
+offset_bottom = 8.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
