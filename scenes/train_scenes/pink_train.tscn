@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dujpkdxxw3rf8" path="res://art_assets/pink_train.png" id="2_08mu2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kti70"]
-size = Vector2(2, 1.25)
+size = Vector2(4, 4)
 
 [node name="Area2D" type="Area2D" groups=["colour_train_pink", "train_sprite"]]
 script = ExtResource("1_le8ow")

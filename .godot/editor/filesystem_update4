@@ -15,3 +15,15 @@ res://scenes/junctions/down_left_junction.tscn
 res://scenes/junctions/left_down_junction.tscn
 res://scripts/Train.gd
 res://scenes/train_scenes/orange_train.tscn
+res://scenes/tile_map_4.tscn
+res://scenes/spawn_left.tscn
+res://scenes/spawn_down.tscn
+res://scenes/train_scenes/pink_train.tscn
+res://scenes/train_scenes/purple_train.tscn
+res://scenes/train_scenes/blue_train.tscn
+res://scenes/train_scenes/yellow_train.tscn
+res://scenes/train_scenes/silver_train.tscn
+res://scenes/terminus_scenes/orange_terminus.tscn
+res://scenes/terminus_scenes/green_terminus.tscn
+res://scenes/train_scenes/green_train.tscn
+res://scripts/Game.gd

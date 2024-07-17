@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/Spawn.gd" id="1_mxdck"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jwylj"]
-b = Vector2(0, 5)
+b = Vector2(0, 6)
 
 [node name="Spawn" type="Area2D" groups=["spawn", "spawn_left"]]
 script = ExtResource("1_mxdck")
@@ -13,5 +13,6 @@ script = ExtResource("1_mxdck")
 texture = ExtResource("1_bx3v6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
+position = Vector2(0, -3)
+scale = Vector2(2.24, 1)
 shape = SubResource("SegmentShape2D_jwylj")
