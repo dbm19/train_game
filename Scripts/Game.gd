@@ -1,7 +1,7 @@
 extends Node2D
 
 var rng = RandomNumberGenerator.new()
-var spawn_rng = rng.randi_range(1, 7)
+var spawn_rng 
 var current_spawn
 var spawn
 var spawn_orientation
@@ -25,9 +25,23 @@ var silver_train = preload("res://scenes/train_scenes/silver_train.tscn")
 var red_train = preload("res://scenes/train_scenes/red_train.tscn")
 var green_train = preload("res://scenes/train_scenes/green_train.tscn")
 var train_count = 15
+var random_numbers =  [1, 2, 3, 4, 5, 6, 7, 8]
+var random_numbers_index = 0
 
 func _ready():
 	spawn = get_node("Spawn")
+	
+	if random_numbers_index == 0:
+		random_numbers.shuffle()
+	
+	if random_numbers_index < random_numbers.size():
+		spawn_rng = random_numbers[random_numbers_index]
+		print(spawn_rng)
+		random_numbers_index += 1
+	else:
+		random_numbers_index = 0
+		_ready()
+	
 	if spawn_rng == 1:
 		trains[train_index] = blue_train.instantiate()
 	elif spawn_rng == 2:
@@ -80,10 +94,6 @@ func _on_timer_timeout():
 			train_index += 1
 		else:
 			train_index = 1
-			
-		current_spawn = spawn_rng
-		while spawn_rng == current_spawn:
-			spawn_rng = rng.randi_range(1, 8)
-			
+
 		_ready()
 
