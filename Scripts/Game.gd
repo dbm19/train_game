@@ -6,6 +6,7 @@ var current_spawn
 var spawn
 var spawn_orientation
 var train_index = 1
+var train_total = 8
 var trains = {
 	"1": 0,
 	"2": 0,
@@ -25,11 +26,16 @@ var silver_train = preload("res://scenes/train_scenes/silver_train.tscn")
 var red_train = preload("res://scenes/train_scenes/red_train.tscn")
 var green_train = preload("res://scenes/train_scenes/green_train.tscn")
 var train_count = 15
-var random_numbers =  [1, 2, 3, 4, 5, 6, 7, 8]
 var random_numbers_index = 0
 
 func _ready():
 	spawn = get_node("Spawn")
+	var current_map_scene = get_tree()
+	var random_numbers =  []
+ 
+	if self.has_node("TileMapEasy"):
+		for n in range(1, 4):
+			random_numbers.append(n)
 	
 	if random_numbers_index == 0:
 		random_numbers.shuffle()

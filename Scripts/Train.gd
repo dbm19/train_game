@@ -29,7 +29,7 @@ func _on_area_entered(area):
 	elif area.is_in_group("spawn_down"):
 		velocity = Vector2(0, 60)
 	elif area.is_in_group("spawn_left"):
-		print("huh")
 		velocity = Vector2(-60, 0)
 	elif area.is_in_group("spawn_right"):
 		velocity = Vector2(60, 0)
+		print("ayy")

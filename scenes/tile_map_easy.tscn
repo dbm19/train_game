@@ -1,0 +1,128 @@
+[gd_scene load_steps=36 format=3 uid="uid://ni56ouk55n4w"]
+
+[ext_resource type="Script" path="res://scripts/Game.gd" id="1_kfypg"]
+[ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_br2fj"]
+[ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://scenes/junctions/down_right_junction.tscn" id="3_lq6jh"]
+[ext_resource type="PackedScene" uid="uid://blckcooogvd6y" path="res://scenes/junctions/down_left_junction.tscn" id="4_rek3p"]
+[ext_resource type="PackedScene" uid="uid://cbhb5rqlqobs2" path="res://scenes/junctions/left_down_junction.tscn" id="5_v6wnm"]
+[ext_resource type="PackedScene" uid="uid://dexyaq8gdjgt6" path="res://scenes/junctions/left_up_junction.tscn" id="6_msb2i"]
+[ext_resource type="PackedScene" uid="uid://dp6xpqxpo0fat" path="res://scenes/junctions/right_down_junction.tscn" id="7_vj8px"]
+[ext_resource type="PackedScene" uid="uid://cmwuu1yq0cq8j" path="res://scenes/junctions/right_up_junction.tscn" id="8_gccar"]
+[ext_resource type="PackedScene" uid="uid://bvng67bvd01sf" path="res://scenes/junctions/up_left_junction.tscn" id="9_cw3av"]
+[ext_resource type="PackedScene" uid="uid://g4rilokafyfj" path="res://scenes/junctions/up_right_junction.tscn" id="10_f1jfq"]
+[ext_resource type="Texture2D" uid="uid://ibdm47vkoj4a" path="res://art_assets/green_tile.png" id="11_7crng"]
+[ext_resource type="Texture2D" uid="uid://bd3020v00awdm" path="res://art_assets/background_tile.png" id="12_461o8"]
+[ext_resource type="PackedScene" uid="uid://cokn71hbgsjcy" path="res://scenes/terminus_scenes/blue_terminus.tscn" id="13_k6qb3"]
+[ext_resource type="PackedScene" uid="uid://87tunir44fyr" path="res://scenes/terminus_scenes/red_terminus.tscn" id="14_eph7e"]
+[ext_resource type="PackedScene" uid="uid://cdy078uruvol1" path="res://scenes/terminus_scenes/green_terminus.tscn" id="15_yy4lp"]
+[ext_resource type="PackedScene" uid="uid://b1qgf1s61ekaa" path="res://scenes/terminus_scenes/orange_terminus.tscn" id="16_2dcpl"]
+[ext_resource type="PackedScene" uid="uid://cwnrrxck8acnw" path="res://scenes/terminus_scenes/purple_terminus.tscn" id="17_kwwe6"]
+[ext_resource type="PackedScene" uid="uid://d1moe2frr5ond" path="res://scenes/terminus_scenes/yellow_terminus.tscn" id="18_c1lgx"]
+[ext_resource type="PackedScene" uid="uid://b6k34rfau138b" path="res://scenes/terminus_scenes/pink_terminus.tscn" id="19_8epb8"]
+[ext_resource type="PackedScene" uid="uid://c4c6jbq7i4fun" path="res://scenes/terminus_scenes/silver_terminus.tscn" id="20_p34a3"]
+[ext_resource type="Texture2D" uid="uid://mcg0yqpa4vpk" path="res://art_assets/vertical_track.png" id="21_can0s"]
+[ext_resource type="PackedScene" uid="uid://6dcj0bbbo16b" path="res://scenes/spawn_left.tscn" id="22_gyf3o"]
+[ext_resource type="PackedScene" uid="uid://dg5a5horef5qv" path="res://scenes/spawn_down.tscn" id="23_ukbmh"]
+[ext_resource type="PackedScene" uid="uid://clo8svt730k7v" path="res://scenes/spawn_right.tscn" id="24_bsbot"]
+[ext_resource type="PackedScene" uid="uid://cdtyf440n5mf" path="res://scenes/spawn_up.tscn" id="25_5n244"]
+[ext_resource type="Script" path="res://scripts/TileMap.gd" id="26_ho1lm"]
+[ext_resource type="Script" path="res://Score.gd" id="27_n5eby"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynvvt"]
+texture = ExtResource("2_br2fj")
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_wdv22"]
+scenes/1/scene = ExtResource("3_lq6jh")
+scenes/3/scene = ExtResource("4_rek3p")
+scenes/4/scene = ExtResource("5_v6wnm")
+scenes/5/scene = ExtResource("6_msb2i")
+scenes/6/scene = ExtResource("7_vj8px")
+scenes/7/scene = ExtResource("8_gccar")
+scenes/8/scene = ExtResource("9_cw3av")
+scenes/9/scene = ExtResource("10_f1jfq")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k677j"]
+texture = ExtResource("11_7crng")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xea50"]
+texture = ExtResource("12_461o8")
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mrtgv"]
+scenes/1/scene = ExtResource("13_k6qb3")
+scenes/2/scene = ExtResource("14_eph7e")
+scenes/3/scene = ExtResource("15_yy4lp")
+scenes/4/scene = ExtResource("16_2dcpl")
+scenes/6/scene = ExtResource("17_kwwe6")
+scenes/7/scene = ExtResource("18_c1lgx")
+scenes/8/scene = ExtResource("19_8epb8")
+scenes/9/scene = ExtResource("20_p34a3")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ofp7"]
+texture = ExtResource("21_can0s")
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_kf4yd"]
+scenes/1/scene = ExtResource("22_gyf3o")
+scenes/2/scene = ExtResource("23_ukbmh")
+scenes/3/scene = ExtResource("24_bsbot")
+scenes/4/scene = ExtResource("25_5n244")
+
+[sub_resource type="TileSet" id="TileSet_28vtv"]
+sources/1 = SubResource("TileSetScenesCollectionSource_wdv22")
+sources/2 = SubResource("TileSetAtlasSource_k677j")
+sources/3 = SubResource("TileSetAtlasSource_xea50")
+sources/4 = SubResource("TileSetScenesCollectionSource_mrtgv")
+sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
+sources/0 = SubResource("TileSetAtlasSource_ynvvt")
+sources/5 = SubResource("TileSetAtlasSource_5ofp7")
+
+[node name="Game" type="Node2D" groups=["game"]]
+scale = Vector2(1.04251, 1.02653)
+script = ExtResource("1_kfypg")
+
+[node name="TileMapEasy" type="TileMap" parent="."]
+position = Vector2(254.194, 322.446)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_28vtv")
+format = 2
+layer_0/name = "Track"
+layer_0/tile_data = PackedInt32Array(327681, 5, 0, 262145, 5, 0, 196609, 1, 589824, 131073, 5, 0, 65537, 5, 0, -65535, 5, 0, 1, 1, 524288, 0, 0, 0, 196610, 0, 0, 196611, 4, 65536, 65535, 4, 458752, -131071, 4, 393216, 393217, 7, 262144)
+layer_1/name = "Background"
+layer_1/z_index = -1
+layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 196612, 3, 0, 196610, 3, 0, 131074, 3, 0, 65538, 3, 0, -65531, 3, 0, -65532, 3, 0, -65533, 3, 0, -65534, 3, 0, -131070, 3, 0, -196605, 3, 0, -196604, 3, 0, -131068, 3, 0, -131067, 3, 0, -131069, 3, 0, -196603, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 3, 0, -262142, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 131072, 3, 0, 131073, 3, 0, 196607, 3, 0, 196606, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -262143, 3, 0, -262144, 3, 0, -131072, 3, 0, -65536, 3, 0, 0, 3, 0, 65535, 3, 0, -1, 3, 0, -65537, 3, 0, -131073, 3, 0, -196609, 3, 0, -131074, 3, 0, -65538, 3, 0, 65534, 3, 0, -196610, 3, 0, -196611, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -131075, 3, 0, 131069, 3, 0, 196605, 3, 0, 262141, 3, 0, 262140, 3, 0, 131068, 3, 0, -262148, 3, 0, 196613, 3, 0, -327675, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 65540, 3, 0, 5, 3, 0, 65541, 3, 0, 131077, 3, 0, -196612, 3, 0, -131076, 3, 0, -65540, 3, 0, 65532, 3, 0, 65533, 3, 0, -3, 3, 0, 196604, 3, 0, -65539, 3, 0, -2, 3, 0, -4, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 262149, 3, 0, 327685, 3, 0, 327684, 3, 0, 327683, 3, 0, 327682, 3, 0, 327681, 3, 0, 327680, 3, 0, 393215, 3, 0, 393214, 3, 0, 393213, 3, 0, 393212, 3, 0, 458748, 3, 0, 458749, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, -196606, 3, 0, -196607, 3, 0, -196608, 3, 0, 393222, 3, 0, 327686, 3, 0, 262150, 3, 0, 196614, 3, 0, 131078, 3, 0, 65542, 3, 0, 6, 3, 0, -65530, 3, 0, -131066, 3, 0, -196602, 3, 0, -262138, 3, 0, -327674, 3, 0)
+script = ExtResource("26_ho1lm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 632.0
+offset_top = 5.0
+offset_right = 701.0
+offset_bottom = 28.0
+text = "Score: 
+"
+
+[node name="Score" type="Label" parent="ScoreLabel" groups=["score"]]
+layout_mode = 0
+offset_left = 53.7165
+offset_right = 93.7165
+offset_bottom = 23.0
+text = "0"
+script = ExtResource("27_n5eby")
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2(350.117, 739.384)
+
+[connection signal="area_entered" from="TileMapEasy/Area2D" to="TileMapEasy/Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapEasy/Area2D" to="TileMapEasy/Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapEasy/@Area2D@357781" to="TileMapEasy/@Area2D@357781" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapEasy/@Area2D@357781" to="TileMapEasy/@Area2D@357781" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapEasy/@Area2D@357782" to="TileMapEasy/@Area2D@357782" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapEasy/@Area2D@357783" to="TileMapEasy/@Area2D@357783" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapEasy/@Area2D@357784" to="TileMapEasy/@Area2D@357784" method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -28,3 +28,7 @@ res://scenes/terminus_scenes/green_terminus.tscn
 res://scenes/train_scenes/green_train.tscn
 res://scripts/Game.gd
 res://Terminus.gd
+res://scenes/tile_map_easy.tscn
+res://scenes/spawn_up.tscn
+res://scripts/NewGameButton.gd
+res://scripts/TileMap.gd
