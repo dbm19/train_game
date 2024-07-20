@@ -118,11 +118,4 @@ script = ExtResource("27_n5eby")
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(350.117, 739.384)
 
-[connection signal="area_entered" from="TileMapEasy/Area2D" to="TileMapEasy/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapEasy/Area2D" to="TileMapEasy/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapEasy/@Area2D@357781" to="TileMapEasy/@Area2D@357781" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapEasy/@Area2D@357781" to="TileMapEasy/@Area2D@357781" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapEasy/@Area2D@357782" to="TileMapEasy/@Area2D@357782" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapEasy/@Area2D@357783" to="TileMapEasy/@Area2D@357783" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapEasy/@Area2D@357784" to="TileMapEasy/@Area2D@357784" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

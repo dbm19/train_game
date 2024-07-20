@@ -27,25 +27,47 @@ var red_train = preload("res://scenes/train_scenes/red_train.tscn")
 var green_train = preload("res://scenes/train_scenes/green_train.tscn")
 var train_count = 15
 var random_numbers_index = 0
+var random_numbers = []
 
 func _ready():
 	spawn = get_node("Spawn")
-	var current_map_scene = get_tree()
-	var random_numbers =  []
  
 	if self.has_node("TileMapEasy"):
 		for n in range(1, 4):
 			random_numbers.append(n)
+	else:
+		for n in range(1, 9):
+			random_numbers.append(n)
+	_spawn()
+
+func _process(delta):
+	pass
 	
+func _on_timer_timeout():
+	train_count -= 1
+
+	if train_count == 0:
+		get_node("Timer").one_shot = true
+	else:
+		if train_index < 8:
+			train_index += 1
+		else:
+			train_index = 1
+		
+		_spawn()
+		
+func _spawn():
+	print(random_numbers)
 	if random_numbers_index == 0:
 		random_numbers.shuffle()
-	
+		
 	if random_numbers_index < random_numbers.size():
 		spawn_rng = random_numbers[random_numbers_index]
 		print(spawn_rng)
 		random_numbers_index += 1
 	else:
 		random_numbers_index = 0
+		random_numbers = []
 		_ready()
 	
 	if spawn_rng == 1:
@@ -86,20 +108,4 @@ func _ready():
 		trains[train_index].add_to_group("train_index_8")
 
 	self.add_child(trains[train_index])
-
-func _process(delta):
-	pass
-	
-func _on_timer_timeout():
-	train_count -= 1
-
-	if train_count == 0:
-		get_node("Timer").one_shot = true
-	else:
-		if train_index < 8:
-			train_index += 1
-		else:
-			train_index = 1
-
-		_ready()
 
