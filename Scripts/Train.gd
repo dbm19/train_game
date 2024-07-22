@@ -1,6 +1,6 @@
 extends Area2D
 
-const speed = 60
+const speed = 55
 var velocity: Vector2
 
 # Called when the node enters the scene tree for the first time.
@@ -25,11 +25,10 @@ func go_left():
 
 func _on_area_entered(area):
 	if area.is_in_group("spawn_up"):
-		velocity = Vector2(0, -60)
+		velocity = Vector2(0, -speed)
 	elif area.is_in_group("spawn_down"):
-		velocity = Vector2(0, 60)
+		velocity = Vector2(0, speed)
 	elif area.is_in_group("spawn_left"):
-		velocity = Vector2(-60, 0)
+		velocity = Vector2(-speed, 0)
 	elif area.is_in_group("spawn_right"):
-		velocity = Vector2(60, 0)
-		print("ayy")
+		velocity = Vector2(speed, 0)

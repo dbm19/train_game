@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://tsiuxtkynlbw"]
+
+[ext_resource type="Texture2D" uid="uid://dtujymrdmtqhh" path="res://art_assets/title.png" id="1_vyoc8"]
+[ext_resource type="Texture2D" uid="uid://beeckipob8mxn" path="res://art_assets/new_game.png" id="2_sy43a"]
+[ext_resource type="Script" path="res://scripts/NewGameButton.gd" id="3_ldsg6"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_left = 137.0
+offset_top = 26.0
+offset_right = 537.0
+offset_bottom = 555.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_vyoc8")
+stretch_mode = 2
+
+[node name="NewGame" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_sy43a")
+stretch_mode = 2
+
+[node name="NewGameButton" type="Button" parent="HBoxContainer/VBoxContainer/NewGame"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 404.0
+offset_bottom = 103.0
+script = ExtResource("3_ldsg6")
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGame/NewGameButton" to="HBoxContainer/VBoxContainer/NewGame/NewGameButton" method="_on_pressed"]
