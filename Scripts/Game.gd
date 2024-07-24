@@ -46,7 +46,7 @@ func _process(delta):
 func _on_timer_timeout():
 	train_count -= 1
 
-	if train_count == 0:
+	if train_count == 2:
 		get_node("Timer").one_shot = true
 	else:
 		if train_index < 8:

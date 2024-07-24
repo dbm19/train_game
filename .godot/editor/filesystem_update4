@@ -8,3 +8,4 @@ res://scenes/spawn_up.tscn
 res://level_select.tscn
 res://scripts/NewGameButton.gd
 res://TutorialButton.gd
+res://scripts/Game.gd
