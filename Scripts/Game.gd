@@ -88,21 +88,5 @@ func _spawn():
 	trains[train_index].position.y = spawn.position.y
 	trains[train_index].scale.x = 1
 	trains[train_index].scale.y = 1
-	if train_index == 1:
-		trains[train_index].add_to_group("train_index_1")
-	elif train_index == 2:
-		trains[train_index].add_to_group("train_index_2")
-	elif train_index == 3:
-		trains[train_index].add_to_group("train_index_3")
-	elif train_index == 4:
-		trains[train_index].add_to_group("train_index_4")
-	elif train_index == 5:
-		trains[train_index].add_to_group("train_index_5")
-	elif train_index == 6:
-		trains[train_index].add_to_group("train_index_6")
-	elif train_index == 7:
-		trains[train_index].add_to_group("train_index_7")
-	else:
-		trains[train_index].add_to_group("train_index_8")
 
 	self.add_child(trains[train_index])
