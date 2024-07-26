@@ -31,7 +31,7 @@ var random_numbers = []
 
 func _ready():
 	spawn = get_node("Spawn")
- 
+	
 	if self.has_node("TileMapEasy"):
 		for n in range(1, 4):
 			random_numbers.append(n)
@@ -42,7 +42,7 @@ func _ready():
 
 func _process(delta):
 	pass
-	
+
 func _on_timer_timeout():
 	train_count -= 1
 
@@ -106,4 +106,3 @@ func _spawn():
 		trains[train_index].add_to_group("train_index_8")
 
 	self.add_child(trains[train_index])
-

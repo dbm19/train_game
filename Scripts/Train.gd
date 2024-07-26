@@ -32,3 +32,6 @@ func _on_area_entered(area):
 		velocity = Vector2(-speed, 0)
 	elif area.is_in_group("spawn_right"):
 		velocity = Vector2(speed, 0)
+
+func whatthefuck():
+	print("whatthefuck")

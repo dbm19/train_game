@@ -62,18 +62,5 @@ offset_right = 404.0
 offset_bottom = 103.0
 script = ExtResource("5_1qpla")
 
-[node name="TextEdit" type="TextEdit" parent="HBoxContainer/VBoxContainer/NewGame2"]
-layout_mode = 0
-offset_left = -291.0
-offset_top = 320.0
-offset_right = 829.0
-offset_bottom = 496.0
-text = "Your objective is to conduct the trains toward the correct terminals. 
-
-Blue trains must arrive at the blue terminus, yellow trains at the yellow terminus, etc. 
-
-Click on the track junctions to change the direction of the tracks in order to redirect the trains.
-Good luck"
-
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGame/NewGameButton" to="HBoxContainer/VBoxContainer/NewGame/NewGameButton" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGame2/TutorialButton" to="HBoxContainer/VBoxContainer/NewGame2/TutorialButton" method="_on_pressed"]

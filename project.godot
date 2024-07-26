@@ -16,7 +16,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Test="*res://test.gd"
+Singleton="*res://Singleton.gd"
 
 [display]
 

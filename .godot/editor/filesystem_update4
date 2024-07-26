@@ -9,3 +9,8 @@ res://level_select.tscn
 res://scripts/NewGameButton.gd
 res://TutorialButton.gd
 res://scripts/Game.gd
+res://scripts/Junction.gd
+res://scripts/Train.gd
+res://singleton.gd
+res://Singleton.gd
+res://scenes/train_scenes/blue_train.tscn
