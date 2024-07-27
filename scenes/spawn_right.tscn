@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bbowt48fae5ej" path="res://art_assets/spawn.png" id="1_a0kb0"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jwylj"]
+a = Vector2(0, -4)
 b = Vector2(0, 5)
 
 [node name="Spawn" type="Area2D" groups=["spawn", "spawn_right"]]
@@ -13,5 +14,4 @@ script = ExtResource("1_814fv")
 texture = ExtResource("1_a0kb0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
 shape = SubResource("SegmentShape2D_jwylj")

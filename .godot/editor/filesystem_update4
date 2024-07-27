@@ -14,3 +14,11 @@ res://scripts/Train.gd
 res://singleton.gd
 res://Singleton.gd
 res://scenes/train_scenes/blue_train.tscn
+res://scenes/train_scenes/black_train.tscn
+res://scenes/terminus_scenes/black_terminus.tscn
+res://scenes/tile_map_5.tscn
+res://scenes/spawn_right.tscn
+res://Terminus.gd
+res://scenes/train_scenes/pink_train.tscn
+res://scenes/junctions/up_left_junction.tscn
+res://scenes/train_scenes/orange_train.tscn

@@ -25,6 +25,7 @@ var pink_train = preload("res://scenes/train_scenes/pink_train.tscn")
 var silver_train = preload("res://scenes/train_scenes/silver_train.tscn")
 var red_train = preload("res://scenes/train_scenes/red_train.tscn")
 var green_train = preload("res://scenes/train_scenes/green_train.tscn")
+var black_train = preload("res://scenes/train_scenes/black_train.tscn")
 var train_count = 15
 var random_numbers_index = 0
 var random_numbers = []
@@ -35,8 +36,11 @@ func _ready():
 	if self.has_node("TileMapEasy"):
 		for n in range(1, 4):
 			random_numbers.append(n)
-	else:
+	elif self.has_node("TileMapNormal"):
 		for n in range(1, 9):
+			random_numbers.append(n)
+	else:
+		for n in range(1, 10):
 			random_numbers.append(n)
 	_spawn()
 
@@ -49,7 +53,7 @@ func _on_timer_timeout():
 	if train_count == 2:
 		get_node("Timer").one_shot = true
 	else:
-		if train_index < 8:
+		if train_index < 9:
 			train_index += 1
 		else:
 			train_index = 1
@@ -82,8 +86,10 @@ func _spawn():
 		trains[train_index] = silver_train.instantiate()
 	elif spawn_rng == 7:
 		trains[train_index] = red_train.instantiate()
-	else:
+	elif spawn_rng == 8:
 		trains[train_index] = green_train.instantiate()
+	else:
+		trains[train_index] = black_train.instantiate()
 	trains[train_index].position.x = spawn.position.x
 	trains[train_index].position.y = spawn.position.y
 	trains[train_index].scale.x = 1

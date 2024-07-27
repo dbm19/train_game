@@ -25,4 +25,6 @@ func _on_area_entered(area):
 		get_tree().call_group("score", "_update_score")
 	elif area.get_groups()[0] == "colour_train_green" && get_groups()[0] == "colour_green_terminus":
 		get_tree().call_group("score", "_update_score")
+	elif area.get_groups()[0] == "colour_train_black" && get_groups()[0] == "colour_black_terminus":
+		get_tree().call_group("score", "_update_score")
 	area.queue_free()

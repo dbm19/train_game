@@ -83,7 +83,7 @@ sources/5 = SubResource("TileSetAtlasSource_5ofp7")
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_0tudp")
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMapNormal" type="TileMap" parent="."]
 position = Vector2(254.194, 322.446)
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_28vtv")

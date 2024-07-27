@@ -77,7 +77,7 @@ sources/11 = SubResource("TileSetAtlasSource_vliqd")
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_5rr6m")
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMapNormal" type="TileMap" parent="."]
 position = Vector2(258.031, 321.471)
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_28vtv")
