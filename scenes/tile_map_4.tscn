@@ -83,7 +83,7 @@ sources/5 = SubResource("TileSetAtlasSource_5ofp7")
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_0tudp")
 
-[node name="TileMapNormal" type="TileMap" parent="."]
+[node name="TileMapEightTrains" type="TileMap" parent="."]
 position = Vector2(254.194, 322.446)
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_28vtv")
@@ -118,4 +118,26 @@ script = ExtResource("26_1q8fe")
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(671.456, 355.567)
 
+[connection signal="area_entered" from="TileMapEightTrains/Area2D" to="TileMapEightTrains/Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapEightTrains/Area2D" to="TileMapEightTrains/Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@155995" to="TileMapEightTrains/@Area2D@155995" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapEightTrains/@Area2D@155995" to="TileMapEightTrains/@Area2D@155995" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@155996" to="TileMapEightTrains/@Area2D@155996" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@155997" to="TileMapEightTrains/@Area2D@155997" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@155998" to="TileMapEightTrains/@Area2D@155998" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapEightTrains/@Area2D@155998" to="TileMapEightTrains/@Area2D@155998" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@155999" to="TileMapEightTrains/@Area2D@155999" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@156000" to="TileMapEightTrains/@Area2D@156000" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@156001" to="TileMapEightTrains/@Area2D@156001" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapEightTrains/@Area2D@156001" to="TileMapEightTrains/@Area2D@156001" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@156002" to="TileMapEightTrains/@Area2D@156002" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@156003" to="TileMapEightTrains/@Area2D@156003" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapEightTrains/@Area2D@156003" to="TileMapEightTrains/@Area2D@156003" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@156004" to="TileMapEightTrains/@Area2D@156004" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@156005" to="TileMapEightTrains/@Area2D@156005" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapEightTrains/@Area2D@156005" to="TileMapEightTrains/@Area2D@156005" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@156006" to="TileMapEightTrains/@Area2D@156006" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapEightTrains/@Area2D@156006" to="TileMapEightTrains/@Area2D@156006" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@156007" to="TileMapEightTrains/@Area2D@156007" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapEightTrains/@Area2D@156008" to="TileMapEightTrains/@Area2D@156008" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

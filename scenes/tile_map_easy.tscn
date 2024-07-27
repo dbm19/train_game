@@ -83,7 +83,7 @@ sources/5 = SubResource("TileSetAtlasSource_5ofp7")
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_kfypg")
 
-[node name="TileMapEasy" type="TileMap" parent="."]
+[node name="TileMapThreeTrains" type="TileMap" parent="."]
 position = Vector2(254.194, 322.446)
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_28vtv")
@@ -118,4 +118,11 @@ script = ExtResource("27_n5eby")
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(350.117, 739.384)
 
+[connection signal="area_entered" from="TileMapThreeTrains/Area2D" to="TileMapThreeTrains/Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapThreeTrains/Area2D" to="TileMapThreeTrains/Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@156379" to="TileMapThreeTrains/@Area2D@156379" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapThreeTrains/@Area2D@156379" to="TileMapThreeTrains/@Area2D@156379" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@156380" to="TileMapThreeTrains/@Area2D@156380" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@156381" to="TileMapThreeTrains/@Area2D@156381" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@156382" to="TileMapThreeTrains/@Area2D@156382" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

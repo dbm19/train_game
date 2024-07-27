@@ -33,10 +33,10 @@ var random_numbers = []
 func _ready():
 	spawn = get_node("Spawn")
 	
-	if self.has_node("TileMapEasy"):
+	if self.has_node("TileMapThreeTrains"):
 		for n in range(1, 4):
 			random_numbers.append(n)
-	elif self.has_node("TileMapNormal"):
+	elif self.has_node("TileMapEightTrains"):
 		for n in range(1, 9):
 			random_numbers.append(n)
 	else:
