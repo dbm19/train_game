@@ -1,10 +1,10 @@
+Label
 CollisionShape2D
 Node2D
 MultiplayerSpawner
 Area2D
 MarginContainer
 TextEdit
-Label
 Button
 VBoxContainer
 HBoxContainer

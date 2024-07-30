@@ -29,6 +29,7 @@ var black_train = preload("res://scenes/train_scenes/black_train.tscn")
 var train_count = 15
 var random_numbers_index = 0
 var random_numbers = []
+var end = false
 
 func _ready():
 	spawn = get_node("Spawn")
@@ -52,6 +53,7 @@ func _on_timer_timeout():
 
 	if train_count == 2:
 		get_node("Timer").one_shot = true
+		end = true
 	else:
 		if train_index < 9:
 			train_index += 1

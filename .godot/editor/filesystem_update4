@@ -22,3 +22,4 @@ res://Terminus.gd
 res://scenes/train_scenes/pink_train.tscn
 res://scenes/junctions/up_left_junction.tscn
 res://scenes/train_scenes/orange_train.tscn
+res://scenes/score_screen.tscn
