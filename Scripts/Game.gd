@@ -110,7 +110,7 @@ func _spawn():
 		trains[train_index] = green_train.instantiate()
 	elif spawn_rng == 9:
 		trains[train_index] = black_train.instantiate()
-	elif spawn_rng == 10:
+	else:
 		trains[train_index] = white_train.instantiate()
 	trains[train_index].position.x = spawn.position.x
 	trains[train_index].position.y = spawn.position.y
