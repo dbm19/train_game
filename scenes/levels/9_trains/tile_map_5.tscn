@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bc8pdpqplj32u"]
+[gd_scene load_steps=37 format=3 uid="uid://seyju7mtwsk0"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_kwsmm"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_1rl0g"]

@@ -9,6 +9,6 @@ func _process(delta):
 	pass
 
 func _on_pressed():
-	get_tree().change_scene_to_file("res://scenes/difficulty_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu/difficulty_select.tscn")
 	
 

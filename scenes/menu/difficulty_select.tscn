@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3p6dkwo1n4g7"]
 
-[ext_resource type="Texture2D" uid="uid://nwweb2gxu21l" path="res://art_assets/difficulty.png" id="1_hdmih"]
-[ext_resource type="Texture2D" uid="uid://db13r50xq74e" path="res://art_assets/8_trains.png" id="2_3ljwh"]
-[ext_resource type="Texture2D" uid="uid://cxmcqttcw2q60" path="res://art_assets/9_trains.png" id="3_au7ac"]
-[ext_resource type="Script" path="res://scenes/8Trains.gd" id="3_k516c"]
-[ext_resource type="Script" path="res://scenes/9Trains.gd" id="5_6y1a5"]
+[ext_resource type="Texture2D" uid="uid://nwweb2gxu21l" path="res://art_assets/difficulty.png" id="1_5h4p2"]
+[ext_resource type="Texture2D" uid="uid://db13r50xq74e" path="res://art_assets/8_trains.png" id="2_rn1i6"]
+[ext_resource type="Script" path="res://scripts/8Trains.gd" id="3_ftc1b"]
+[ext_resource type="Texture2D" uid="uid://cxmcqttcw2q60" path="res://art_assets/9_trains.png" id="4_wfnel"]
+[ext_resource type="Script" path="res://scripts/9Trains.gd" id="5_aoc2q"]
 
 [node name="DifficultySelect" type="Control"]
 layout_mode = 3
@@ -15,6 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = -3.0
 offset_top = 8.0
 offset_right = 1917.0
@@ -30,7 +31,7 @@ offset_bottom = 157.0
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
-texture = ExtResource("1_hdmih")
+texture = ExtResource("1_5h4p2")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -41,15 +42,15 @@ offset_bottom = 1056.0
 
 [node name="8Trains" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-icon = ExtResource("2_3ljwh")
+icon = ExtResource("2_rn1i6")
 flat = true
-script = ExtResource("3_k516c")
+script = ExtResource("3_ftc1b")
 
 [node name="9Trains" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-icon = ExtResource("3_au7ac")
+icon = ExtResource("4_wfnel")
 flat = true
-script = ExtResource("5_6y1a5")
+script = ExtResource("5_aoc2q")
 
 [connection signal="pressed" from="HBoxContainer/8Trains" to="HBoxContainer/8Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/9Trains" to="HBoxContainer/9Trains" method="_on_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdy078uruvol1"]
 
-[ext_resource type="Script" path="res://Terminus.gd" id="1_sjl8n"]
+[ext_resource type="Script" path="res://scripts/Terminus.gd" id="1_sjl8n"]
 [ext_resource type="Texture2D" uid="uid://c6bl7oyk1h527" path="res://art_assets/green_terminus.png" id="2_u0gtk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8vqw"]

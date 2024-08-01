@@ -17,15 +17,15 @@ var trains = {
 	"7": 0,
 	"8": 0
 }
-var blue_train = preload("res://scenes/train_scenes/blue_train.tscn")
-var yellow_train = preload("res://scenes/train_scenes/yellow_train.tscn")
-var purple_train = preload("res://scenes/train_scenes/purple_train.tscn")
-var orange_train = preload("res://scenes/train_scenes/orange_train.tscn")
-var pink_train = preload("res://scenes/train_scenes/pink_train.tscn")
-var silver_train = preload("res://scenes/train_scenes/silver_train.tscn")
-var red_train = preload("res://scenes/train_scenes/red_train.tscn")
-var green_train = preload("res://scenes/train_scenes/green_train.tscn")
-var black_train = preload("res://scenes/train_scenes/black_train.tscn")
+var blue_train = preload("res://scenes/trains/blue_train.tscn")
+var yellow_train = preload("res://scenes/trains/yellow_train.tscn")
+var purple_train = preload("res://scenes/trains/purple_train.tscn")
+var orange_train = preload("res://scenes/trains/orange_train.tscn")
+var pink_train = preload("res://scenes/trains/pink_train.tscn")
+var silver_train = preload("res://scenes/trains/silver_train.tscn")
+var red_train = preload("res://scenes/trains/red_train.tscn")
+var green_train = preload("res://scenes/trains/green_train.tscn")
+var black_train = preload("res://scenes/trains/black_train.tscn")
 var train_count = 15
 var random_numbers_index = 0
 var random_numbers = []

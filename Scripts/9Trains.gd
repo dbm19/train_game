@@ -13,4 +13,4 @@ func _process(delta):
 	pass
 
 func _on_pressed():
-	get_tree().change_scene_to_file("res://scenes/tile_map_5.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/9_trains/tile_map_5.tscn")

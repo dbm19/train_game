@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://b2xupy1sue1jd"]
 
-[ext_resource type="Texture2D" uid="uid://bfxsjfy50ecx0" path="res://art_assets/train_game_ligma.png" id="1_y46ve"]
-[ext_resource type="Texture2D" uid="uid://dq8eixputiefi" path="res://art_assets/new_game_ligma.png" id="2_rntdt"]
-[ext_resource type="Script" path="res://scripts/NewGameButton.gd" id="3_mfiof"]
-[ext_resource type="Texture2D" uid="uid://bpa10jw24sfb7" path="res://art_assets/tutorial_ligma.png" id="4_g5pp0"]
-[ext_resource type="Script" path="res://TutorialButton.gd" id="5_3siwa"]
+[ext_resource type="Texture2D" uid="uid://bfxsjfy50ecx0" path="res://art_assets/train_game_ligma.png" id="1_puhaq"]
+[ext_resource type="Texture2D" uid="uid://dq8eixputiefi" path="res://art_assets/new_game_ligma.png" id="2_t36sk"]
+[ext_resource type="Script" path="res://scripts/NewGameButton.gd" id="3_ce2ib"]
+[ext_resource type="Texture2D" uid="uid://bpa10jw24sfb7" path="res://art_assets/tutorial_ligma.png" id="4_ep3py"]
+[ext_resource type="Script" path="res://scripts/TutorialButton.gd" id="5_0f1lw"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -39,7 +39,7 @@ theme_override_constants/margin_bottom = 80
 
 [node name="GameTitle" type="TextureRect" parent="MarginContainer2"]
 layout_mode = 2
-texture = ExtResource("1_y46ve")
+texture = ExtResource("1_puhaq")
 stretch_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -53,17 +53,17 @@ size_flags_vertical = 4
 
 [node name="NewGameButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("2_rntdt")
+icon = ExtResource("2_t36sk")
 flat = true
 icon_alignment = 1
-script = ExtResource("3_mfiof")
+script = ExtResource("3_ce2ib")
 
 [node name="TutorialButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("4_g5pp0")
+icon = ExtResource("4_ep3py")
 flat = true
 icon_alignment = 1
-script = ExtResource("5_3siwa")
+script = ExtResource("5_0f1lw")
 
 [connection signal="pressed" from="VBoxContainer/NewGameButton" to="VBoxContainer/NewGameButton" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/TutorialButton" to="VBoxContainer/TutorialButton" method="_on_pressed"]
