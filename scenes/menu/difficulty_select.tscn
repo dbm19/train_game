@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c3p6dkwo1n4g7"]
+[gd_scene load_steps=16 format=3 uid="uid://c3p6dkwo1n4g7"]
 
 [ext_resource type="Texture2D" uid="uid://nwweb2gxu21l" path="res://art_assets/difficulty.png" id="1_5h4p2"]
 [ext_resource type="Texture2D" uid="uid://db13r50xq74e" path="res://art_assets/8_trains.png" id="2_rn1i6"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://scenes/menu/6Trains.gd" id="7_074l6"]
 [ext_resource type="Texture2D" uid="uid://bm78gjhg0j8ur" path="res://art_assets/7_trains.png" id="8_75wur"]
 [ext_resource type="Script" path="res://scenes/menu/7Trains.gd" id="9_ts8hw"]
+[ext_resource type="Texture2D" uid="uid://q5kwd8wyfm7h" path="res://art_assets/10_trains.png" id="14_fkat8"]
+[ext_resource type="Script" path="res://scenes/menu/10Trains.gd" id="14_oro5x"]
 
 [node name="DifficultySelect" type="Control"]
 layout_mode = 3
@@ -87,9 +89,19 @@ icon = ExtResource("4_wfnel")
 flat = true
 script = ExtResource("5_aoc2q")
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="10Trains" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+icon = ExtResource("14_fkat8")
+flat = true
+script = ExtResource("14_oro5x")
+
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/4Trains" to="HBoxContainer/VBoxContainer/4Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/5Trains" to="HBoxContainer/VBoxContainer/5Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/6Trains" to="HBoxContainer/VBoxContainer/6Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/7Trains" to="HBoxContainer/VBoxContainer/7Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/8Trains2" to="HBoxContainer/VBoxContainer/8Trains2" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/9Trains" to="HBoxContainer/VBoxContainer/9Trains" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/10Trains" to="HBoxContainer/VBoxContainer2/10Trains" method="_on_pressed"]

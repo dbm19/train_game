@@ -93,7 +93,7 @@ offset_right = 994.35
 offset_bottom = 538.059
 color = Color(0.560784, 0.952941, 0.996078, 1)
 
-[node name="TileMapHard" type="TileMap" parent="."]
+[node name="TileMapNine" type="TileMap" parent="."]
 position = Vector2(-23.0213, -50.656)
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_28vtv")

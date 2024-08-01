@@ -1,8 +1,9 @@
-VBoxContainer
 Button
-HBoxContainer
-TextureRect
 Label
+HBoxContainer
+TextEdit
+VBoxContainer
+TextureRect
 MarginContainer
 ColorRect
 Control
@@ -10,5 +11,4 @@ CollisionShape2D
 Node2D
 MultiplayerSpawner
 Area2D
-TextEdit
 RichTextLabel
