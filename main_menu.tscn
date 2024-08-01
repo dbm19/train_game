@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dk4prnvo4y0ql"]
 
-[ext_resource type="Texture2D" uid="uid://dtujymrdmtqhh" path="res://art_assets/title.png" id="1_jn1px"]
-[ext_resource type="Texture2D" uid="uid://beeckipob8mxn" path="res://art_assets/new_game.png" id="2_ko1gu"]
+[ext_resource type="Texture2D" uid="uid://bfxsjfy50ecx0" path="res://art_assets/train_game_ligma.png" id="1_23h46"]
+[ext_resource type="Texture2D" uid="uid://d0m5rmana3l7a" path="res://art_assets/new_game_figma.png" id="2_a7f7t"]
 [ext_resource type="Script" path="res://scripts/NewGameButton.gd" id="3_1krpl"]
-[ext_resource type="Texture2D" uid="uid://dlhfoo46a6dgf" path="res://art_assets/tutorial.png" id="4_0a2he"]
+[ext_resource type="Texture2D" uid="uid://bpa10jw24sfb7" path="res://art_assets/tutorial_ligma.png" id="4_kq353"]
 [ext_resource type="Script" path="res://TutorialButton.gd" id="5_1qpla"]
 
 [node name="MarginContainer" type="MarginContainer"]
@@ -20,12 +20,12 @@ layout_mode = 2
 
 [node name="Title" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_jn1px")
+texture = ExtResource("1_23h46")
 stretch_mode = 2
 
 [node name="NewGame" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_ko1gu")
+texture = ExtResource("2_a7f7t")
 stretch_mode = 2
 
 [node name="NewGameButton" type="Button" parent="HBoxContainer/VBoxContainer/NewGame"]
@@ -51,7 +51,7 @@ Good luck"
 
 [node name="NewGame2" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_0a2he")
+texture = ExtResource("4_kq353")
 stretch_mode = 2
 
 [node name="TutorialButton" type="Button" parent="HBoxContainer/VBoxContainer/NewGame2"]
