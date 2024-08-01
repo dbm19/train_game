@@ -1,10 +1,10 @@
+VBoxContainer
 Button
 HBoxContainer
 TextureRect
 Label
 MarginContainer
 ColorRect
-VBoxContainer
 Control
 CollisionShape2D
 Node2D

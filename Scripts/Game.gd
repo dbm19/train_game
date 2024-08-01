@@ -40,6 +40,9 @@ func _ready():
 	elif self.has_node("TileMapFourTrains"):
 		for n in range(1, 5):
 			random_numbers.append(n)
+	elif self.has_node("TileMapFiveTrains"):
+		for n in range(1, 6):
+			random_numbers.append(n)
 	elif self.has_node("TileMapEightTrains"):
 		for n in range(1, 9):
 			random_numbers.append(n)
