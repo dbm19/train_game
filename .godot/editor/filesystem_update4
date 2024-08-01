@@ -25,3 +25,7 @@ res://scenes/junctions/down_right_junction.tscn
 res://scenes/junctions/right_down_junction.tscn
 res://scripts/NewGameButton.gd
 res://scenes/tile_map_easy.tscn
+res://difficulty_select.tscn
+res://scenes/difficulty_select.tscn
+res://scenes/8Trains.gd
+res://scenes/9Trains.gd

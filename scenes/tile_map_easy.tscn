@@ -89,7 +89,7 @@ offset_left = -925.65
 offset_top = -529.941
 offset_right = 994.35
 offset_bottom = 538.059
-color = Color(0.560784, 0.952941, 0.996078, 1)
+color = Color(0.933333, 0.843137, 0.968627, 1)
 
 [node name="TileMapThreeTrains" type="TileMap" parent="."]
 position = Vector2(-96.8816, -31.173)

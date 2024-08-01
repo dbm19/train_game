@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3p6dkwo1n4g7"]
+
+[ext_resource type="Texture2D" uid="uid://nwweb2gxu21l" path="res://art_assets/difficulty.png" id="1_hdmih"]
+[ext_resource type="Texture2D" uid="uid://db13r50xq74e" path="res://art_assets/8_trains.png" id="2_3ljwh"]
+[ext_resource type="Texture2D" uid="uid://cxmcqttcw2q60" path="res://art_assets/9_trains.png" id="3_au7ac"]
+[ext_resource type="Script" path="res://scenes/8Trains.gd" id="3_k516c"]
+[ext_resource type="Script" path="res://scenes/9Trains.gd" id="5_6y1a5"]
+
+[node name="DifficultySelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3.0
+offset_top = 8.0
+offset_right = 1917.0
+offset_bottom = 1076.0
+color = Color(0.933333, 0.843137, 0.968627, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 21.0
+offset_right = 1220.0
+offset_bottom = 157.0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_hdmih")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 208.0
+offset_right = 1902.0
+offset_bottom = 1056.0
+
+[node name="8Trains" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_3ljwh")
+flat = true
+script = ExtResource("3_k516c")
+
+[node name="9Trains" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_au7ac")
+flat = true
+script = ExtResource("5_6y1a5")
+
+[connection signal="pressed" from="HBoxContainer/8Trains" to="HBoxContainer/8Trains" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/9Trains" to="HBoxContainer/9Trains" method="_on_pressed"]
