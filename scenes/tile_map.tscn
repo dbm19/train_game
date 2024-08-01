@@ -74,11 +74,19 @@ sources/10 = SubResource("TileSetAtlasSource_netuf")
 sources/11 = SubResource("TileSetAtlasSource_vliqd")
 
 [node name="Game" type="Node2D" groups=["game"]]
+position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_5rr6m")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -925.65
+offset_top = -529.941
+offset_right = 994.35
+offset_bottom = 538.059
+color = Color(0.560784, 0.952941, 0.996078, 1)
+
 [node name="TileMapEightTrains" type="TileMap" parent="."]
-position = Vector2(258.031, 321.471)
+position = Vector2(-34.5321, -26.3022)
 scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_28vtv")
 format = 2
@@ -94,10 +102,10 @@ wait_time = 2.0
 autostart = true
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 571.697
-offset_top = 2.92247
-offset_right = 771.697
-offset_bottom = 114.922
+offset_left = 274.338
+offset_top = -339.98
+offset_right = 474.338
+offset_bottom = -227.981
 text = "Score: 
 "
 
@@ -110,6 +118,6 @@ text = "0"
 script = ExtResource("20_yllyj")
 
 [node name="Spawn" type="Node2D" parent="."]
-position = Vector2(34.532, 31.173)
+position = Vector2(-258.031, -308.807)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

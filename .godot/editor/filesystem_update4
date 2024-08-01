@@ -23,3 +23,5 @@ res://new_main_menu.tscn
 res://scenes/junctions/down_left_junction.tscn
 res://scenes/junctions/down_right_junction.tscn
 res://scenes/junctions/right_down_junction.tscn
+res://scripts/NewGameButton.gd
+res://scenes/tile_map_easy.tscn
