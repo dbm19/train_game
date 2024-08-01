@@ -7,10 +7,14 @@
 [ext_resource type="Script" path="res://TutorialButton.gd" id="5_1qpla"]
 
 [node name="MarginContainer" type="MarginContainer"]
-offset_left = 726.0
-offset_top = 169.0
-offset_right = 1126.0
-offset_bottom = 698.0
+offset_left = 598.0
+offset_top = 217.0
+offset_right = 1490.0
+offset_bottom = 793.0
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -61,6 +65,9 @@ offset_top = -1.0
 offset_right = 404.0
 offset_bottom = 103.0
 script = ExtResource("5_1qpla")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGame/NewGameButton" to="HBoxContainer/VBoxContainer/NewGame/NewGameButton" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGame2/TutorialButton" to="HBoxContainer/VBoxContainer/NewGame2/TutorialButton" method="_on_pressed"]
