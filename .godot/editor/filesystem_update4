@@ -40,3 +40,5 @@ res://tutorial.tscn
 res://scenes/menu/PracticeRound.gd
 res://scenes/menu/tutorial.tscn
 res://scripts/TutorialButton.gd
+res://scripts/NewGameButton.gd
+res://scripts/8Trains.gd

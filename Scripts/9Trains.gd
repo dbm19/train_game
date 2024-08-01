@@ -13,6 +13,7 @@ func _process(delta):
 	pass
 
 func _on_pressed():
+	get_node("AudioStreamPlayer").playing = true
 	map_index = rng.randi_range(1, 5)
 	if map_index == 1:
 		get_tree().change_scene_to_file("res://scenes/levels/9_trains/tile_map_5.tscn")

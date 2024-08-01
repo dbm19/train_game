@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3p6dkwo1n4g7"]
+[gd_scene load_steps=17 format=3 uid="uid://c3p6dkwo1n4g7"]
 
 [ext_resource type="Texture2D" uid="uid://nwweb2gxu21l" path="res://art_assets/difficulty.png" id="1_5h4p2"]
 [ext_resource type="Texture2D" uid="uid://db13r50xq74e" path="res://art_assets/8_trains.png" id="2_rn1i6"]
 [ext_resource type="Texture2D" uid="uid://cw1k5sbh0463b" path="res://art_assets/4_trains.png" id="2_ys30n"]
 [ext_resource type="Script" path="res://scripts/8Trains.gd" id="3_ftc1b"]
 [ext_resource type="Script" path="res://scenes/menu/4Trains.gd" id="3_fvup8"]
+[ext_resource type="AudioStream" uid="uid://c7hlgtpnk7ptc" path="res://light_switch_click.wav" id="4_tbj4s"]
 [ext_resource type="Texture2D" uid="uid://cxmcqttcw2q60" path="res://art_assets/9_trains.png" id="4_wfnel"]
 [ext_resource type="Texture2D" uid="uid://hlk5m1asfsv5" path="res://art_assets/5_trains.png" id="4_yv6eg"]
 [ext_resource type="Script" path="res://scripts/9Trains.gd" id="5_aoc2q"]
@@ -59,11 +60,19 @@ icon = ExtResource("2_ys30n")
 flat = true
 script = ExtResource("3_fvup8")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HBoxContainer/VBoxContainer/4Trains"]
+stream = ExtResource("4_tbj4s")
+volume_db = 24.0
+
 [node name="5Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("4_yv6eg")
 flat = true
 script = ExtResource("5_p0rla")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HBoxContainer/VBoxContainer/5Trains"]
+stream = ExtResource("4_tbj4s")
+volume_db = 24.0
 
 [node name="6Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -71,11 +80,19 @@ icon = ExtResource("6_7lhxf")
 flat = true
 script = ExtResource("7_074l6")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HBoxContainer/VBoxContainer/6Trains"]
+stream = ExtResource("4_tbj4s")
+volume_db = 24.0
+
 [node name="7Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("8_75wur")
 flat = true
 script = ExtResource("9_ts8hw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HBoxContainer/VBoxContainer/7Trains"]
+stream = ExtResource("4_tbj4s")
+volume_db = 24.0
 
 [node name="8Trains2" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -83,11 +100,19 @@ icon = ExtResource("2_rn1i6")
 flat = true
 script = ExtResource("3_ftc1b")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HBoxContainer/VBoxContainer/8Trains2"]
+stream = ExtResource("4_tbj4s")
+volume_db = 24.0
+
 [node name="9Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("4_wfnel")
 flat = true
 script = ExtResource("5_aoc2q")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HBoxContainer/VBoxContainer/9Trains"]
+stream = ExtResource("4_tbj4s")
+volume_db = 24.0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -97,6 +122,10 @@ layout_mode = 2
 icon = ExtResource("14_fkat8")
 flat = true
 script = ExtResource("14_oro5x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HBoxContainer/VBoxContainer2/10Trains"]
+stream = ExtResource("4_tbj4s")
+volume_db = 24.0
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/4Trains" to="HBoxContainer/VBoxContainer/4Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/5Trains" to="HBoxContainer/VBoxContainer/5Trains" method="_on_pressed"]

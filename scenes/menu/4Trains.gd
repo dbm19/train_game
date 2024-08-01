@@ -12,6 +12,7 @@ func _process(delta):
 	pass
 
 func _on_pressed():
+	get_node("AudioStreamPlayer").playing = true
 	map_index = rng.randi_range(1, 5)
 	if map_index == 1:
 		get_tree().change_scene_to_file("res://scenes/levels/4_trains/4_train_map_one.tscn")
@@ -21,4 +22,3 @@ func _on_pressed():
 		get_tree().change_scene_to_file("res://scenes/levels/4_trains/4_train_map_three.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/levels/4_trains/4_train_map_four.tscn")
-	
