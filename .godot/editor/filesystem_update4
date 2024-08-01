@@ -42,3 +42,6 @@ res://scenes/menu/tutorial.tscn
 res://scripts/TutorialButton.gd
 res://scripts/NewGameButton.gd
 res://scripts/8Trains.gd
+res://scripts/Junction.gd
+res://singleton.gd
+res://scenes/sound_player.tscn

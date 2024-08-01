@@ -26,6 +26,7 @@ func _on_area_entered(area):
 	_change_train_orientation(area)
 
 func _on_button_pressed():
+	SoundPlayer.play_sound()
 	if get_groups()[0] == "down_right":
 		if orientation == orientations["down"]:
 			orientation = orientations["right"]

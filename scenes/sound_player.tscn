@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn3dr55lqwsi7"]
+
+[ext_resource type="Script" path="res://singleton.gd" id="1_jtcbj"]
+[ext_resource type="AudioStream" uid="uid://1kmi1dp1si2o" path="res://junction_sound.wav" id="2_efqii"]
+
+[node name="SoundPlayer" type="Node"]
+script = ExtResource("1_jtcbj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_efqii")

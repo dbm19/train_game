@@ -1,4 +1,5 @@
 AudioStreamPlayer
+Node
 Button
 Label
 HBoxContainer
@@ -11,5 +12,3 @@ Control
 CollisionShape2D
 Node2D
 MultiplayerSpawner
-Area2D
-RichTextLabel
