@@ -1,3 +1,5 @@
+VBoxContainer
+MarginContainer
 Control
 TextureRect
 Label
@@ -5,11 +7,8 @@ CollisionShape2D
 Node2D
 MultiplayerSpawner
 Area2D
-MarginContainer
 TextEdit
 Button
-VBoxContainer
 HBoxContainer
 RichTextLabel
 Sprite2D
-Timer

@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2xupy1sue1jd"]
+[gd_scene load_steps=6 format=3 uid="uid://b2xupy1sue1jd"]
 
-[ext_resource type="PackedScene" uid="uid://dk4prnvo4y0ql" path="res://main_menu.tscn" id="1_n23t7"]
 [ext_resource type="Texture2D" uid="uid://bfxsjfy50ecx0" path="res://art_assets/train_game_ligma.png" id="1_y46ve"]
-[ext_resource type="Texture2D" uid="uid://d0m5rmana3l7a" path="res://art_assets/new_game_figma.png" id="2_ff7gb"]
+[ext_resource type="Texture2D" uid="uid://dq8eixputiefi" path="res://art_assets/new_game_ligma.png" id="2_rntdt"]
 [ext_resource type="Script" path="res://scripts/NewGameButton.gd" id="3_mfiof"]
 [ext_resource type="Texture2D" uid="uid://bpa10jw24sfb7" path="res://art_assets/tutorial_ligma.png" id="4_g5pp0"]
 [ext_resource type="Script" path="res://TutorialButton.gd" id="5_3siwa"]
@@ -12,65 +11,51 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 475.0
+offset_top = 146.0
+offset_right = -389.0
+offset_bottom = -146.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" parent="." instance=ExtResource("1_n23t7")]
+[node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 892.0
-offset_bottom = 576.0
+offset_left = 54.0
+offset_top = -148.0
+offset_right = 946.0
+offset_bottom = 444.0
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="Title" type="TextureRect" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
+[node name="GameTitle" type="TextureRect" parent="MarginContainer2"]
 layout_mode = 2
 texture = ExtResource("1_y46ve")
 stretch_mode = 2
 
-[node name="NewGame" type="TextureRect" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
-texture = ExtResource("2_ff7gb")
-stretch_mode = 2
+offset_left = 235.0
+offset_top = 212.0
+offset_right = 763.0
+offset_bottom = 504.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
 
-[node name="NewGameButton" type="Button" parent="MarginContainer/HBoxContainer2/VBoxContainer/NewGame"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 404.0
-offset_bottom = 103.0
+[node name="NewGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_rntdt")
+flat = true
+icon_alignment = 1
 script = ExtResource("3_mfiof")
 
-[node name="TextEdit" type="TextEdit" parent="MarginContainer/HBoxContainer2/VBoxContainer/NewGame"]
-layout_mode = 0
-offset_left = -291.0
-offset_top = 320.0
-offset_right = 829.0
-offset_bottom = 496.0
-text = "Your objective is to conduct the trains toward the correct terminals. 
-
-Blue trains must arrive at the blue terminus, yellow trains at the yellow terminus, etc. 
-
-Click on the track junctions to change the direction of the tracks in order to redirect the trains.
-Good luck"
-
-[node name="NewGame2" type="TextureRect" parent="MarginContainer/HBoxContainer2/VBoxContainer"]
+[node name="TutorialButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_g5pp0")
-stretch_mode = 2
-
-[node name="TutorialButton" type="Button" parent="MarginContainer/HBoxContainer2/VBoxContainer/NewGame2"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 404.0
-offset_bottom = 103.0
+icon = ExtResource("4_g5pp0")
+flat = true
+icon_alignment = 1
 script = ExtResource("5_3siwa")
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer/NewGame/NewGameButton" to="MarginContainer/HBoxContainer2/VBoxContainer/NewGame/NewGameButton" method="_on_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer2/VBoxContainer/NewGame2/TutorialButton" to="MarginContainer/HBoxContainer2/VBoxContainer/NewGame2/TutorialButton" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/NewGameButton" to="VBoxContainer/NewGameButton" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/TutorialButton" to="VBoxContainer/TutorialButton" method="_on_pressed"]
