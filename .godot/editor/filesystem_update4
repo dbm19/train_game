@@ -13,3 +13,13 @@ res://scripts/Game.gd
 res://scenes/levels/5_trains/5_train_map_three.tscn
 res://scenes/levels/5_trains/5_train_map_two.tscn
 res://scenes/menu/5Trains.gd
+res://scenes/levels/6_trains/6_train_map_four.tscn
+res://scenes/levels/6_trains/6_train_map_two.tscn
+res://scenes/levels/6_trains/6_train_map_three.tscn
+res://scenes/levels/6_trains/6_train_map_one.tscn
+res://scenes/menu/6Trains.gd
+res://scenes/levels/7_trains/7_train_map_four.tscn
+res://scenes/levels/7_trains/7_train_map_one.tscn
+res://scenes/levels/7_trains/7_train_map_three.tscn
+res://scenes/levels/7_trains/7_train_map_two.tscn
+res://scenes/menu/7Trains.gd

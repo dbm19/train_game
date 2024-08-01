@@ -43,6 +43,12 @@ func _ready():
 	elif self.has_node("TileMapFiveTrains"):
 		for n in range(1, 6):
 			random_numbers.append(n)
+	elif self.has_node("TileMapSixTrains"):
+		for n in range(1, 7):
+			random_numbers.append(n)
+	elif self.has_node("TileMapSevenTrains"):
+		for n in range(1, 8):
+			random_numbers.append(n)
 	elif self.has_node("TileMapEightTrains"):
 		for n in range(1, 9):
 			random_numbers.append(n)

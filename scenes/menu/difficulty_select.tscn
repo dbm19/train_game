@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3p6dkwo1n4g7"]
+[gd_scene load_steps=14 format=3 uid="uid://c3p6dkwo1n4g7"]
 
 [ext_resource type="Texture2D" uid="uid://nwweb2gxu21l" path="res://art_assets/difficulty.png" id="1_5h4p2"]
 [ext_resource type="Texture2D" uid="uid://db13r50xq74e" path="res://art_assets/8_trains.png" id="2_rn1i6"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://hlk5m1asfsv5" path="res://art_assets/5_trains.png" id="4_yv6eg"]
 [ext_resource type="Script" path="res://scripts/9Trains.gd" id="5_aoc2q"]
 [ext_resource type="Script" path="res://scenes/menu/5Trains.gd" id="5_p0rla"]
+[ext_resource type="Texture2D" uid="uid://d0ud74wbn1pps" path="res://art_assets/6_trains.png" id="6_7lhxf"]
+[ext_resource type="Script" path="res://scenes/menu/6Trains.gd" id="7_074l6"]
+[ext_resource type="Texture2D" uid="uid://bm78gjhg0j8ur" path="res://art_assets/7_trains.png" id="8_75wur"]
+[ext_resource type="Script" path="res://scenes/menu/7Trains.gd" id="9_ts8hw"]
 
 [node name="DifficultySelect" type="Control"]
 layout_mode = 3
@@ -39,10 +43,10 @@ texture = ExtResource("1_5h4p2")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 208.0
+offset_left = 8.0
+offset_top = 189.0
 offset_right = 1902.0
-offset_bottom = 1056.0
+offset_bottom = 1092.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -59,6 +63,18 @@ icon = ExtResource("4_yv6eg")
 flat = true
 script = ExtResource("5_p0rla")
 
+[node name="6Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("6_7lhxf")
+flat = true
+script = ExtResource("7_074l6")
+
+[node name="7Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("8_75wur")
+flat = true
+script = ExtResource("9_ts8hw")
+
 [node name="8Trains2" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("2_rn1i6")
@@ -73,5 +89,7 @@ script = ExtResource("5_aoc2q")
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/4Trains" to="HBoxContainer/VBoxContainer/4Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/5Trains" to="HBoxContainer/VBoxContainer/5Trains" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/6Trains" to="HBoxContainer/VBoxContainer/6Trains" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/7Trains" to="HBoxContainer/VBoxContainer/7Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/8Trains2" to="HBoxContainer/VBoxContainer/8Trains2" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/9Trains" to="HBoxContainer/VBoxContainer/9Trains" method="_on_pressed"]
