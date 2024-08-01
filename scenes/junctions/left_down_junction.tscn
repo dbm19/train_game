@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cyty4ct4cq8wr" path="res://art_assets/horizontal_junction.png" id="2_u436s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
-size = Vector2(2, 3)
+size = Vector2(2, 1.5)
 
 [node name="Area2D" type="Area2D" groups=["left_down"]]
 script = ExtResource("1_22nes")

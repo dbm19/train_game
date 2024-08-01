@@ -4,12 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cbdjygg1js3uy" path="res://art_assets/green_train.png" id="2_h22pd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kti70"]
-size = Vector2(3, 2.25)
+size = Vector2(10.25, 9)
 
 [node name="Area2D" type="Area2D" groups=["colour_train_green", "train_sprite"]]
 script = ExtResource("1_7gb7s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.125, 0)
 shape = SubResource("RectangleShape2D_kti70")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
