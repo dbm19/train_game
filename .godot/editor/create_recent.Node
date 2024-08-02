@@ -1,8 +1,8 @@
+Button
+TextureRect
 Timer
 Node
-TextureRect
 AudioStreamPlayer
-Button
 Label
 HBoxContainer
 TextEdit
@@ -12,4 +12,3 @@ ColorRect
 Control
 CollisionShape2D
 Node2D
-MultiplayerSpawner

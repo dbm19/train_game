@@ -16,3 +16,4 @@ res://scenes/levels/9_trains/9_train_map_one.tscn
 res://scripts/score_screen.gd
 res://scripts/Terminus.gd
 res://scripts/Score.gd
+res://scenes/menu/Back.gd

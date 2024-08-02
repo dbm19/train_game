@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://0q0gjhr0wior"]
+[gd_scene load_steps=3 format=3 uid="uid://0q0gjhr0wior"]
 
 [ext_resource type="Script" path="res://scripts/score_screen.gd" id="1_v7e4w"]
+[ext_resource type="Texture2D" uid="uid://dr2frl3do3p78" path="res://art_assets/your_score.png" id="2_iesvy"]
 
 [node name="ScoreScreen" type="Node2D" groups=["game"]]
 scale = Vector2(1.04251, 1.02653)
@@ -13,19 +14,18 @@ offset_right = 1846.33
 offset_bottom = 1083.41
 color = Color(0.933333, 0.843137, 0.968627, 1)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 588.963
-offset_top = 500.716
-offset_right = 1259.96
-offset_bottom = 523.716
-text = "Your score:"
-horizontal_alignment = 1
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 695.437
+offset_top = 296.143
+offset_right = 1215.44
+offset_bottom = 404.143
+texture = ExtResource("2_iesvy")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 793.278
-offset_top = 530.915
-offset_right = 1063.28
-offset_bottom = 555.915
+offset_left = 772.175
+offset_top = 465.646
+offset_right = 1154.17
+offset_bottom = 582.646
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

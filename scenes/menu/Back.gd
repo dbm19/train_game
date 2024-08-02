@@ -1,16 +1,15 @@
-extends Label
+extends Button
 
-var score = 0
-signal update_score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-	
+	pass # Replace with function body.
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-func _update_score():
-	score += 1
-	text = str(score)
+func _on_pressed():
+	SoundPlayer.play_menu_sound()
+	get_tree().change_scene_to_file("res://scenes/menu/new_main_menu.tscn")
