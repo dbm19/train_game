@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ni56ouk55n4w"]
+[gd_scene load_steps=38 format=3 uid="uid://ni56ouk55n4w"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_kfypg"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_br2fj"]
@@ -27,6 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://cdtyf440n5mf" path="res://scenes/spawn/spawn_up.tscn" id="25_5n244"]
 [ext_resource type="Script" path="res://scripts/TileMap.gd" id="26_ho1lm"]
 [ext_resource type="Script" path="res://scripts/Score.gd" id="27_n5eby"]
+[ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="28_835gl"]
+[ext_resource type="Script" path="res://scenes/menu/Back.gd" id="29_jibfu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynvvt"]
 texture = ExtResource("2_br2fj")
@@ -126,4 +128,14 @@ script = ExtResource("27_n5eby")
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-0.959213, 385.766)
 
+[node name="Back" type="Button" parent="."]
+offset_left = -904.548
+offset_top = -513.38
+offset_right = -724.548
+offset_bottom = -397.38
+icon = ExtResource("28_835gl")
+flat = true
+script = ExtResource("29_jibfu")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

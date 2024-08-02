@@ -17,3 +17,8 @@ res://scripts/score_screen.gd
 res://scripts/Terminus.gd
 res://scripts/Score.gd
 res://scenes/menu/Back.gd
+res://scenes/tile_map_easy.tscn
+res://scenes/spawn/spawn_down.tscn
+res://scenes/spawn/spawn_left.tscn
+res://scenes/spawn/spawn_right.tscn
+res://scenes/spawn/spawn_up.tscn
