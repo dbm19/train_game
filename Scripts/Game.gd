@@ -36,6 +36,7 @@ var end = false
 
 func _ready():
 	spawn = get_node("Spawn")
+	ScoreScreen.timer.timeout.connect(_on_timeout)
 	
 	if self.has_node("TileMapThreeTrains"):
 		for n in range(1, 4):
@@ -68,10 +69,12 @@ func _process(delta):
 
 func _on_timer_timeout():
 	train_count -= 1
+	
+	if train_count == 1:
+		end = true
 
 	if train_count == 2:
 		get_node("Timer").one_shot = true
-		end = true
 	else:
 		if train_index < 9:
 			train_index += 1
@@ -112,9 +115,16 @@ func _spawn():
 		trains[train_index] = black_train.instantiate()
 	else:
 		trains[train_index] = white_train.instantiate()
+	
+	if end == true:
+		trains[train_index].add_to_group("last_train")
+		print(trains[train_index].get_groups())
 	trains[train_index].position.x = spawn.position.x
 	trains[train_index].position.y = spawn.position.y
 	trains[train_index].scale.x = 1
 	trains[train_index].scale.y = 1
 
 	self.add_child(trains[train_index])
+
+func _on_timeout():
+	get_tree().change_scene_to_file("res://scenes/score_screen.tscn")

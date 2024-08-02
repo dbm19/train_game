@@ -1,11 +1,12 @@
-AudioStreamPlayer
+Timer
 Node
+TextureRect
+AudioStreamPlayer
 Button
 Label
 HBoxContainer
 TextEdit
 VBoxContainer
-TextureRect
 MarginContainer
 ColorRect
 Control

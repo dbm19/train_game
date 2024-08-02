@@ -65,9 +65,9 @@ func _on_pressed():
 		elif map_index == 2:
 			get_tree().change_scene_to_file("res://scenes/levels/9_trains/9_train_map_one.tscn")
 		elif map_index == 3:
-			get_tree().change_scene_to_file("res://scenes/levels/9_trains/9_tile_map_two.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/9_trains/9_train_map_two.tscn")
 		else:
-			get_tree().change_scene_to_file("res://scenes/levels/9_trains/9_tile_map_three.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/9_trains/9_train_map_three.tscn")
 	elif self.name == "10Trains":
 		if map_index == 1:
 			get_tree().change_scene_to_file("res://scenes/levels/10_trains/10_train_map_one.tscn")

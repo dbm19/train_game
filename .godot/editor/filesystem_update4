@@ -9,3 +9,10 @@ res://singleton.gd
 res://scenes/menu/4Trains.gd
 res://scripts/TutorialButton.gd
 res://scripts/PracticeRound.gd
+res://scripts/Difficulty.gd
+res://scripts/Game.gd
+res://scenes/score_screen.tscn
+res://scenes/levels/9_trains/9_train_map_one.tscn
+res://scripts/score_screen.gd
+res://scripts/Terminus.gd
+res://scripts/Score.gd

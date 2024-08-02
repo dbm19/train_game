@@ -27,4 +27,9 @@ func _on_area_entered(area):
 		get_tree().call_group("score", "_update_score")
 	elif area.get_groups()[0] == "colour_train_black" && get_groups()[0] == "colour_black_terminus":
 		get_tree().call_group("score", "_update_score")
+	elif area.get_groups()[0] == "colour_train_white" && get_groups()[0] == "colour_white_terminus":
+		get_tree().call_group("score", "_update_score")
+	
+	if area.get_groups().size() == 3 && area.get_groups()[2] == "last_train":
+		ScoreScreen.endTimer()
 	area.queue_free()

@@ -13,3 +13,4 @@ func _process(delta):
 func _update_score():
 	score += 1
 	text = str(score)
+	ScoreScreen.score = score
