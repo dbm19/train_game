@@ -80,9 +80,9 @@ func _on_timer_timeout():
 			train_index += 1
 		else:
 			train_index = 1
-		
-		_spawn()
-		
+			
+	_spawn()
+
 func _spawn():
 	if random_numbers_index == 0:
 		random_numbers.shuffle()
