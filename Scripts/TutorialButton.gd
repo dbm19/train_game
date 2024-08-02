@@ -9,5 +9,5 @@ func _process(delta):
 	pass
 
 func _on_pressed():
-	get_node("AudioStreamPlayer").playing = true
+	SoundPlayer.play_menu_sound()
 	get_tree().change_scene_to_file("res://scenes/menu/tutorial.tscn")

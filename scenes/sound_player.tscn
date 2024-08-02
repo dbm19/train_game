@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn3dr55lqwsi7"]
+[gd_scene load_steps=4 format=3 uid="uid://bn3dr55lqwsi7"]
 
 [ext_resource type="Script" path="res://singleton.gd" id="1_jtcbj"]
-[ext_resource type="AudioStream" uid="uid://1kmi1dp1si2o" path="res://junction_sound.wav" id="2_efqii"]
+[ext_resource type="AudioStream" uid="uid://b56axs8wgh3dn" path="res://junction_sound.wav" id="2_lr5v1"]
+[ext_resource type="AudioStream" uid="uid://c7hlgtpnk7ptc" path="res://menu_sound.wav" id="3_0xrin"]
 
 [node name="SoundPlayer" type="Node"]
 script = ExtResource("1_jtcbj")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_efqii")
+[node name="JunctionSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_lr5v1")
+
+[node name="MenuSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0xrin")
+volume_db = 24.0

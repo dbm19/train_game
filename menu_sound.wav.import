@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c7hlgtpnk7ptc"
-path="res://.godot/imported/light_switch_click.wav-758e962bfe84aa06686bbb50ba17d2ea.sample"
+path="res://.godot/imported/menu_sound.wav-d70de6925f02999c5b1728795c70480d.sample"
 
 [deps]
 
-source_file="res://light_switch_click.wav"
-dest_files=["res://.godot/imported/light_switch_click.wav-758e962bfe84aa06686bbb50ba17d2ea.sample"]
+source_file="res://menu_sound.wav"
+dest_files=["res://.godot/imported/menu_sound.wav-d70de6925f02999c5b1728795c70480d.sample"]
 
 [params]
 
