@@ -4,3 +4,6 @@ res://scenes/levels/10_trains/10_train_map_two.tscn
 res://scenes/levels/9_trains/9_train_map_one.tscn
 res://scripts/Terminus.gd
 res://scripts/Game.gd
+res://scenes/tile_map_easy.tscn
+res://scripts/PracticeRound.gd
+res://scenes/menu/Back.gd

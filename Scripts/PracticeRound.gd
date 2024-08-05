@@ -10,7 +10,6 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_pressed():
 	SoundPlayer.play_menu_sound()
 	get_tree().change_scene_to_file("res://scenes/tile_map_easy.tscn")

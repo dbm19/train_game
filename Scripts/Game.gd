@@ -82,12 +82,11 @@ func _on_timer_timeout():
 func _spawn():
 	if random_numbers_index == 0 :
 		random_numbers.shuffle()
-	print(random_numbers, random_numbers_index)
+		
 	if random_numbers_index < random_numbers.size():
 		spawn_rng = random_numbers[random_numbers_index]
 		random_numbers_index += 1
 	else:
-		print("shuffle")
 		random_numbers.shuffle()
 		random_numbers_index = 0
 		spawn_rng = random_numbers[random_numbers_index]

@@ -12,4 +12,5 @@ func _process(delta):
 
 func _on_pressed():
 	SoundPlayer.play_menu_sound()
+	SoundPlayer.backgroundChugSound.playing = false
 	get_tree().change_scene_to_file("res://scenes/menu/new_main_menu.tscn")
