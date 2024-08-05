@@ -1,15 +1,14 @@
+VBoxContainer
+Label
 AudioStreamPlayer2D
 Timer
 Node
 Button
 TextureRect
 AudioStreamPlayer
-Label
 HBoxContainer
 TextEdit
-VBoxContainer
 MarginContainer
 ColorRect
 Control
 CollisionShape2D
-Node2D

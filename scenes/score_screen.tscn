@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://0q0gjhr0wior"]
+[gd_scene load_steps=7 format=3 uid="uid://0q0gjhr0wior"]
 
 [ext_resource type="Script" path="res://scripts/score_screen.gd" id="1_4jhxx"]
 [ext_resource type="Texture2D" uid="uid://dr2frl3do3p78" path="res://art_assets/your_score.png" id="2_iesvy"]
@@ -6,6 +6,11 @@
 [ext_resource type="Script" path="res://scenes/menu/Back.gd" id="4_vjarx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yraji"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_61qpk"]
+line_spacing = 30.0
 font_size = 30
 font_color = Color(0, 0, 0, 1)
 
@@ -27,14 +32,6 @@ offset_right = 1215.44
 offset_bottom = 404.143
 texture = ExtResource("2_iesvy")
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 772.175
-offset_top = 465.646
-offset_right = 1154.17
-offset_bottom = 582.646
-label_settings = SubResource("LabelSettings_yraji")
-horizontal_alignment = 1
-
 [node name="Back" type="Button" parent="."]
 offset_left = 17.0
 offset_top = 20.0
@@ -43,5 +40,21 @@ offset_bottom = 136.0
 icon = ExtResource("3_cdeyj")
 flat = true
 script = ExtResource("4_vjarx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 724.0
+offset_top = 430.0
+offset_right = 1166.0
+offset_bottom = 586.0
+
+[node name="Label1" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_yraji")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_61qpk")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
