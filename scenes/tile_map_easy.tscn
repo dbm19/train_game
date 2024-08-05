@@ -137,12 +137,5 @@ icon = ExtResource("28_835gl")
 flat = true
 script = ExtResource("29_jibfu")
 
-[connection signal="area_entered" from="TileMapThreeTrains/Area2D" to="TileMapThreeTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapThreeTrains/Area2D" to="TileMapThreeTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@371308" to="TileMapThreeTrains/@Area2D@371308" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapThreeTrains/@Area2D@371308" to="TileMapThreeTrains/@Area2D@371308" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@371309" to="TileMapThreeTrains/@Area2D@371309" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@371310" to="TileMapThreeTrains/@Area2D@371310" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@371311" to="TileMapThreeTrains/@Area2D@371311" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

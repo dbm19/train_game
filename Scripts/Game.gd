@@ -32,11 +32,9 @@ var white_train = preload("res://scenes/trains/white_train.tscn")
 var train_count = 15
 var random_numbers_index = 0
 var random_numbers = []
-var end = false
 
 func _ready():
 	spawn = get_node("Spawn")
-	ScoreScreen.timer.timeout.connect(_on_timeout)
 	
 	if self.has_node("TileMapThreeTrains"):
 		for n in range(1, 4):
@@ -69,9 +67,6 @@ func _process(delta):
 
 func _on_timer_timeout():
 	train_count -= 1
-	
-	if train_count == 1:
-		end = true
 
 	if train_count == 2:
 		get_node("Timer").one_shot = true
@@ -92,8 +87,6 @@ func _spawn():
 		random_numbers_index += 1
 	else:
 		random_numbers_index = 0
-		random_numbers = []
-		_ready()
 	
 	if spawn_rng == 1:
 		trains[train_index] = blue_train.instantiate()
@@ -116,9 +109,6 @@ func _spawn():
 	else:
 		trains[train_index] = white_train.instantiate()
 	
-	if end == true:
-		trains[train_index].add_to_group("last_train")
-		print(trains[train_index].get_groups())
 	trains[train_index].position.x = spawn.position.x
 	trains[train_index].position.y = spawn.position.y
 	trains[train_index].scale.x = 1

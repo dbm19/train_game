@@ -17,4 +17,3 @@ func play_junction_sound():
 	
 func play_menu_sound():
 	menuSound.playing = true
-

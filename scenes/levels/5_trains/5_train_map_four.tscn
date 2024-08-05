@@ -126,17 +126,4 @@ script = ExtResource("27_uubm4")
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(371.219, 31.173)
 
-[connection signal="area_entered" from="TileMapFiveTrains/Area2D" to="TileMapFiveTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFiveTrains/Area2D" to="TileMapFiveTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFiveTrains/@Area2D@34099" to="TileMapFiveTrains/@Area2D@34099" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFiveTrains/@Area2D@34100" to="TileMapFiveTrains/@Area2D@34100" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFiveTrains/@Area2D@34101" to="TileMapFiveTrains/@Area2D@34101" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFiveTrains/@Area2D@34101" to="TileMapFiveTrains/@Area2D@34101" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFiveTrains/@Area2D@34102" to="TileMapFiveTrains/@Area2D@34102" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFiveTrains/@Area2D@34102" to="TileMapFiveTrains/@Area2D@34102" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFiveTrains/@Area2D@34104" to="TileMapFiveTrains/@Area2D@34104" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFiveTrains/@Area2D@34711" to="TileMapFiveTrains/@Area2D@34711" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFiveTrains/@Area2D@34712" to="TileMapFiveTrains/@Area2D@34712" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFiveTrains/@Area2D@34714" to="TileMapFiveTrains/@Area2D@34714" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFiveTrains/@Area2D@34714" to="TileMapFiveTrains/@Area2D@34714" method="_on_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

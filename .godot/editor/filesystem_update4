@@ -22,3 +22,9 @@ res://scenes/spawn/spawn_down.tscn
 res://scenes/spawn/spawn_left.tscn
 res://scenes/spawn/spawn_right.tscn
 res://scenes/spawn/spawn_up.tscn
+res://scenes/levels/5_trains/5_train_map_four.tscn
+res://scenes/terminus/blue_terminus.tscn
+res://scenes/trains/blue_train.tscn
+res://scenes/tile_map_2.tscn
+res://scenes/levels/4_trains/bug_test_map.tscn
+res://scenes/levels/4_trains/bug_test_map.gd
