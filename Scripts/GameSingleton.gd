@@ -20,3 +20,4 @@ func updateScore():
 
 func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://scenes/score_screen.tscn")
+	SoundPlayer.backgroundChugSound.playing = false

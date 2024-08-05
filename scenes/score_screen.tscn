@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://0q0gjhr0wior"]
+[gd_scene load_steps=6 format=3 uid="uid://0q0gjhr0wior"]
 
-[ext_resource type="Script" path="res://scenes/score_screen.gd" id="1_4jhxx"]
+[ext_resource type="Script" path="res://scripts/score_screen.gd" id="1_4jhxx"]
 [ext_resource type="Texture2D" uid="uid://dr2frl3do3p78" path="res://art_assets/your_score.png" id="2_iesvy"]
 [ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="3_cdeyj"]
 [ext_resource type="Script" path="res://scenes/menu/Back.gd" id="4_vjarx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yraji"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [node name="ScoreScreen" type="Node2D" groups=["game"]]
 scale = Vector2(1.04251, 1.02653)
@@ -28,6 +32,8 @@ offset_left = 772.175
 offset_top = 465.646
 offset_right = 1154.17
 offset_bottom = 582.646
+label_settings = SubResource("LabelSettings_yraji")
+horizontal_alignment = 1
 
 [node name="Back" type="Button" parent="."]
 offset_left = 17.0

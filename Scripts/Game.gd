@@ -35,6 +35,7 @@ var random_numbers = []
 
 func _ready():
 	spawn = get_node("Spawn")
+	SoundPlayer.play_chug_sound()
 	
 	if self.has_node("TileMapThreeTrains"):
 		for n in range(1, 4):

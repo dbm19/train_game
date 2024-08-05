@@ -33,3 +33,4 @@ res://game_singleton.tscn
 res://scenes/game_singleton.tscn
 res://scripts/GameSingleton.gd
 res://scenes/score_screen.gd
+res://scripts/Sound.gd
