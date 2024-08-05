@@ -7,3 +7,11 @@ res://scripts/Game.gd
 res://scenes/tile_map_easy.tscn
 res://scripts/PracticeRound.gd
 res://scenes/menu/Back.gd
+res://scenes/trains/brown_train.tscn
+res://scenes/terminus/brown_terminus.tscn
+res://scenes/levels/11_trains/11_train_map_four.tscn
+res://scenes/levels/11_trains/11_train_map_one.tscn
+res://scenes/levels/11_trains/11_train_map_three.tscn
+res://scenes/levels/11_trains/11_train_map_two.tscn
+res://scripts/Difficulty.gd
+res://scenes/menu/difficulty_select.tscn

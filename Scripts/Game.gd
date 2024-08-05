@@ -17,7 +17,8 @@ var trains = {
 	"7": 0,
 	"8": 0,
 	"9": 0,
-	"10": 0
+	"10": 0,
+	"11": 0,
 }
 var blue_train = preload("res://scenes/trains/blue_train.tscn")
 var yellow_train = preload("res://scenes/trains/yellow_train.tscn")
@@ -29,6 +30,7 @@ var red_train = preload("res://scenes/trains/red_train.tscn")
 var green_train = preload("res://scenes/trains/green_train.tscn")
 var black_train = preload("res://scenes/trains/black_train.tscn")
 var white_train = preload("res://scenes/trains/white_train.tscn")
+var brown_train = preload("res://scenes/trains/brown_train.tscn")
 var train_count = 15
 var random_numbers_index = 0
 var random_numbers = []
@@ -58,8 +60,11 @@ func _ready():
 	elif self.has_node("TileMapNineTrains"):
 		for n in range(1, 10):
 			random_numbers.append(n)
-	else:
+	elif self.has_node("TileMapTenTrains"):
 		for n in range(1, 11):
+			random_numbers.append(n)
+	else:
+		for n in range(1, 12):
 			random_numbers.append(n)
 	_spawn()
 
@@ -109,8 +114,10 @@ func _spawn():
 		trains[train_index] = green_train.instantiate()
 	elif spawn_rng == 9:
 		trains[train_index] = black_train.instantiate()
-	else:
+	elif spawn_rng == 10:
 		trains[train_index] = white_train.instantiate()
+	else:
+		trains[train_index] = brown_train.instantiate()
 	
 	trains[train_index].position.x = spawn.position.x
 	trains[train_index].position.y = spawn.position.y

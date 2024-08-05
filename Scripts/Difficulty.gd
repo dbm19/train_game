@@ -77,3 +77,12 @@ func _on_pressed():
 			get_tree().change_scene_to_file("res://scenes/levels/10_trains/10_train_map_three.tscn")
 		else:
 			get_tree().change_scene_to_file("res://scenes/levels/10_trains/10_train_map_four.tscn")
+	elif self.name == "11Trains":
+		if map_index == 1:
+			get_tree().change_scene_to_file("res://scenes/levels/11_trains/11_train_map_one.tscn")
+		elif map_index == 2:
+			get_tree().change_scene_to_file("res://scenes/levels/11_trains/11_train_map_two.tscn")
+		elif map_index == 3:
+			get_tree().change_scene_to_file("res://scenes/levels/11_trains/11_train_map_three.tscn")
+		else:
+			get_tree().change_scene_to_file("res://scenes/levels/11_trains/11_train_map_four.tscn")

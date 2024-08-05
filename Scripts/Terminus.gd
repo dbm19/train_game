@@ -41,6 +41,9 @@ func _on_area_entered(area):
 	elif area.get_groups()[0] == "colour_train_white" && get_groups()[0] == "colour_white_terminus":
 		get_tree().call_group("score", "_update_score")
 		SoundPlayer.play_success_sound()
+	elif area.get_groups()[0] == "colour_train_brown" && get_groups()[0] == "colour_brown_terminus":
+		get_tree().call_group("score", "_update_score")
+		SoundPlayer.play_success_sound()
 	else:
 		SoundPlayer.play_fail_sound()
 	

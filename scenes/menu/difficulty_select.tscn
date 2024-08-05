@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c3p6dkwo1n4g7"]
+[gd_scene load_steps=13 format=3 uid="uid://c3p6dkwo1n4g7"]
 
 [ext_resource type="Texture2D" uid="uid://nwweb2gxu21l" path="res://art_assets/difficulty.png" id="1_5h4p2"]
 [ext_resource type="Texture2D" uid="uid://db13r50xq74e" path="res://art_assets/8_trains.png" id="2_rn1i6"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://hlk5m1asfsv5" path="res://art_assets/5_trains.png" id="4_yv6eg"]
 [ext_resource type="Texture2D" uid="uid://d0ud74wbn1pps" path="res://art_assets/6_trains.png" id="6_7lhxf"]
 [ext_resource type="Texture2D" uid="uid://bm78gjhg0j8ur" path="res://art_assets/7_trains.png" id="8_75wur"]
+[ext_resource type="Texture2D" uid="uid://cem0yhmr10klv" path="res://art_assets/11_trains.png" id="10_i17ru"]
 [ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="10_w4fex"]
 [ext_resource type="Script" path="res://scenes/menu/Back.gd" id="11_vw10k"]
 [ext_resource type="Texture2D" uid="uid://q5kwd8wyfm7h" path="res://art_assets/10_trains.png" id="14_fkat8"]
@@ -95,6 +96,12 @@ icon = ExtResource("14_fkat8")
 flat = true
 script = ExtResource("3_fvup8")
 
+[node name="11Trains" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+icon = ExtResource("10_i17ru")
+flat = true
+script = ExtResource("3_fvup8")
+
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
 offset_left = 17.0
@@ -112,4 +119,5 @@ script = ExtResource("11_vw10k")
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/8Trains" to="HBoxContainer/VBoxContainer/8Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/9Trains" to="HBoxContainer/VBoxContainer/9Trains" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/10Trains" to="HBoxContainer/VBoxContainer2/10Trains" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/11Trains" to="HBoxContainer/VBoxContainer2/11Trains" method="_on_pressed"]
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
