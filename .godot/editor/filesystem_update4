@@ -28,3 +28,8 @@ res://scenes/trains/blue_train.tscn
 res://scenes/tile_map_2.tscn
 res://scenes/levels/4_trains/bug_test_map.tscn
 res://scenes/levels/4_trains/bug_test_map.gd
+res://GameSingleton.gd
+res://game_singleton.tscn
+res://scenes/game_singleton.tscn
+res://scripts/GameSingleton.gd
+res://scenes/score_screen.gd

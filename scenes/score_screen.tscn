@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://0q0gjhr0wior"]
 
-[ext_resource type="Script" path="res://scripts/score_screen.gd" id="1_v7e4w"]
+[ext_resource type="Script" path="res://scenes/score_screen.gd" id="1_4jhxx"]
 [ext_resource type="Texture2D" uid="uid://dr2frl3do3p78" path="res://art_assets/your_score.png" id="2_iesvy"]
 [ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="3_cdeyj"]
 [ext_resource type="Script" path="res://scenes/menu/Back.gd" id="4_vjarx"]
 
 [node name="ScoreScreen" type="Node2D" groups=["game"]]
 scale = Vector2(1.04251, 1.02653)
-script = ExtResource("1_v7e4w")
+script = ExtResource("1_4jhxx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -7.67379
@@ -29,9 +29,6 @@ offset_top = 465.646
 offset_right = 1154.17
 offset_bottom = 582.646
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
-
 [node name="Back" type="Button" parent="."]
 offset_left = 17.0
 offset_top = 20.0
@@ -41,5 +38,4 @@ icon = ExtResource("3_cdeyj")
 flat = true
 script = ExtResource("4_vjarx")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

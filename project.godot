@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SoundPlayer="*res://scenes/sound_player.tscn"
-ScoreScreen="*res://scenes/score_screen.tscn"
+GameSingleton="*res://scenes/game_singleton.tscn"
 
 [display]
 

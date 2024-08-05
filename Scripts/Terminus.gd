@@ -9,8 +9,8 @@ func _process(delta):
 	pass
 
 func _on_area_entered(area):
-	ScoreScreen.train_count -= 1
-	print(ScoreScreen.train_count)
+	GameSingleton.train_count -= 1
+	print(GameSingleton.train_count)
 	if area.get_groups()[0] == "colour_train_blue" && get_groups()[0] == "colour_blue_terminus":
 		get_tree().call_group("score", "_update_score")
 	elif area.get_groups()[0] == "colour_train_yellow" && get_groups()[0] == "colour_yellow_terminus":
@@ -32,7 +32,7 @@ func _on_area_entered(area):
 	elif area.get_groups()[0] == "colour_train_white" && get_groups()[0] == "colour_white_terminus":
 		get_tree().call_group("score", "_update_score")
 	
-	if ScoreScreen.train_count == 0:
-		ScoreScreen.endTimer()
+	if GameSingleton.train_count == 0:
+		GameSingleton.endTimer()
 	area.queue_free()
 
