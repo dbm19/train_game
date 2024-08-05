@@ -28,3 +28,6 @@ res://scenes/levels/4_trains/4_train_map_two.tscn
 res://scenes/menu/new_main_menu.tscn
 res://scenes/score_screen.tscn
 res://scripts/score_screen.gd
+res://scenes/sound_player.tscn
+res://scripts/Sound.gd
+res://scripts/Terminus.gd

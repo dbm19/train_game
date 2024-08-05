@@ -1,6 +1,6 @@
+AudioStreamPlayer2D
 VBoxContainer
 Label
-AudioStreamPlayer2D
 Timer
 Node
 Button
