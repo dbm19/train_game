@@ -60,3 +60,5 @@ res://scripts/game.gd
 res://scripts/difficulty_menu.gd
 res://scripts/tutorial_button.gd
 res://scripts/junction.gd
+res://scenes/menu/main_menu.tscn
+res://scripts/main_menu.gd

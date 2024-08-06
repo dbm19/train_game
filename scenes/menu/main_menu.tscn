@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2xupy1sue1jd"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_u8phs"]
+[ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_if151"]
+[ext_resource type="Texture2D" uid="uid://bfxsjfy50ecx0" path="res://art_assets/train_game_ligma.png" id="3_q3u0h"]
+[ext_resource type="Texture2D" uid="uid://c5rpny54ttjtq" path="res://art_assets/new_new_game_button.png" id="4_7bx77"]
+[ext_resource type="Script" path="res://scripts/new_game_button.gd" id="5_5ky0d"]
+[ext_resource type="Texture2D" uid="uid://dcn0bjmf0ujex" path="res://art_assets/new_tutorial_button.png" id="6_6tr7w"]
+[ext_resource type="Script" path="res://scripts/tutorial_button.gd" id="7_411wg"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -864.0
+offset_bottom = -292.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8phs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+offset_top = -322.0
+offset_right = 154.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_if151")
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -446.0
+offset_right = 446.0
+offset_bottom = 592.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="GameTitle" type="TextureRect" parent="CanvasLayer/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("3_q3u0h")
+stretch_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.0
+offset_top = -126.0
+offset_right = 216.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="NewGameButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_7bx77")
+flat = true
+icon_alignment = 1
+script = ExtResource("5_5ky0d")
+
+[node name="TutorialButton" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("6_6tr7w")
+flat = true
+icon_alignment = 1
+script = ExtResource("7_411wg")
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/NewGameButton" to="CanvasLayer/VBoxContainer/NewGameButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/TutorialButton" to="CanvasLayer/VBoxContainer/TutorialButton" method="_on_pressed"]

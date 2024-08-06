@@ -13,4 +13,4 @@ func _process(delta):
 func _on_pressed():
 	SoundSingleton.play_menu_sound()
 	SoundSingleton.background_chug_sound.playing = false
-	get_tree().change_scene_to_file("res://scenes/menu/new_main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
