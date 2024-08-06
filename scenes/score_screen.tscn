@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dr2frl3do3p78" path="res://art_assets/your_score.png" id="2_iesvy"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_rac68"]
 [ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="3_cdeyj"]
-[ext_resource type="Script" path="res://scenes/menu/Back.gd" id="4_vjarx"]
+[ext_resource type="Script" path="res://scripts/back_button.gd" id="4_vjarx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yraji"]
 font_size = 30

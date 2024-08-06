@@ -1,19 +1,19 @@
 extends Node
 
-var junctionSound
-var menuSound
-var backgroundChugSound
-var failSound
-var successSound
+var junction_sound
+var menu_sound
+var background_chug_sound
+var fail_sound
+var success_sound
 var background_ocean_sound
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	junctionSound = get_node("JunctionSound")
-	menuSound = get_node("MenuSound")
-	backgroundChugSound = get_node("BackgroundChugSound")
-	failSound = get_node("FailSound")
-	successSound = get_node("SuccessSound")
+	junction_sound = get_node("JunctionSound")
+	menu_sound = get_node("MenuSound")
+	background_chug_sound = get_node("BackgroundChugSound")
+	fail_sound = get_node("FailSound")
+	success_sound = get_node("SuccessSound")
 	background_ocean_sound = get_node("BackgroundOceanSound")
 	play_background_ocean_sound()
 
@@ -22,19 +22,19 @@ func _process(delta):
 	pass
 
 func play_junction_sound():
-	junctionSound.playing = true
+	junction_sound.playing = true
 	
 func play_menu_sound():
-	menuSound.playing = true
+	menu_sound.playing = true
 
 func play_chug_sound():
-	backgroundChugSound.playing = true
+	background_chug_sound.playing = true
 
 func play_fail_sound():
-	failSound.playing = true
+	fail_sound.playing = true
 
 func play_success_sound():
-	successSound.playing = true
+	success_sound.playing = true
 
 func play_background_ocean_sound():
 	background_ocean_sound.playing = true

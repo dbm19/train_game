@@ -9,11 +9,11 @@ func _ready():
 	label.text = str(GameSingleton.score) + " / 15"
 	
 	if GameSingleton.score == 15:
-		addNiceLabel()
+		add_nice_label()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-func addNiceLabel():
+func add_nice_label():
 	label2.text = "Nice one"

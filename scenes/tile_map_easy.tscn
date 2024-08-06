@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://ni56ouk55n4w"]
 
-[ext_resource type="Script" path="res://scripts/Game.gd" id="1_kfypg"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_kfypg"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_br2fj"]
 [ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://scenes/junctions/down_right_junction.tscn" id="3_lq6jh"]
 [ext_resource type="PackedScene" uid="uid://blckcooogvd6y" path="res://scenes/junctions/down_left_junction.tscn" id="4_rek3p"]
@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://clo8svt730k7v" path="res://scenes/spawn/spawn_right.tscn" id="24_bsbot"]
 [ext_resource type="PackedScene" uid="uid://cdtyf440n5mf" path="res://scenes/spawn/spawn_up.tscn" id="25_5n244"]
 [ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="28_835gl"]
-[ext_resource type="Script" path="res://scenes/menu/Back.gd" id="29_jibfu"]
+[ext_resource type="Script" path="res://scripts/back_button.gd" id="29_jibfu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynvvt"]
 texture = ExtResource("2_br2fj")
@@ -118,12 +118,5 @@ icon = ExtResource("28_835gl")
 flat = true
 script = ExtResource("29_jibfu")
 
-[connection signal="area_entered" from="TileMapThreeTrains/Area2D" to="TileMapThreeTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapThreeTrains/Area2D" to="TileMapThreeTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@345000" to="TileMapThreeTrains/@Area2D@345000" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapThreeTrains/@Area2D@345000" to="TileMapThreeTrains/@Area2D@345000" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@345001" to="TileMapThreeTrains/@Area2D@345001" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@345002" to="TileMapThreeTrains/@Area2D@345002" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@345003" to="TileMapThreeTrains/@Area2D@345003" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

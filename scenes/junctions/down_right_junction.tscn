@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bubficg50scye"]
 
-[ext_resource type="Script" path="res://scripts/Junction.gd" id="1_31q5s"]
+[ext_resource type="Script" path="res://scripts/junction.gd" id="1_31q5s"]
 [ext_resource type="Texture2D" uid="uid://bdwtan5s4keeu" path="res://art_assets/vertical_junction.png" id="2_4x33w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]

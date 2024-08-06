@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://blttmve5jebbh"]
 
-[ext_resource type="Script" path="res://scripts/Train.gd" id="1_fjbte"]
+[ext_resource type="Script" path="res://scripts/train.gd" id="1_fjbte"]
 [ext_resource type="Texture2D" uid="uid://c6wce86rp66yj" path="res://art_assets/silver_train.png" id="2_ok8mq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kti70"]

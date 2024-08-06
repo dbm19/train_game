@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://clo8svt730k7v"]
 
-[ext_resource type="Script" path="res://scripts/Spawn.gd" id="1_814fv"]
+[ext_resource type="Script" path="res://scripts/spawn.gd" id="1_814fv"]
 [ext_resource type="Texture2D" uid="uid://dnrkqmsypwat1" path="res://art_assets/new_spawn.png" id="2_kdjnv"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jwylj"]

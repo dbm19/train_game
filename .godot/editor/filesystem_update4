@@ -47,3 +47,8 @@ res://scenes/levels/8_trains/tile_map_3.tscn
 res://scenes/levels/8_trains/tile_map_2.tscn
 res://scenes/levels/8_trains/tile_map.tscn
 res://scenes/tile_map.tscn
+res://scripts/score_screen.gd
+res://scripts/sound.gd
+res://scenes/game_singleton.tscn
+res://scripts/game_singleton.gd
+res://scripts/back_button.gd

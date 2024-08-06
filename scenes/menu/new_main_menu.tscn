@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="1_fad3m"]
 [ext_resource type="Texture2D" uid="uid://bfxsjfy50ecx0" path="res://art_assets/train_game_ligma.png" id="1_puhaq"]
 [ext_resource type="Texture2D" uid="uid://dq8eixputiefi" path="res://art_assets/new_game_ligma.png" id="2_t36sk"]
-[ext_resource type="Script" path="res://scripts/NewGameButton.gd" id="3_ce2ib"]
+[ext_resource type="Script" path="res://scripts/new_game_button.gd" id="3_ce2ib"]
 [ext_resource type="Texture2D" uid="uid://bpa10jw24sfb7" path="res://art_assets/tutorial_ligma.png" id="4_ep3py"]
-[ext_resource type="Script" path="res://scripts/TutorialButton.gd" id="5_0f1lw"]
+[ext_resource type="Script" path="res://scripts/tutorial_button.gd" id="5_0f1lw"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
