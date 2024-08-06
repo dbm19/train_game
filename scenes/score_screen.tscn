@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://0q0gjhr0wior"]
+[gd_scene load_steps=8 format=3 uid="uid://0q0gjhr0wior"]
 
 [ext_resource type="Script" path="res://scripts/score_screen.gd" id="1_4jhxx"]
 [ext_resource type="Texture2D" uid="uid://dr2frl3do3p78" path="res://art_assets/your_score.png" id="2_iesvy"]
+[ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_rac68"]
 [ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="3_cdeyj"]
 [ext_resource type="Script" path="res://scenes/menu/Back.gd" id="4_vjarx"]
 
@@ -18,12 +19,12 @@ font_color = Color(0, 0, 0, 1)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_4jhxx")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -7.67379
-offset_top = -15.5865
-offset_right = 1846.33
-offset_bottom = 1083.41
-color = Color(0.933333, 0.843137, 0.968627, 1)
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -306.951
+offset_top = -491.949
+offset_right = 2081.05
+offset_bottom = 1176.05
+texture = ExtResource("2_rac68")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 695.437

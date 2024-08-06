@@ -1,6 +1,7 @@
-[gd_scene load_steps=35 format=3 uid="uid://cr1fwtyf4x8x8"]
+[gd_scene load_steps=36 format=3 uid="uid://cr1fwtyf4x8x8"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_os7g4"]
+[ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_d24kf"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_s5ea6"]
 [ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://scenes/junctions/down_right_junction.tscn" id="3_txj7v"]
 [ext_resource type="PackedScene" uid="uid://blckcooogvd6y" path="res://scenes/junctions/down_left_junction.tscn" id="4_bj342"]
@@ -83,12 +84,12 @@ position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_os7g4")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -925.65
-offset_top = -529.941
-offset_right = 994.35
-offset_bottom = 538.059
-color = Color(0.560784, 0.952941, 0.996078, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1129.97
+offset_top = -1001.43
+offset_right = 1258.03
+offset_bottom = 666.568
+texture = ExtResource("2_d24kf")
 
 [node name="TileMapFourTrains" type="TileMap" parent="."]
 position = Vector2(-44.1242, -0.974091)
@@ -124,14 +125,4 @@ script = ExtResource("27_fctog")
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(371.219, 31.173)
 
-[connection signal="area_entered" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@72774" to="TileMapFourTrains/@Area2D@72774" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@72775" to="TileMapFourTrains/@Area2D@72775" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@72776" to="TileMapFourTrains/@Area2D@72776" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@72776" to="TileMapFourTrains/@Area2D@72776" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@72777" to="TileMapFourTrains/@Area2D@72777" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@72777" to="TileMapFourTrains/@Area2D@72777" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@72778" to="TileMapFourTrains/@Area2D@72778" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@72779" to="TileMapFourTrains/@Area2D@72779" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

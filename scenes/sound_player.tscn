@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bn3dr55lqwsi7"]
+[gd_scene load_steps=8 format=3 uid="uid://bn3dr55lqwsi7"]
 
 [ext_resource type="Script" path="res://scripts/Sound.gd" id="1_jtcbj"]
 [ext_resource type="AudioStream" uid="uid://b56axs8wgh3dn" path="res://sounds/junction_sound.wav" id="2_lr5v1"]
 [ext_resource type="AudioStream" uid="uid://c7hlgtpnk7ptc" path="res://sounds/menu_sound.wav" id="3_0xrin"]
 [ext_resource type="AudioStream" uid="uid://dqrk5u6r38tq3" path="res://sounds/what.wav" id="4_l3kav"]
 [ext_resource type="AudioStream" uid="uid://do3x3ff7vs25g" path="res://sounds/fail.wav" id="5_m6e46"]
-[ext_resource type="AudioStream" uid="uid://bipyfucatwe7o" path="res://success.wav" id="6_koon6"]
+[ext_resource type="AudioStream" uid="uid://bipyfucatwe7o" path="res://sounds/success.wav" id="6_koon6"]
+[ext_resource type="AudioStream" uid="uid://dv7nyab4dxfi5" path="res://sounds/ocean.wav" id="7_r00g7"]
 
 [node name="SoundPlayer" type="Node"]
 script = ExtResource("1_jtcbj")
@@ -28,4 +29,9 @@ volume_db = 10.0
 stream = ExtResource("6_koon6")
 volume_db = 10.0
 
+[node name="BackgroundOceanSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_r00g7")
+volume_db = 24.0
+
 [connection signal="finished" from="BackgroundChugSound" to="." method="_on_background_chug_sound_finished"]
+[connection signal="finished" from="BackgroundOceanSound" to="." method="_on_background_ocean_sound_finished"]

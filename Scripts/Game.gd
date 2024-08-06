@@ -38,6 +38,7 @@ var random_numbers = []
 func _ready():
 	spawn = get_node("Spawn")
 	SoundPlayer.play_chug_sound()
+	SoundPlayer.play_background_ocean_sound()
 	GameSingleton._ready()
 	
 	if self.has_node("TileMapThreeTrains"):

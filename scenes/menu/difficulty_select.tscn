@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3p6dkwo1n4g7"]
+[gd_scene load_steps=14 format=3 uid="uid://c3p6dkwo1n4g7"]
 
 [ext_resource type="Texture2D" uid="uid://nwweb2gxu21l" path="res://art_assets/difficulty.png" id="1_5h4p2"]
+[ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="1_l8f6r"]
 [ext_resource type="Texture2D" uid="uid://db13r50xq74e" path="res://art_assets/8_trains.png" id="2_rn1i6"]
 [ext_resource type="Texture2D" uid="uid://cw1k5sbh0463b" path="res://art_assets/4_trains.png" id="2_ys30n"]
 [ext_resource type="Script" path="res://scripts/Difficulty.gd" id="3_fvup8"]
@@ -21,13 +22,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -3.0
-offset_top = 8.0
-offset_right = 1917.0
-offset_bottom = 1076.0
-color = Color(0.933333, 0.843137, 0.968627, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -271.0
+offset_top = -455.0
+offset_right = 2117.0
+offset_bottom = 1213.0
+texture = ExtResource("1_l8f6r")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0

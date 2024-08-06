@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cble8cf0s65u7"]
+[gd_scene load_steps=9 format=3 uid="uid://cble8cf0s65u7"]
 
+[ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="1_2omle"]
 [ext_resource type="Texture2D" uid="uid://cq0ipjr7qckts" path="res://art_assets/Screenshot 2024-08-01 at 14.27.48.png" id="1_wm8cd"]
 [ext_resource type="Texture2D" uid="uid://pc6adlj87j38" path="res://art_assets/Screenshot 2024-08-01 at 14.28.17.png" id="2_hsucq"]
 [ext_resource type="Texture2D" uid="uid://b0p2fqeoa3ohf" path="res://art_assets/begin_practice_round.png" id="3_a64y4"]
@@ -19,13 +20,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 1.0
-offset_top = -4.0
-offset_right = 1921.0
-offset_bottom = 1064.0
-color = Color(0.933333, 0.843137, 0.968627, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -258.0
+offset_top = -492.0
+offset_right = 2130.0
+offset_bottom = 1176.0
+texture = ExtResource("1_2omle")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -68,6 +68,7 @@ icon_alignment = 1
 script = ExtResource("4_y7tso")
 
 [node name="Back" type="Button" parent="."]
+layout_mode = 0
 offset_left = 17.0
 offset_top = 20.0
 offset_right = 197.0
