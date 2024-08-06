@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://ni56ouk55n4w"]
+[gd_scene load_steps=36 format=3 uid="uid://ni56ouk55n4w"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_kfypg"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_br2fj"]
@@ -25,7 +25,6 @@
 [ext_resource type="PackedScene" uid="uid://dg5a5horef5qv" path="res://scenes/spawn/spawn_down.tscn" id="23_ukbmh"]
 [ext_resource type="PackedScene" uid="uid://clo8svt730k7v" path="res://scenes/spawn/spawn_right.tscn" id="24_bsbot"]
 [ext_resource type="PackedScene" uid="uid://cdtyf440n5mf" path="res://scenes/spawn/spawn_up.tscn" id="25_5n244"]
-[ext_resource type="Script" path="res://scripts/Score.gd" id="27_n5eby"]
 [ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="28_835gl"]
 [ext_resource type="Script" path="res://scenes/menu/Back.gd" id="29_jibfu"]
 
@@ -107,22 +106,6 @@ layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 19
 wait_time = 2.0
 autostart = true
 
-[node name="ScoreLabel" type="Label" parent="."]
-offset_left = 273.379
-offset_top = -343.877
-offset_right = 342.379
-offset_bottom = -320.877
-text = "Score: 
-"
-
-[node name="Score" type="Label" parent="ScoreLabel" groups=["score"]]
-layout_mode = 0
-offset_left = 53.7165
-offset_right = 93.7165
-offset_bottom = 23.0
-text = "0"
-script = ExtResource("27_n5eby")
-
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-0.959213, 385.766)
 
@@ -135,5 +118,12 @@ icon = ExtResource("28_835gl")
 flat = true
 script = ExtResource("29_jibfu")
 
+[connection signal="area_entered" from="TileMapThreeTrains/Area2D" to="TileMapThreeTrains/Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapThreeTrains/Area2D" to="TileMapThreeTrains/Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@345000" to="TileMapThreeTrains/@Area2D@345000" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapThreeTrains/@Area2D@345000" to="TileMapThreeTrains/@Area2D@345000" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@345001" to="TileMapThreeTrains/@Area2D@345001" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@345002" to="TileMapThreeTrains/@Area2D@345002" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapThreeTrains/@Area2D@345003" to="TileMapThreeTrains/@Area2D@345003" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

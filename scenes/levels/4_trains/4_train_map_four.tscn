@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cr1fwtyf4x8x8"]
+[gd_scene load_steps=35 format=3 uid="uid://cr1fwtyf4x8x8"]
 
 [ext_resource type="Script" path="res://scripts/Game.gd" id="1_os7g4"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_d24kf"]
@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://dg5a5horef5qv" path="res://scenes/spawn/spawn_down.tscn" id="23_6out4"]
 [ext_resource type="PackedScene" uid="uid://clo8svt730k7v" path="res://scenes/spawn/spawn_right.tscn" id="24_sjg80"]
 [ext_resource type="PackedScene" uid="uid://cdtyf440n5mf" path="res://scenes/spawn/spawn_up.tscn" id="25_nfrb4"]
-[ext_resource type="Script" path="res://scripts/Score.gd" id="27_fctog"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynvvt"]
 texture = ExtResource("2_s5ea6")
@@ -105,22 +104,6 @@ layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 19
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
-
-[node name="ScoreLabel" type="Label" parent="."]
-offset_left = 836.443
-offset_top = -508.509
-offset_right = 905.443
-offset_bottom = -485.509
-text = "Score: 
-"
-
-[node name="Score" type="Label" parent="ScoreLabel" groups=["score"]]
-layout_mode = 0
-offset_left = 53.7165
-offset_right = 93.7165
-offset_bottom = 23.0
-text = "0"
-script = ExtResource("27_fctog")
 
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(371.219, 31.173)

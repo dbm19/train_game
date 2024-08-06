@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dqrk5u6r38tq3" path="res://sounds/what.wav" id="4_l3kav"]
 [ext_resource type="AudioStream" uid="uid://do3x3ff7vs25g" path="res://sounds/fail.wav" id="5_m6e46"]
 [ext_resource type="AudioStream" uid="uid://bipyfucatwe7o" path="res://sounds/success.wav" id="6_koon6"]
-[ext_resource type="AudioStream" uid="uid://dv7nyab4dxfi5" path="res://sounds/ocean.wav" id="7_r00g7"]
+[ext_resource type="AudioStream" uid="uid://bc3pockmbirfd" path="res://ocean.wav" id="7_6ya7u"]
 
 [node name="SoundPlayer" type="Node"]
 script = ExtResource("1_jtcbj")
@@ -30,7 +30,7 @@ stream = ExtResource("6_koon6")
 volume_db = 10.0
 
 [node name="BackgroundOceanSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_r00g7")
+stream = ExtResource("7_6ya7u")
 volume_db = 24.0
 
 [connection signal="finished" from="BackgroundChugSound" to="." method="_on_background_chug_sound_finished"]

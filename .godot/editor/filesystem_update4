@@ -42,3 +42,8 @@ res://scenes/levels/10_trains/10_train_map_one.tscn
 res://scenes/levels/10_trains/10_train_map_three.tscn
 res://scenes/menu/tutorial.tscn
 res://scenes/score_screen.tscn
+res://scenes/levels/8_trains/tile_map_4.tscn
+res://scenes/levels/8_trains/tile_map_3.tscn
+res://scenes/levels/8_trains/tile_map_2.tscn
+res://scenes/levels/8_trains/tile_map.tscn
+res://scenes/tile_map.tscn

@@ -20,10 +20,9 @@ func start_game():
 func endTimer():
 	timer.start()
 
-func updateScore():
+func update_score():
 	score += 1
 
 func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://scenes/score_screen.tscn")
 	SoundPlayer.backgroundChugSound.playing = false
-	SoundPlayer.background_ocean_sound.playing = false
