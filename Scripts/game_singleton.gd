@@ -17,7 +17,7 @@ func _process(delta):
 func start_game():
 	_ready()
 
-func endTimer():
+func end_timer():
 	timer.start()
 
 func update_score():
@@ -25,4 +25,4 @@ func update_score():
 
 func _on_timer_timeout():
 	get_tree().change_scene_to_file("res://scenes/score_screen.tscn")
-	SoundPlayer.background_chug_sound.playing = false
+	SoundSingleton.background_chug_sound.playing = false

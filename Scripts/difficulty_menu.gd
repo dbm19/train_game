@@ -12,7 +12,7 @@ func _process(delta):
 	pass
 
 func _on_pressed():
-	SoundPlayer.play_menu_sound()
+	SoundSingleton.play_menu_sound()
 	map_index = rng.randi_range(1, 5)
 	if self.name == "4Trains":
 		if map_index == 1:

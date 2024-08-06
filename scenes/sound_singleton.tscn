@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://bn3dr55lqwsi7"]
+
+[ext_resource type="Script" path="res://scripts/sound_singleton.gd" id="1_ic703"]
+[ext_resource type="AudioStream" uid="uid://b56axs8wgh3dn" path="res://sounds/junction_sound.wav" id="2_ikgem"]
+[ext_resource type="AudioStream" uid="uid://c7hlgtpnk7ptc" path="res://sounds/menu_sound.wav" id="3_6psat"]
+[ext_resource type="AudioStream" uid="uid://dqrk5u6r38tq3" path="res://sounds/what.wav" id="4_aoygj"]
+[ext_resource type="AudioStream" uid="uid://do3x3ff7vs25g" path="res://sounds/fail.wav" id="5_syqsj"]
+[ext_resource type="AudioStream" uid="uid://bipyfucatwe7o" path="res://sounds/success.wav" id="6_d0alw"]
+[ext_resource type="AudioStream" uid="uid://bc3pockmbirfd" path="res://sounds/ocean.wav" id="7_rwt75"]
+
+[node name="SoundSingleton" type="Node"]
+script = ExtResource("1_ic703")
+
+[node name="JunctionSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ikgem")
+
+[node name="MenuSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6psat")
+volume_db = 24.0
+
+[node name="BackgroundChugSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_aoygj")
+
+[node name="FailSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_syqsj")
+volume_db = 10.0
+
+[node name="SuccessSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_d0alw")
+volume_db = 10.0
+
+[node name="BackgroundOceanSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_rwt75")
+volume_db = 24.0
+
+[connection signal="finished" from="BackgroundChugSound" to="." method="_on_background_chug_sound_finished"]
+[connection signal="finished" from="BackgroundOceanSound" to="." method="_on_background_ocean_sound_finished"]

@@ -52,3 +52,11 @@ res://scripts/sound.gd
 res://scenes/game_singleton.tscn
 res://scripts/game_singleton.gd
 res://scripts/back_button.gd
+res://scripts/terminus.gd
+res://scripts/practice_round_button.gd
+res://scripts/new_game_button.gd
+res://scenes/sound_singleton.tscn
+res://scripts/game.gd
+res://scripts/difficulty_menu.gd
+res://scripts/tutorial_button.gd
+res://scripts/junction.gd
