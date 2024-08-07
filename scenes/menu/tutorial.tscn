@@ -22,10 +22,10 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -258.0
-offset_top = -492.0
-offset_right = 2130.0
-offset_bottom = 1176.0
+offset_left = -254.0
+offset_top = -398.0
+offset_right = 2134.0
+offset_bottom = 1270.0
 texture = ExtResource("1_2omle")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]

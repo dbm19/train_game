@@ -1,6 +1,7 @@
-[gd_scene load_steps=36 format=3 uid="uid://ni56ouk55n4w"]
+[gd_scene load_steps=37 format=3 uid="uid://ni56ouk55n4w"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_kfypg"]
+[ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_8q5qm"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_br2fj"]
 [ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://scenes/junctions/down_right_junction.tscn" id="3_lq6jh"]
 [ext_resource type="PackedScene" uid="uid://blckcooogvd6y" path="res://scenes/junctions/down_left_junction.tscn" id="4_rek3p"]
@@ -84,12 +85,17 @@ position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_kfypg")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -925.65
-offset_top = -529.941
-offset_right = 994.35
-offset_bottom = 538.059
-color = Color(0.933333, 0.843137, 0.968627, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1274.0
+offset_top = -862.0
+offset_right = 1114.0
+offset_bottom = 806.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8q5qm")
 
 [node name="TileMapThreeTrains" type="TileMap" parent="."]
 position = Vector2(-96.8816, -31.173)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7oeqx8spb6kq"]
+
+[ext_resource type="Script" path="res://scenes/tracks/curved_track.gd" id="1_1oa4f"]
+[ext_resource type="Texture2D" uid="uid://dvsa5lr3gn8tl" path="res://art_assets/up_left_track.png" id="2_pkllq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qi0ts"]
+size = Vector2(2, 1.5)
+
+[node name="UpLeft" type="Area2D" groups=["up_left"]]
+script = ExtResource("1_1oa4f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.875, 0.861111)
+texture = ExtResource("2_pkllq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_qi0ts")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
