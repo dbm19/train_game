@@ -18,3 +18,5 @@ res://scenes/tracks/left_down_track.tscn
 res://scenes/tracks/left_up_track.tscn
 res://scenes/tracks/right_down_track.tscn
 res://scenes/tracks/right_up_track.tscn
+res://scenes/levels/5_trains/5_train_map_five.tscn
+res://scenes/levels/6_trains/6_train_map_five.tscn

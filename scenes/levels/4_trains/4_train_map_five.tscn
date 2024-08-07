@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://do5dawvnsjqyt"]
+[gd_scene load_steps=37 format=3 uid="uid://do5dawvnsjqyt"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_0u4dm"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_1y07g"]
@@ -12,10 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bvng67bvd01sf" path="res://scenes/junctions/up_left_junction.tscn" id="10_813ap"]
 [ext_resource type="PackedScene" uid="uid://g4rilokafyfj" path="res://scenes/junctions/up_right_junction.tscn" id="11_74yfu"]
 [ext_resource type="PackedScene" uid="uid://dgtiohs8p3jj6" path="res://scenes/tracks/down_left_track.tscn" id="12_jg75a"]
-[ext_resource type="Texture2D" uid="uid://ibdm47vkoj4a" path="res://art_assets/green_tile.png" id="12_l76xg"]
 [ext_resource type="PackedScene" uid="uid://cbmnwo1epcc6q" path="res://scenes/tracks/left_up_track.tscn" id="13_lfoek"]
 [ext_resource type="PackedScene" uid="uid://dilnr5nvr0il7" path="res://scenes/tracks/down_right_track.tscn" id="13_ppye7"]
-[ext_resource type="Texture2D" uid="uid://bd3020v00awdm" path="res://art_assets/background_tile.png" id="13_rlhei"]
 [ext_resource type="PackedScene" uid="uid://cokn71hbgsjcy" path="res://scenes/terminus/blue_terminus.tscn" id="14_a0kw1"]
 [ext_resource type="PackedScene" uid="uid://c4u5tnp680vbe" path="res://scenes/tracks/right_down_track.tscn" id="14_kfrnu"]
 [ext_resource type="PackedScene" uid="uid://c7oeqx8spb6kq" path="res://scenes/tracks/up_left_track.tscn" id="14_y7e1h"]
@@ -37,7 +35,7 @@ texture = ExtResource("3_u2uew")
 0:0/0 = 0
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_wdv22"]
-resource_name = "Juncions"
+resource_name = "Junctions"
 scenes/1/scene = ExtResource("4_a466h")
 scenes/3/scene = ExtResource("5_m4wl7")
 scenes/4/scene = ExtResource("6_q5mtj")
@@ -62,14 +60,6 @@ scenes/12/scene = ExtResource("15_f0r3n")
 scenes/13/scene = ExtResource("14_y7e1h")
 scenes/14/scene = ExtResource("15_h8x35")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k677j"]
-texture = ExtResource("12_l76xg")
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xea50"]
-texture = ExtResource("13_rlhei")
-0:0/0 = 0
-
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mrtgv"]
 resource_name = "Termini"
 scenes/1/scene = ExtResource("14_a0kw1")
@@ -86,12 +76,11 @@ texture = ExtResource("22_x6tr7")
 0:0/0 = 0
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_kf4yd"]
+resource_name = "Spawn"
 scenes/2/scene = ExtResource("23_g7dxh")
 
 [sub_resource type="TileSet" id="TileSet_28vtv"]
 sources/1 = SubResource("TileSetScenesCollectionSource_wdv22")
-sources/2 = SubResource("TileSetAtlasSource_k677j")
-sources/3 = SubResource("TileSetAtlasSource_xea50")
 sources/4 = SubResource("TileSetScenesCollectionSource_mrtgv")
 sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
 sources/0 = SubResource("TileSetAtlasSource_ro1x8")
@@ -116,7 +105,7 @@ scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_28vtv")
 format = 2
 layer_0/name = "Track"
-layer_0/tile_data = PackedInt32Array(-262143, 0, 0, -327679, 7, 131072, -196607, 12, 65536, -196608, 5, 0, -131073, 12, 589824, -65537, 0, 0, -1, 0, 0, 65535, 12, 524288, 0, 5, 0, 1, 12, 720896, 65537, 0, 0)
+layer_0/tile_data = PackedInt32Array(-262143, 0, 0, -327679, 7, 131072, -196607, 0, 0, -131071, 0, 0, -65535, 12, 65536, -65536, 5, 0, -1, 1, 327680, -2, 5, 0, -3, 5, 0, -65537, 0, 0, -131073, 0, 0, -4, 12, 589824, -196609, 1, 524288, -262145, 0, 0, -196610, 5, 0, 131068, 1, 65536, 65532, 0, 0, 196604, 0, 0, 131069, 5, 0, -327681, 4, 65536, -196611, 4, 458752, 131070, 4, 393216, 262140, 4, 262144)
 layer_1/name = "Background"
 layer_1/z_index = -1
 layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 196612, 3, 0, 196610, 3, 0, 131074, 3, 0, 65538, 3, 0, -65531, 3, 0, -65532, 3, 0, -65533, 3, 0, -65534, 3, 0, -131070, 3, 0, -196605, 3, 0, -196604, 3, 0, -131068, 3, 0, -131067, 3, 0, -131069, 3, 0, -196603, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 3, 0, -262142, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 131072, 3, 0, 131073, 3, 0, 196607, 3, 0, 196606, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -262143, 3, 0, -262144, 3, 0, -131072, 3, 0, -65536, 3, 0, 0, 3, 0, 65535, 3, 0, -1, 3, 0, -65537, 3, 0, -131073, 3, 0, -196609, 3, 0, -131074, 3, 0, -65538, 3, 0, 65534, 3, 0, -196610, 3, 0, -196611, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -131075, 3, 0, 131069, 3, 0, 196605, 3, 0, 262141, 3, 0, 262140, 3, 0, 131068, 3, 0, -262148, 3, 0, 196613, 3, 0, -327675, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 65540, 3, 0, 5, 3, 0, 65541, 3, 0, 131077, 3, 0, -196612, 3, 0, -131076, 3, 0, -65540, 3, 0, 65532, 3, 0, 65533, 3, 0, -3, 3, 0, 196604, 3, 0, -65539, 3, 0, -2, 3, 0, -4, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 262149, 3, 0, 327685, 3, 0, 327684, 3, 0, 327683, 3, 0, 327682, 3, 0, 327681, 3, 0, 327680, 3, 0, 393215, 3, 0, 393214, 3, 0, 393213, 3, 0, 393212, 3, 0, 458748, 3, 0, 458749, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, -196606, 3, 0, -196607, 3, 0, -196608, 3, 0, 393222, 3, 0, 327686, 3, 0, 262150, 3, 0, 196614, 3, 0, 131078, 3, 0, 65542, 3, 0, 6, 3, 0, -65530, 3, 0, -131066, 3, 0, -196602, 3, 0, -262138, 3, 0, -327674, 3, 0)
@@ -128,11 +117,4 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-0.959231, -353.618)
 
-[connection signal="area_entered" from="TileMapFourTrains/DownLeft" to="TileMapFourTrains/DownLeft" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/LeftDown" to="TileMapFourTrains/LeftDown" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/LeftDown" to="TileMapFourTrains/LeftDown" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/DownRight" to="TileMapFourTrains/DownRight" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/DownRight" to="TileMapFourTrains/DownRight" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/RightDown" to="TileMapFourTrains/RightDown" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/RightDown" to="TileMapFourTrains/RightDown" method="_on_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
