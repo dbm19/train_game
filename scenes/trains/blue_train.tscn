@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://dihecvdguuo7g"]
+[gd_scene load_steps=3 format=3 uid="uid://dihecvdguuo7g"]
 
-[ext_resource type="Texture2D" uid="uid://b5e82vq7v86w6" path="res://icon.svg" id="1_5g3kp"]
 [ext_resource type="Script" path="res://scripts/train.gd" id="1_tijyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kti70"]
@@ -13,7 +12,6 @@ script = ExtResource("1_tijyu")
 shape = SubResource("RectangleShape2D_kti70")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.46875, 0.46875)
-texture = ExtResource("1_5g3kp")
+scale = Vector2(2, 2)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

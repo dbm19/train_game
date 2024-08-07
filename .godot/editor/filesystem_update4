@@ -62,3 +62,7 @@ res://scripts/tutorial_button.gd
 res://scripts/junction.gd
 res://scenes/menu/main_menu.tscn
 res://scripts/main_menu.gd
+res://scenes/trains/blue_train.tscn
+res://scripts/train.gd
+res://scenes/trains/yellow_train.tscn
+res://scenes/trains/purple_train.tscn
