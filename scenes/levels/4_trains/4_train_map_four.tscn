@@ -108,14 +108,4 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(371.219, 31.173)
 
-[connection signal="area_entered" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@471384" to="TileMapFourTrains/@Area2D@471384" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@471385" to="TileMapFourTrains/@Area2D@471385" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@471386" to="TileMapFourTrains/@Area2D@471386" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@471386" to="TileMapFourTrains/@Area2D@471386" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@471387" to="TileMapFourTrains/@Area2D@471387" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@471387" to="TileMapFourTrains/@Area2D@471387" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@471388" to="TileMapFourTrains/@Area2D@471388" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@471389" to="TileMapFourTrains/@Area2D@471389" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

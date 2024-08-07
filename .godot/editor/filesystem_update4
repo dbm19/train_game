@@ -66,3 +66,10 @@ res://scenes/trains/blue_train.tscn
 res://scripts/train.gd
 res://scenes/trains/yellow_train.tscn
 res://scenes/trains/purple_train.tscn
+res://scenes/trains/orange_train.tscn
+res://scenes/trains/pink_train.tscn
+res://scenes/trains/silver_train.tscn
+res://scenes/trains/red_train.tscn
+res://scenes/trains/green_train.tscn
+res://scenes/trains/black_train.tscn
+res://scenes/trains/white_train.tscn
