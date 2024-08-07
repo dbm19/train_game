@@ -20,3 +20,10 @@ res://scenes/tracks/right_down_track.tscn
 res://scenes/tracks/right_up_track.tscn
 res://scenes/levels/5_trains/5_train_map_five.tscn
 res://scenes/levels/6_trains/6_train_map_five.tscn
+res://scripts/new_game_button.gd
+res://scenes/menu/train_select_menu.tscn
+res://scripts/normal_button.gd
+res://scripts/score_screen.gd
+res://scripts/game_singleton.gd
+res://scenes/menu/normal_train_select_menu.tscn
+res://scenes/menu/hard_train_select_menu.tscn

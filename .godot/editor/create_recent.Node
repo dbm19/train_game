@@ -1,15 +1,14 @@
-CanvasLayer
+Button
 TextureRect
+CanvasLayer
 AudioStreamPlayer2D
 VBoxContainer
 Label
 Timer
 Node
-Button
 AudioStreamPlayer
 HBoxContainer
 TextEdit
 MarginContainer
 ColorRect
 Control
-CollisionShape2D

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://knlyn0faffvm"]
 
-[ext_resource type="Script" path="res://scenes/tracks/curved_track.gd" id="1_b4co6"]
+[ext_resource type="Script" path="res://scripts/curved_track.gd" id="1_b4co6"]
 [ext_resource type="Texture2D" uid="uid://bx084kupwxc8l" path="res://art_assets/up_right_track.png" id="2_jwjhn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
