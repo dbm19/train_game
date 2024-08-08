@@ -25,13 +25,13 @@ func _on_pressed():
 			get_tree().change_scene_to_file("res://scenes/levels/4_trains/4_trains_normal/4_train_map_four.tscn")
 	elif self.name == "5TrainsNormal":
 		if map_index == 1:
-			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_train_map_one.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_trains_normal/5_train_map_one.tscn")
 		elif map_index == 2:
-			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_train_map_two.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_trains_normal/5_train_map_two.tscn")
 		elif map_index == 3:
-			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_train_map_three.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_trains_normal/5_train_map_three.tscn")
 		else:
-			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_train_map_four.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_trains_normal/5_train_map_four.tscn")
 	elif self.name == "6TrainsNormal":
 		if map_index == 1:
 			get_tree().change_scene_to_file("res://scenes/levels/6_trains/6_train_map_one.tscn")
@@ -95,3 +95,12 @@ func _on_pressed():
 			get_tree().change_scene_to_file("res://scenes/levels/4_trains/4_trains_hard/4_train_hard_map_three.tscn")
 		else:
 			get_tree().change_scene_to_file("res://scenes/levels/4_trains/4_trains_hard/4_train_hard_map_four.tscn")
+	elif self.name == "5TrainsHard":
+		if map_index == 1:
+			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_trains_hard/5_train_hard_map_one.tscn")
+		elif map_index == 2:
+			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_trains_hard/5_train_hard_map_two.tscn")
+		elif map_index == 3:
+			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_trains_hard/5_train_hard_map_three.tscn")
+		else:
+			get_tree().change_scene_to_file("res://scenes/levels/5_trains/5_trains_hard/5_train_hard_map_four.tscn")

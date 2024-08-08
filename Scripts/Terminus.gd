@@ -10,8 +10,6 @@ func _process(delta):
 
 func _on_area_entered(area):
 	GameSingleton.train_count -= 1
-	print(GameSingleton.train_count)
-	print(GameSingleton.score)
 	
 	if area.get_groups()[0] == "colour_train_blue" && get_groups()[0] == "colour_blue_terminus":
 		get_tree().call_group("score", "_update_score")
@@ -61,7 +59,6 @@ func _on_area_entered(area):
 		SoundSingleton.play_fail_sound()
 	
 	if GameSingleton.train_count == 0:
-		print("ayy")
 		GameSingleton.end_timer()
 	area.queue_free()
 

@@ -1,0 +1,116 @@
+[gd_scene load_steps=37 format=3 uid="uid://ldwhimagb0da"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_gjwbb"]
+[ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_ugft1"]
+[ext_resource type="Texture2D" uid="uid://mcg0yqpa4vpk" path="res://art_assets/vertical_track.png" id="3_ntfa4"]
+[ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://scenes/down_right_junction.tscn" id="4_ny1as"]
+[ext_resource type="PackedScene" uid="uid://blckcooogvd6y" path="res://scenes/junctions/down_left_junction.tscn" id="5_m3pr6"]
+[ext_resource type="PackedScene" uid="uid://cbhb5rqlqobs2" path="res://scenes/junctions/left_down_junction.tscn" id="6_h4415"]
+[ext_resource type="PackedScene" uid="uid://dexyaq8gdjgt6" path="res://scenes/junctions/left_up_junction.tscn" id="7_c55cr"]
+[ext_resource type="PackedScene" uid="uid://dp6xpqxpo0fat" path="res://scenes/junctions/right_down_junction.tscn" id="8_kvote"]
+[ext_resource type="PackedScene" uid="uid://cmwuu1yq0cq8j" path="res://scenes/junctions/right_up_junction.tscn" id="9_8qs8l"]
+[ext_resource type="PackedScene" uid="uid://bvng67bvd01sf" path="res://scenes/junctions/up_left_junction.tscn" id="10_rslap"]
+[ext_resource type="PackedScene" uid="uid://g4rilokafyfj" path="res://scenes/junctions/up_right_junction.tscn" id="11_ul2b2"]
+[ext_resource type="PackedScene" uid="uid://cokn71hbgsjcy" path="res://scenes/terminus/blue_terminus.tscn" id="12_xog33"]
+[ext_resource type="PackedScene" uid="uid://87tunir44fyr" path="res://scenes/terminus/red_terminus.tscn" id="13_o05gh"]
+[ext_resource type="PackedScene" uid="uid://cdy078uruvol1" path="res://scenes/terminus/green_terminus.tscn" id="14_ubtig"]
+[ext_resource type="PackedScene" uid="uid://b1qgf1s61ekaa" path="res://scenes/terminus/orange_terminus.tscn" id="15_emexq"]
+[ext_resource type="PackedScene" uid="uid://cwnrrxck8acnw" path="res://scenes/terminus/purple_terminus.tscn" id="16_8f7f8"]
+[ext_resource type="PackedScene" uid="uid://d1moe2frr5ond" path="res://scenes/terminus/yellow_terminus.tscn" id="17_auj5u"]
+[ext_resource type="PackedScene" uid="uid://b6k34rfau138b" path="res://scenes/terminus/pink_terminus.tscn" id="18_lyj1o"]
+[ext_resource type="PackedScene" uid="uid://c4c6jbq7i4fun" path="res://scenes/terminus/silver_terminus.tscn" id="19_77iwp"]
+[ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="20_q7hsp"]
+[ext_resource type="PackedScene" uid="uid://dgtiohs8p3jj6" path="res://scenes/tracks/down_left_track.tscn" id="21_god2b"]
+[ext_resource type="PackedScene" uid="uid://dilnr5nvr0il7" path="res://scenes/tracks/down_right_track.tscn" id="22_x04i6"]
+[ext_resource type="PackedScene" uid="uid://knlyn0faffvm" path="res://scenes/tracks/left_down_track.tscn" id="23_kenn5"]
+[ext_resource type="PackedScene" uid="uid://cbmnwo1epcc6q" path="res://scenes/tracks/left_up_track.tscn" id="24_jfjni"]
+[ext_resource type="PackedScene" uid="uid://c4u5tnp680vbe" path="res://scenes/tracks/right_down_track.tscn" id="25_svvwd"]
+[ext_resource type="PackedScene" uid="uid://c5688g2662rwc" path="res://scenes/tracks/right_up_track.tscn" id="26_q6bf1"]
+[ext_resource type="PackedScene" uid="uid://c7oeqx8spb6kq" path="res://scenes/tracks/up_left_track.tscn" id="27_mb1nm"]
+[ext_resource type="PackedScene" uid="uid://c2sim46mvre2w" path="res://scenes/tracks/up_right_track.tscn" id="28_gnjmf"]
+[ext_resource type="PackedScene" uid="uid://cdtyf440n5mf" path="res://scenes/spawn/spawn_up.tscn" id="29_bo85g"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro1x8"]
+texture = ExtResource("3_ntfa4")
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_wdv22"]
+resource_name = "Junctions"
+scenes/1/scene = ExtResource("4_ny1as")
+scenes/3/scene = ExtResource("5_m3pr6")
+scenes/4/scene = ExtResource("6_h4415")
+scenes/5/scene = ExtResource("7_c55cr")
+scenes/6/scene = ExtResource("8_kvote")
+scenes/7/scene = ExtResource("9_8qs8l")
+scenes/8/scene = ExtResource("10_rslap")
+scenes/9/scene = ExtResource("11_ul2b2")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mrtgv"]
+resource_name = "Termini"
+scenes/1/scene = ExtResource("12_xog33")
+scenes/2/scene = ExtResource("13_o05gh")
+scenes/3/scene = ExtResource("14_ubtig")
+scenes/4/scene = ExtResource("15_emexq")
+scenes/6/scene = ExtResource("16_8f7f8")
+scenes/7/scene = ExtResource("17_auj5u")
+scenes/8/scene = ExtResource("18_lyj1o")
+scenes/9/scene = ExtResource("19_77iwp")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tx84g"]
+texture = ExtResource("20_q7hsp")
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_rp5n5"]
+resource_name = "Tracks"
+scenes/1/scene = ExtResource("21_god2b")
+scenes/2/scene = ExtResource("22_x04i6")
+scenes/3/scene = ExtResource("23_kenn5")
+scenes/4/scene = ExtResource("24_jfjni")
+scenes/5/scene = ExtResource("25_svvwd")
+scenes/6/scene = ExtResource("26_q6bf1")
+scenes/7/scene = ExtResource("27_mb1nm")
+scenes/8/scene = ExtResource("28_gnjmf")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_kf4yd"]
+resource_name = "Spawn"
+scenes/2/scene = ExtResource("29_bo85g")
+
+[sub_resource type="TileSet" id="TileSet_28vtv"]
+sources/1 = SubResource("TileSetScenesCollectionSource_wdv22")
+sources/4 = SubResource("TileSetScenesCollectionSource_mrtgv")
+sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
+sources/0 = SubResource("TileSetAtlasSource_ro1x8")
+sources/5 = SubResource("TileSetAtlasSource_tx84g")
+sources/6 = SubResource("TileSetScenesCollectionSource_rp5n5")
+
+[node name="Game" type="Node2D"]
+position = Vector2(960, 540)
+scale = Vector2(1.04251, 1.02653)
+script = ExtResource("1_gjwbb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1129.97
+offset_top = -1001.43
+offset_right = 1258.03
+offset_bottom = 666.57
+texture = ExtResource("2_ugft1")
+
+[node name="TileMapFiveTrains" type="TileMap" parent="."]
+position = Vector2(-97.8408, -66.2426)
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_28vtv")
+format = 2
+layer_0/name = "Track"
+layer_0/tile_data = PackedInt32Array(393217, 7, 131072, 327681, 0, 0, 262145, 0, 0, 196609, 1, 524288, 131073, 6, 524288, 131074, 5, 0, 131075, 1, 458752, 65539, 0, 0, 131076, 5, 0, 3, 6, 458752, 1, 5, 0, 2, 1, 327680, -65534, 0, 0, 131077, 4, 393216, -131070, 4, 524288, 196608, 5, 0, 262143, 4, 65536, 0, 1, 327680, -65536, 0, 0, 65535, 5, 0, -131072, 4, 262144, 65534, 4, 458752)
+layer_1/name = "Background"
+layer_1/z_index = -1
+layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 196612, 3, 0, 196610, 3, 0, 131074, 3, 0, 65538, 3, 0, -65531, 3, 0, -65532, 3, 0, -65533, 3, 0, -65534, 3, 0, -131070, 3, 0, -196605, 3, 0, -196604, 3, 0, -131068, 3, 0, -131067, 3, 0, -131069, 3, 0, -196603, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 3, 0, -262142, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 131072, 3, 0, 131073, 3, 0, 196607, 3, 0, 196606, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -262143, 3, 0, -262144, 3, 0, -131072, 3, 0, -65536, 3, 0, 0, 3, 0, 65535, 3, 0, -1, 3, 0, -65537, 3, 0, -131073, 3, 0, -196609, 3, 0, -131074, 3, 0, -65538, 3, 0, 65534, 3, 0, -196610, 3, 0, -196611, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -131075, 3, 0, 131069, 3, 0, 196605, 3, 0, 262141, 3, 0, 262140, 3, 0, 131068, 3, 0, -262148, 3, 0, 196613, 3, 0, -327675, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 65540, 3, 0, 5, 3, 0, 65541, 3, 0, 131077, 3, 0, -196612, 3, 0, -131076, 3, 0, -65540, 3, 0, 65532, 3, 0, 65533, 3, 0, -3, 3, 0, 196604, 3, 0, -65539, 3, 0, -2, 3, 0, -4, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 262149, 3, 0, 327685, 3, 0, 327684, 3, 0, 327683, 3, 0, 327682, 3, 0, 327681, 3, 0, 327680, 3, 0, 393215, 3, 0, 393214, 3, 0, 393213, 3, 0, 393212, 3, 0, 458748, 3, 0, 458749, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, -196606, 3, 0, -196607, 3, 0, -196608, 3, 0, 393222, 3, 0, 327686, 3, 0, 262150, 3, 0, 196614, 3, 0, 131078, 3, 0, 65542, 3, 0, 6, 3, 0, -65530, 3, 0, -131066, 3, 0, -196602, 3, 0, -262138, 3, 0, -327674, 3, 0)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2(-1.91844, 354.593)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

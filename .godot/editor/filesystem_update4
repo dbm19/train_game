@@ -17,3 +17,6 @@ res://scripts/game.gd
 res://scenes/menu/score_screen.tscn
 res://scripts/game_singleton.gd
 res://scripts/terminus.gd
+res://scripts/train_select_menu.gd
+res://scenes/levels/5_trains/5_trains_hard/5_train_hard_map_four.tscn
+res://scenes/menu/hard_train_select_menu.tscn
