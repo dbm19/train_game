@@ -34,6 +34,7 @@ var brown_train = preload("res://scenes/trains/brown_train.tscn")
 var train_count = 15
 var random_numbers_index = 0
 var random_numbers = []
+var last_number_of_set
 
 func _ready():
 	spawn = get_node("Spawn")
@@ -68,7 +69,8 @@ func _ready():
 	else:
 		for n in range(1, 12):
 			random_numbers.append(n)
-	_spawn()
+	random_numbers.shuffle()
+	last_number_of_set = random_numbers[random_numbers.size() - 1]
 
 func _process(_delta):
 	pass
@@ -79,7 +81,7 @@ func _on_timer_timeout():
 	if train_count == 2:
 		get_node("Timer").one_shot = true
 	else:
-		if train_index < 9:
+		if train_index < 12:
 			train_index += 1
 		else:
 			train_index = 1
@@ -87,16 +89,16 @@ func _on_timer_timeout():
 	_spawn()
 
 func _spawn():
-	if random_numbers_index == 0 :
-		random_numbers.shuffle()
-		
 	if random_numbers_index < random_numbers.size():
 		spawn_rng = random_numbers[random_numbers_index]
-		random_numbers_index += 1
 	else:
 		random_numbers.shuffle()
+		if random_numbers[0] == last_number_of_set:
+			random_numbers.pop_front()
+			random_numbers.append(last_number_of_set)
 		random_numbers_index = 0
 		spawn_rng = random_numbers[random_numbers_index]
+	random_numbers_index += 1
 	
 	if spawn_rng == 1:
 		trains[train_index] = blue_train.instantiate()

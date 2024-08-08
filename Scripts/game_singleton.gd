@@ -24,5 +24,6 @@ func update_score():
 	score += 1
 
 func _on_timer_timeout():
+	print("end")
 	get_tree().change_scene_to_file("res://scenes/menu/score_screen.tscn")
 	SoundSingleton.background_chug_sound.playing = false

@@ -16,3 +16,4 @@ res://scenes/tracks/up_right_track.tscn
 res://scripts/game.gd
 res://scenes/menu/score_screen.tscn
 res://scripts/game_singleton.gd
+res://scripts/terminus.gd
