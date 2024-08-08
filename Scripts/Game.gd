@@ -31,7 +31,7 @@ var green_train = preload("res://scenes/trains/green_train.tscn")
 var black_train = preload("res://scenes/trains/black_train.tscn")
 var white_train = preload("res://scenes/trains/white_train.tscn")
 var brown_train = preload("res://scenes/trains/brown_train.tscn")
-var train_count = 15
+var train_count = 16
 var random_numbers_index = 0
 var random_numbers = []
 var last_number_of_set
