@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SoundSingleton="*res://scenes/sound_singleton.tscn"
-GameSingleton="*res://scenes/game_singleton.tscn"
+SoundSingleton="*res://scripts/sound_singleton.tscn"
+GameSingleton="*res://scripts/game_singleton.tscn"
 
 [display]
 

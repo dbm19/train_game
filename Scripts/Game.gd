@@ -127,6 +127,3 @@ func _spawn():
 	trains[train_index].scale.y = 1
 
 	self.add_child(trains[train_index])
-
-func _on_timeout():
-	get_tree().change_scene_to_file("res://scenes/score_screen.tscn")

@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://knlyn0faffvm"]
 
-[ext_resource type="Script" path="res://scripts/curved_track.gd" id="1_b4co6"]
+[ext_resource type="Script" path="res://scripts/curved_track.gd" id="1_2af3g"]
 [ext_resource type="Texture2D" uid="uid://bx084kupwxc8l" path="res://art_assets/up_right_track.png" id="2_jwjhn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
 size = Vector2(2, 1.5)
 
-[node name="LeftDown" type="Area2D" groups=["left_down"]]
-script = ExtResource("1_b4co6")
+[node name="LeftDown" type="Area2D" groups=["left_down_track"]]
+script = ExtResource("1_2af3g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1.19209e-07, 1.19209e-07)
@@ -19,4 +19,3 @@ position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_liejn")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="area_exited" from="." to="." method="_on_area_exited"]

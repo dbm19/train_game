@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
 size = Vector2(1.5, 1.25)
 
-[node name="RightDown" type="Area2D" groups=["right_down"]]
+[node name="RightDown" type="Area2D" groups=["right_down_track"]]
 position = Vector2(2.08165e-12, 2.08165e-12)
 script = ExtResource("1_cxhkw")
 

@@ -3,27 +3,26 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func _on_area_entered(area):
-	if self.name == "DownLeft":
+	if get_groups()[0] == "down_left_track":
 		area.go_left()
-	elif self.name == "DownRight":
+	elif get_groups()[0] == "down_right_track":
 		area.go_right()
-	elif self.name == "UpLeft":
+	elif get_groups()[0] == "up_left_track":
 		area.go_left()
-	elif self.name == "UpRight":
+	elif get_groups()[0] == "up_right_track":
 		area.go_right()
-	elif self.name == "LeftDown":
+	elif get_groups()[0] == "left_down_track":
 		area.go_down()
-	elif self.name == "LeftUp":
+	elif get_groups()[0] == "left_up_track":
 		area.go_up()
-	elif self.name == "RightDown":
+	elif get_groups()[0] == "right_down_track":
 		area.go_down()
-		print(area)
-	elif self.name == "RightUp":
+	elif get_groups()[0] == "right_up_track":
 		area.go_up()
