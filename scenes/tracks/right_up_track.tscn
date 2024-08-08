@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5688g2662rwc"]
 
-[ext_resource type="Script" path="res://scripts/curved_track.gd" id="1_fmsub"]
+[ext_resource type="Script" path="res://scripts/curved_track.gd" id="1_a2jpu"]
 [ext_resource type="Texture2D" uid="uid://esoig1rfsuah" path="res://art_assets/down_left_track.png" id="2_m7w47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbx4d"]
 size = Vector2(2, 1.5)
 
 [node name="RightUp" type="Area2D" groups=["right_up"]]
-script = ExtResource("1_fmsub")
+script = ExtResource("1_a2jpu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.08165e-12, 2.08165e-12)
-scale = Vector2(1.055, 1.034)
+scale = Vector2(1.055, 1.038)
 texture = ExtResource("2_m7w47")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

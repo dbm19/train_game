@@ -12,4 +12,7 @@ func _process(delta):
 
 func _on_pressed():
 	SoundSingleton.play_menu_sound()
-	get_tree().change_scene_to_file("res://scenes/menu/normal_train_select_menu.tscn")
+	if self.name == "NormalButton":
+		get_tree().change_scene_to_file("res://scenes/menu/normal_train_select_menu.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/menu/hard_train_select_menu.tscn")

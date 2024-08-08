@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgtiohs8p3jj6"]
 
-[ext_resource type="Script" path="res://scripts/curved_track.gd" id="1_2pbba"]
+[ext_resource type="Script" path="res://scripts/curved_track.gd" id="1_rci6h"]
 [ext_resource type="Texture2D" uid="uid://esoig1rfsuah" path="res://art_assets/down_left_track.png" id="2_a61m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liejn"]
 size = Vector2(1.5, 1.25)
 
 [node name="DownLeft" type="Area2D" groups=["down_left"]]
-script = ExtResource("1_2pbba")
+script = ExtResource("1_rci6h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -7.45058e-09)
-scale = Vector2(1.05469, 1.00949)
+scale = Vector2(1.055, 1.038)
 texture = ExtResource("2_a61m2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

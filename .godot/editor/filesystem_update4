@@ -27,3 +27,12 @@ res://scripts/score_screen.gd
 res://scripts/game_singleton.gd
 res://scenes/menu/normal_train_select_menu.tscn
 res://scenes/menu/hard_train_select_menu.tscn
+res://scripts/train_select_menu.gd
+res://scenes/levels/4_trains/4_trains_normal/4_train_map_five.tscn
+res://scenes/levels/4_trains/4_trains_hard/4_train_hard_map_one.tscn
+res://scripts/curved_track.gd
+res://scenes/trains/orange_train.tscn
+res://scenes/levels/4_trains/4_trains_hard/4_train_hard_map_two.tscn
+res://scenes/levels/4_trains/4_trains_hard/4_train_hard_map_three.tscn
+res://scenes/levels/4_trains/4_trains_hard/4_train_hard_map_four.tscn
+res://scripts/back_button.gd

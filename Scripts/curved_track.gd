@@ -24,5 +24,6 @@ func _on_area_entered(area):
 		area.go_up()
 	elif self.name == "RightDown":
 		area.go_down()
+		print(area)
 	elif self.name == "RightUp":
 		area.go_up()

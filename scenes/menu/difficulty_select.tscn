@@ -75,6 +75,8 @@ script = ExtResource("6_lw7vj")
 layout_mode = 2
 icon = ExtResource("3_0x7y6")
 flat = true
+script = ExtResource("6_lw7vj")
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/NormalButton" to="VBoxContainer/NormalButton" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/HardButton" to="VBoxContainer/HardButton" method="_on_pressed"]

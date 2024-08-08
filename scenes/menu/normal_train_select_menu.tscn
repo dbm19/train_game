@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://scripts/back_button.gd" id="11_vw10k"]
 [ext_resource type="Texture2D" uid="uid://q5kwd8wyfm7h" path="res://art_assets/10_trains.png" id="14_fkat8"]
 
-[node name="DifficultySelect" type="Control"]
+[node name="NormalTrainSelect" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,37 +52,37 @@ alignment = 1
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="4Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="4TrainsNormal" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("2_ys30n")
 flat = true
 script = ExtResource("3_fvup8")
 
-[node name="5Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="5TrainsNormal" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("4_yv6eg")
 flat = true
 script = ExtResource("3_fvup8")
 
-[node name="6Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="6TrainsNormal" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("6_7lhxf")
 flat = true
 script = ExtResource("3_fvup8")
 
-[node name="7Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="7TrainsNormal" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("8_75wur")
 flat = true
 script = ExtResource("3_fvup8")
 
-[node name="8Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="8TrainsNormal" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("2_rn1i6")
 flat = true
 script = ExtResource("3_fvup8")
 
-[node name="9Trains" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="9TrainsNormal" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("4_wfnel")
 flat = true
@@ -91,13 +91,13 @@ script = ExtResource("3_fvup8")
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="10Trains" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="10TrainsHard" type="Button" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 icon = ExtResource("14_fkat8")
 flat = true
 script = ExtResource("3_fvup8")
 
-[node name="11Trains" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="11TrainsHard" type="Button" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 icon = ExtResource("10_i17ru")
 flat = true
@@ -113,12 +113,12 @@ icon = ExtResource("10_w4fex")
 flat = true
 script = ExtResource("11_vw10k")
 
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/4Trains" to="HBoxContainer/VBoxContainer/4Trains" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/5Trains" to="HBoxContainer/VBoxContainer/5Trains" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/6Trains" to="HBoxContainer/VBoxContainer/6Trains" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/7Trains" to="HBoxContainer/VBoxContainer/7Trains" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/8Trains" to="HBoxContainer/VBoxContainer/8Trains" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/9Trains" to="HBoxContainer/VBoxContainer/9Trains" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/10Trains" to="HBoxContainer/VBoxContainer2/10Trains" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/11Trains" to="HBoxContainer/VBoxContainer2/11Trains" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/4TrainsNormal" to="HBoxContainer/VBoxContainer/4TrainsNormal" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/5TrainsNormal" to="HBoxContainer/VBoxContainer/5TrainsNormal" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/6TrainsNormal" to="HBoxContainer/VBoxContainer/6TrainsNormal" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/7TrainsNormal" to="HBoxContainer/VBoxContainer/7TrainsNormal" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/8TrainsNormal" to="HBoxContainer/VBoxContainer/8TrainsNormal" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/9TrainsNormal" to="HBoxContainer/VBoxContainer/9TrainsNormal" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/10TrainsHard" to="HBoxContainer/VBoxContainer2/10TrainsHard" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/11TrainsHard" to="HBoxContainer/VBoxContainer2/11TrainsHard" method="_on_pressed"]
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
