@@ -81,5 +81,9 @@ flat = true
 icon_alignment = 1
 script = ExtResource("7_411wg")
 
+[connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/NewGameButton" to="CanvasLayer/VBoxContainer/NewGameButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/NewGameButton" to="CanvasLayer/VBoxContainer/NewGameButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/NewGameButton" to="CanvasLayer/VBoxContainer/NewGameButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/TutorialButton" to="CanvasLayer/VBoxContainer/TutorialButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/TutorialButton" to="CanvasLayer/VBoxContainer/TutorialButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/TutorialButton" to="CanvasLayer/VBoxContainer/TutorialButton" method="_on_pressed"]

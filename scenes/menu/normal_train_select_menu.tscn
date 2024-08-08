@@ -91,13 +91,13 @@ script = ExtResource("3_fvup8")
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="10TrainsHard" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="10TrainsNormal" type="Button" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 icon = ExtResource("14_fkat8")
 flat = true
 script = ExtResource("3_fvup8")
 
-[node name="11TrainsHard" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="11TrainsNormal" type="Button" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 icon = ExtResource("10_i17ru")
 flat = true
@@ -119,6 +119,6 @@ script = ExtResource("11_vw10k")
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/7TrainsNormal" to="HBoxContainer/VBoxContainer/7TrainsNormal" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/8TrainsNormal" to="HBoxContainer/VBoxContainer/8TrainsNormal" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/9TrainsNormal" to="HBoxContainer/VBoxContainer/9TrainsNormal" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/10TrainsHard" to="HBoxContainer/VBoxContainer2/10TrainsHard" method="_on_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/11TrainsHard" to="HBoxContainer/VBoxContainer2/11TrainsHard" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/10TrainsNormal" to="HBoxContainer/VBoxContainer2/10TrainsNormal" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/11TrainsNormal" to="HBoxContainer/VBoxContainer2/11TrainsNormal" method="_on_pressed"]
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

@@ -11,3 +11,9 @@ func _process(delta):
 func _on_pressed():
 	SoundSingleton.play_menu_sound()
 	get_tree().change_scene_to_file("res://scenes/menu/difficulty_select.tscn")
+
+func _on_mouse_entered():
+	icon = load("res://art_assets/new_game_hovered.png")
+
+func _on_mouse_exited():
+	icon = load("res://art_assets/new_new_game_button.png")

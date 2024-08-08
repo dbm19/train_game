@@ -78,5 +78,9 @@ flat = true
 script = ExtResource("6_lw7vj")
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/NormalButton" to="VBoxContainer/NormalButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/NormalButton" to="VBoxContainer/NormalButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="VBoxContainer/NormalButton" to="VBoxContainer/NormalButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/HardButton" to="VBoxContainer/HardButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/HardButton" to="VBoxContainer/HardButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="VBoxContainer/HardButton" to="VBoxContainer/HardButton" method="_on_pressed"]
