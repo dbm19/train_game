@@ -99,7 +99,7 @@ func _spawn():
 		spawn_rng = random_numbers[random_numbers_index]
 	random_numbers_index += 1
 	last_number_of_set = random_numbers[random_numbers.size() - 1]
-	print(random_numbers, last_number_of_set)
+
 	if spawn_rng == 1:
 		trains[train_index] = blue_train.instantiate()
 	elif spawn_rng == 2:

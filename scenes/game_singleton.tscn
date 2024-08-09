@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg384d5c6c8gg"]
+
+[ext_resource type="Script" path="res://scripts/game_singleton.gd" id="1_2y5gf"]
+[ext_resource type="AudioStream" uid="uid://k7xenxfjn2le" path="res://sounds/background_music.wav" id="2_bgovr"]
+
+[node name="GameSingleton" type="Node2D"]
+script = ExtResource("1_2y5gf")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_bgovr")
+volume_db = 15.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="finished" from="BackgroundMusic" to="." method="_on_background_music_finished"]

@@ -1,3 +1,4 @@
+res://sounds
 res://art_assets
 res://scripts
 /Users/danielmau/Projects/iOS/exported_godot_game
@@ -6,6 +7,5 @@ res://scenes/menu
 /Users/danielmau/Projects/Godot/tilemap
 res://
 res://scenes/terminus
-res://sounds
 res://scenes
 res://scenes/trains

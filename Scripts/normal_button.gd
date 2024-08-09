@@ -20,12 +20,12 @@ func _on_pressed():
 
 func _on_mouse_entered():
 	if self.name == "NormalButton":
-		icon = load("res://art_assets/normal_button_shadow.png")
+		icon = load("res://art_assets/normal_button_hovered.png")
 	else:
-		icon = load("res://art_assets/hard_button_shadow.png")
+		icon = load("res://art_assets/hard_button_hovered.png")
 
 func _on_mouse_exited():
 	if self.name == "NormalButton":
-		icon = load("res://art_assets/normal_button.png")
+		icon = load("res://art_assets/normal_button_shadow.png")
 	else:
-		icon = load("res://art_assets/hard_button.png")
+		icon = load("res://art_assets/hard_button_shadow.png")

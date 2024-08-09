@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://ds5c73ts28chl"]
 
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="1_l8f6r"]
-[ext_resource type="Texture2D" uid="uid://m44iej4wcojc" path="res://art_assets/normal_button.png" id="2_los1f"]
-[ext_resource type="Texture2D" uid="uid://ccu52n76uf0nb" path="res://art_assets/hard_button.png" id="3_0x7y6"]
 [ext_resource type="Texture2D" uid="uid://bto3gaw2qnrdy" path="res://art_assets/back_button_shadow.png" id="3_yv3xr"]
 [ext_resource type="Texture2D" uid="uid://d0h8hxirqktfb" path="res://art_assets/difficulty_select_title.png" id="4_bcusl"]
+[ext_resource type="Texture2D" uid="uid://cyf4o4gs10liq" path="res://art_assets/normal_button_shadow.png" id="5_jbvnx"]
 [ext_resource type="Script" path="res://scripts/normal_button.gd" id="6_lw7vj"]
+[ext_resource type="Texture2D" uid="uid://b10y5t7lfhii8" path="res://art_assets/hard_button_shadow.png" id="7_4kc3r"]
 [ext_resource type="Script" path="res://scripts/back_button.gd" id="11_vw10k"]
 
 [node name="DifficultySelect" type="Control"]
@@ -56,10 +56,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -259.0
-offset_top = -159.0
-offset_right = 269.0
-offset_bottom = 133.0
+offset_left = -273.0
+offset_top = -134.0
+offset_right = 287.0
+offset_bottom = 222.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -67,14 +67,14 @@ size_flags_vertical = 4
 
 [node name="NormalButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("2_los1f")
+icon = ExtResource("5_jbvnx")
 flat = true
 icon_alignment = 1
 script = ExtResource("6_lw7vj")
 
 [node name="HardButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("3_0x7y6")
+icon = ExtResource("7_4kc3r")
 flat = true
 icon_alignment = 1
 script = ExtResource("6_lw7vj")
