@@ -11,7 +11,7 @@ func _ready():
 	train_count = 15
 	score = 0
 	music = get_node("BackgroundMusic")
-	music.playing = true
+	#music.playing = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
