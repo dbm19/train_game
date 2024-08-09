@@ -32,10 +32,10 @@ texture = ExtResource("1_l8f6r")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 700.0
-offset_top = 21.0
-offset_right = 1220.0
-offset_bottom = 157.0
+offset_left = 659.0
+offset_top = 10.0
+offset_right = 1311.0
+offset_bottom = 146.0
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
