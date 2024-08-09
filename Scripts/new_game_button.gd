@@ -13,7 +13,10 @@ func _on_pressed():
 	get_tree().change_scene_to_file("res://scenes/menu/difficulty_select.tscn")
 
 func _on_mouse_entered():
-	icon = load("res://art_assets/new_game_hovered.png")
+	icon = load("res://art_assets/new_game_button_hovered.png")
+
+func _on_button_down():
+	icon = load("res://art_assets/new_game_button_pressed.png")
 
 func _on_mouse_exited():
-	icon = load("res://art_assets/new_new_game_button.png")
+	icon = load("res://art_assets/new_game_button_shadow.png")

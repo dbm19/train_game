@@ -17,3 +17,9 @@ func _on_pressed():
 		get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/menu/difficulty_select.tscn")
+
+func _on_mouse_entered():
+	icon = load("res://art_assets/back_button_hovered.png")
+
+func _on_mouse_exited():
+	icon = load("res://art_assets/back_button_shadow.png")

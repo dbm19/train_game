@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://d0ud74wbn1pps" path="res://art_assets/6_trains.png" id="6_7lhxf"]
 [ext_resource type="Texture2D" uid="uid://bm78gjhg0j8ur" path="res://art_assets/7_trains.png" id="8_75wur"]
 [ext_resource type="Texture2D" uid="uid://cem0yhmr10klv" path="res://art_assets/11_trains.png" id="10_i17ru"]
-[ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="10_w4fex"]
 [ext_resource type="Script" path="res://scripts/back_button.gd" id="11_vw10k"]
+[ext_resource type="Texture2D" uid="uid://bto3gaw2qnrdy" path="res://art_assets/back_button_shadow.png" id="12_brefa"]
 [ext_resource type="Texture2D" uid="uid://q5kwd8wyfm7h" path="res://art_assets/10_trains.png" id="14_fkat8"]
 
 [node name="NormalTrainSelect" type="Control"]
@@ -109,7 +109,7 @@ offset_left = 17.0
 offset_top = 20.0
 offset_right = 197.0
 offset_bottom = 136.0
-icon = ExtResource("10_w4fex")
+icon = ExtResource("12_brefa")
 flat = true
 script = ExtResource("11_vw10k")
 
@@ -121,4 +121,6 @@ script = ExtResource("11_vw10k")
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/9TrainsNormal" to="HBoxContainer/VBoxContainer/9TrainsNormal" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/10TrainsNormal" to="HBoxContainer/VBoxContainer2/10TrainsNormal" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/11TrainsNormal" to="HBoxContainer/VBoxContainer2/11TrainsNormal" method="_on_pressed"]
+[connection signal="mouse_entered" from="Back" to="Back" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Back" to="Back" method="_on_mouse_exited"]
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

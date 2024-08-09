@@ -16,6 +16,8 @@ func _on_pressed():
 func _on_mouse_entered():
 	icon = load("res://art_assets/tutorial_button_hovered.png")
 
-
+func _on_button_down():
+	icon = load("res://art_assets/tutorial_button_pressed.png")
+	
 func _on_mouse_exited():
-	icon = load("res://art_assets/new_tutorial_button.png")
+	icon = load("res://art_assets/tutorial_button_shadow.png")

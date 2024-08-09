@@ -70,7 +70,6 @@ func _ready():
 		for n in range(1, 12):
 			random_numbers.append(n)
 	random_numbers.shuffle()
-	last_number_of_set = random_numbers[random_numbers.size() - 1]
 
 func _process(_delta):
 	pass
@@ -99,7 +98,8 @@ func _spawn():
 		random_numbers_index = 0
 		spawn_rng = random_numbers[random_numbers_index]
 	random_numbers_index += 1
-	
+	last_number_of_set = random_numbers[random_numbers.size() - 1]
+	print(random_numbers, last_number_of_set)
 	if spawn_rng == 1:
 		trains[train_index] = blue_train.instantiate()
 	elif spawn_rng == 2:

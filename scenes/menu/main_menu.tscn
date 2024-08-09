@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_u8phs"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_if151"]
 [ext_resource type="Texture2D" uid="uid://bfxsjfy50ecx0" path="res://art_assets/train_game_ligma.png" id="3_q3u0h"]
-[ext_resource type="Texture2D" uid="uid://c5rpny54ttjtq" path="res://art_assets/new_new_game_button.png" id="4_7bx77"]
+[ext_resource type="Texture2D" uid="uid://mdvvix4gch8k" path="res://art_assets/new_game_button_shadow.png" id="4_2h4ds"]
 [ext_resource type="Script" path="res://scripts/new_game_button.gd" id="5_5ky0d"]
-[ext_resource type="Texture2D" uid="uid://dcn0bjmf0ujex" path="res://art_assets/new_tutorial_button.png" id="6_6tr7w"]
+[ext_resource type="Texture2D" uid="uid://fulmui16fswb" path="res://art_assets/tutorial_button_shadow.png" id="6_0qpvc"]
 [ext_resource type="Script" path="res://scripts/tutorial_button.gd" id="7_411wg"]
 
 [node name="MainMenu" type="Control"]
@@ -58,10 +58,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -216.0
+offset_left = -279.0
 offset_top = -126.0
-offset_right = 216.0
-offset_bottom = 126.0
+offset_right = 281.0
+offset_bottom = 230.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -69,21 +69,23 @@ size_flags_vertical = 4
 
 [node name="NewGameButton" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("4_7bx77")
+icon = ExtResource("4_2h4ds")
 flat = true
 icon_alignment = 1
 script = ExtResource("5_5ky0d")
 
 [node name="TutorialButton" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("6_6tr7w")
+icon = ExtResource("6_0qpvc")
 flat = true
 icon_alignment = 1
 script = ExtResource("7_411wg")
 
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/NewGameButton" to="CanvasLayer/VBoxContainer/NewGameButton" method="_on_button_down"]
 [connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/NewGameButton" to="CanvasLayer/VBoxContainer/NewGameButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/NewGameButton" to="CanvasLayer/VBoxContainer/NewGameButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/NewGameButton" to="CanvasLayer/VBoxContainer/NewGameButton" method="_on_pressed"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/TutorialButton" to="CanvasLayer/VBoxContainer/TutorialButton" method="_on_button_down"]
 [connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/TutorialButton" to="CanvasLayer/VBoxContainer/TutorialButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/TutorialButton" to="CanvasLayer/VBoxContainer/TutorialButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/TutorialButton" to="CanvasLayer/VBoxContainer/TutorialButton" method="_on_pressed"]

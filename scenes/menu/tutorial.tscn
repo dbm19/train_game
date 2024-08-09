@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://pc6adlj87j38" path="res://art_assets/Screenshot 2024-08-01 at 14.28.17.png" id="2_hsucq"]
 [ext_resource type="Texture2D" uid="uid://b0p2fqeoa3ohf" path="res://art_assets/begin_practice_round.png" id="3_a64y4"]
 [ext_resource type="Script" path="res://scripts/practice_round_button.gd" id="4_y7tso"]
-[ext_resource type="Texture2D" uid="uid://2q70pe8bmuoe" path="res://art_assets/back.png" id="5_4q1go"]
 [ext_resource type="Script" path="res://scripts/back_button.gd" id="6_etgne"]
+[ext_resource type="Texture2D" uid="uid://bto3gaw2qnrdy" path="res://art_assets/back_button_shadow.png" id="6_f628n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8n4bv"]
 font_size = 20
@@ -74,9 +74,11 @@ offset_left = 17.0
 offset_top = 20.0
 offset_right = 197.0
 offset_bottom = 136.0
-icon = ExtResource("5_4q1go")
+icon = ExtResource("6_f628n")
 flat = true
 script = ExtResource("6_etgne")
 
 [connection signal="pressed" from="MarginContainer2/VBoxContainer/Button" to="MarginContainer2/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="Back" to="Back" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Back" to="Back" method="_on_mouse_exited"]
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
