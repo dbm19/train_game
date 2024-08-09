@@ -16,41 +16,39 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_left = -271.0
 offset_top = -455.0
 offset_right = 2117.0
 offset_bottom = 1213.0
 texture = ExtResource("1_l8f6r")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 offset_left = 519.0
 offset_top = 155.0
-offset_right = 1171.0
-offset_bottom = 291.0
+offset_right = 1411.0
+offset_bottom = 431.0
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 80
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("4_bcusl")
 
-[node name="Back" type="Button" parent="."]
-layout_mode = 0
+[node name="Back" type="Button" parent="CanvasLayer"]
 offset_left = 17.0
 offset_top = 20.0
-offset_right = 197.0
-offset_bottom = 136.0
+offset_right = 265.0
+offset_bottom = 176.0
 icon = ExtResource("3_yv3xr")
 flat = true
 script = ExtResource("11_vw10k")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -65,26 +63,26 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
-[node name="NormalButton" type="Button" parent="VBoxContainer"]
+[node name="NormalButton" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("5_jbvnx")
 flat = true
 icon_alignment = 1
 script = ExtResource("6_lw7vj")
 
-[node name="HardButton" type="Button" parent="VBoxContainer"]
+[node name="HardButton" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("7_4kc3r")
 flat = true
 icon_alignment = 1
 script = ExtResource("6_lw7vj")
 
-[connection signal="mouse_entered" from="Back" to="Back" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Back" to="Back" method="_on_mouse_exited"]
-[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/NormalButton" to="VBoxContainer/NormalButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/NormalButton" to="VBoxContainer/NormalButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer/NormalButton" to="VBoxContainer/NormalButton" method="_on_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/HardButton" to="VBoxContainer/HardButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/HardButton" to="VBoxContainer/HardButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer/HardButton" to="VBoxContainer/HardButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/NormalButton" to="CanvasLayer/VBoxContainer/NormalButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/NormalButton" to="CanvasLayer/VBoxContainer/NormalButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/NormalButton" to="CanvasLayer/VBoxContainer/NormalButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/HardButton" to="CanvasLayer/VBoxContainer/HardButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/HardButton" to="CanvasLayer/VBoxContainer/HardButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HardButton" to="CanvasLayer/VBoxContainer/HardButton" method="_on_pressed"]
