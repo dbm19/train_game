@@ -21,11 +21,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -254.0
-offset_top = -398.0
-offset_right = 2134.0
-offset_bottom = 1270.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+offset_top = -322.0
+offset_right = 154.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_2omle")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
