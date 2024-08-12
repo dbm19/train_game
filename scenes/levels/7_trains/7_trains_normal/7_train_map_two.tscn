@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d2q4vgwv4cmj6"]
+[gd_scene load_steps=34 format=3 uid="uid://d2q4vgwv4cmj6"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_3jale"]
 [ext_resource type="Texture2D" uid="uid://mcg0yqpa4vpk" path="res://art_assets/vertical_track.png" id="2_fj26f"]
@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://c4c6jbq7i4fun" path="res://scenes/terminus/silver_terminus.tscn" id="20_ui2of"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="21_ceihi"]
 [ext_resource type="PackedScene" uid="uid://dg5a5horef5qv" path="res://scenes/spawn/spawn_down.tscn" id="22_5d27q"]
+[ext_resource type="Texture2D" uid="uid://bto3gaw2qnrdy" path="res://art_assets/back_button_shadow.png" id="24_sa6og"]
+[ext_resource type="Script" path="res://scripts/back_button.gd" id="25_4iat8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ro1x8"]
 texture = ExtResource("2_fj26f")
@@ -77,13 +79,6 @@ position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_3jale")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1129.97
-offset_top = -1001.43
-offset_right = 1258.03
-offset_bottom = 666.57
-texture = ExtResource("2_rbhwa")
-
 [node name="TileMapSevenTrains" type="TileMap" parent="."]
 position = Vector2(-97.8408, -66.2426)
 scale = Vector2(4, 4)
@@ -91,9 +86,6 @@ tile_set = SubResource("TileSet_28vtv")
 format = 2
 layer_0/name = "Track"
 layer_0/tile_data = PackedInt32Array(-262143, 0, 0, -196607, 1, 65536, -131071, 0, 0, -65536, 5, 0, -1, 1, 327680, 1, 0, 0, -327679, 7, 131072, -196606, 5, 0, -65535, 1, 196608, -3, 4, 65536, -2, 5, 0, -131075, 4, 524288, -262145, 4, 393216, -131074, 5, 0, -65537, 0, 0, -196609, 0, 0, -131073, 1, 524288, -65533, 4, 589824, -196603, 4, 262144, -131069, 0, 0, -196604, 5, 0, -196605, 1, 393216, 65537, 1, 65536, 131073, 0, 0, 65538, 5, 0, 196609, 4, 458752, 65539, 4, 131072)
-layer_1/name = "Background"
-layer_1/z_index = -1
-layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 196612, 3, 0, 196610, 3, 0, 131074, 3, 0, 65538, 3, 0, -65531, 3, 0, -65532, 3, 0, -65533, 3, 0, -65534, 3, 0, -131070, 3, 0, -196605, 3, 0, -196604, 3, 0, -131068, 3, 0, -131067, 3, 0, -131069, 3, 0, -196603, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 3, 0, -262142, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 131072, 3, 0, 131073, 3, 0, 196607, 3, 0, 196606, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -262143, 3, 0, -262144, 3, 0, -131072, 3, 0, -65536, 3, 0, 0, 3, 0, 65535, 3, 0, -1, 3, 0, -65537, 3, 0, -131073, 3, 0, -196609, 3, 0, -131074, 3, 0, -65538, 3, 0, 65534, 3, 0, -196610, 3, 0, -196611, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -131075, 3, 0, 131069, 3, 0, 196605, 3, 0, 262141, 3, 0, 262140, 3, 0, 131068, 3, 0, -262148, 3, 0, 196613, 3, 0, -327675, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 65540, 3, 0, 5, 3, 0, 65541, 3, 0, 131077, 3, 0, -196612, 3, 0, -131076, 3, 0, -65540, 3, 0, 65532, 3, 0, 65533, 3, 0, -3, 3, 0, 196604, 3, 0, -65539, 3, 0, -2, 3, 0, -4, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 262149, 3, 0, 327685, 3, 0, 327684, 3, 0, 327683, 3, 0, 327682, 3, 0, 327681, 3, 0, 327680, 3, 0, 393215, 3, 0, 393214, 3, 0, 393213, 3, 0, 393212, 3, 0, 458748, 3, 0, 458749, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, -196606, 3, 0, -196607, 3, 0, -196608, 3, 0, 393222, 3, 0, 327686, 3, 0, 262150, 3, 0, 196614, 3, 0, 131078, 3, 0, 65542, 3, 0, 6, 3, 0, -65530, 3, 0, -131066, 3, 0, -196602, 3, 0, -262138, 3, 0, -327674, 3, 0)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -102,23 +94,51 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-0.959231, -353.618)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+offset_top = -322.0
+offset_right = 154.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rbhwa")
+metadata/_edit_use_anchors_ = true
+
+[node name="Back" type="Button" parent="CanvasLayer"]
+offset_left = 17.0
+offset_top = 20.0
+offset_right = 265.0
+offset_bottom = 176.0
+icon = ExtResource("24_sa6og")
+flat = true
+script = ExtResource("25_4iat8")
+
 [connection signal="area_entered" from="TileMapSevenTrains/Area2D" to="TileMapSevenTrains/Area2D" method="_on_area_entered"]
 [connection signal="area_exited" from="TileMapSevenTrains/Area2D" to="TileMapSevenTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277213" to="TileMapSevenTrains/@Area2D@277213" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@277213" to="TileMapSevenTrains/@Area2D@277213" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277214" to="TileMapSevenTrains/@Area2D@277214" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@277214" to="TileMapSevenTrains/@Area2D@277214" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277215" to="TileMapSevenTrains/@Area2D@277215" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277216" to="TileMapSevenTrains/@Area2D@277216" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277217" to="TileMapSevenTrains/@Area2D@277217" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277218" to="TileMapSevenTrains/@Area2D@277218" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@277218" to="TileMapSevenTrains/@Area2D@277218" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277219" to="TileMapSevenTrains/@Area2D@277219" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277220" to="TileMapSevenTrains/@Area2D@277220" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277221" to="TileMapSevenTrains/@Area2D@277221" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@277221" to="TileMapSevenTrains/@Area2D@277221" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277222" to="TileMapSevenTrains/@Area2D@277222" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@277222" to="TileMapSevenTrains/@Area2D@277222" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277223" to="TileMapSevenTrains/@Area2D@277223" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@277224" to="TileMapSevenTrains/@Area2D@277224" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990709" to="TileMapSevenTrains/@Area2D@990709" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@990709" to="TileMapSevenTrains/@Area2D@990709" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990710" to="TileMapSevenTrains/@Area2D@990710" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@990710" to="TileMapSevenTrains/@Area2D@990710" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990711" to="TileMapSevenTrains/@Area2D@990711" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990712" to="TileMapSevenTrains/@Area2D@990712" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990713" to="TileMapSevenTrains/@Area2D@990713" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990714" to="TileMapSevenTrains/@Area2D@990714" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@990714" to="TileMapSevenTrains/@Area2D@990714" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990715" to="TileMapSevenTrains/@Area2D@990715" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990716" to="TileMapSevenTrains/@Area2D@990716" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990717" to="TileMapSevenTrains/@Area2D@990717" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@990717" to="TileMapSevenTrains/@Area2D@990717" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990718" to="TileMapSevenTrains/@Area2D@990718" method="_on_area_entered"]
+[connection signal="area_exited" from="TileMapSevenTrains/@Area2D@990718" to="TileMapSevenTrains/@Area2D@990718" method="_on_area_exited"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990719" to="TileMapSevenTrains/@Area2D@990719" method="_on_area_entered"]
+[connection signal="area_entered" from="TileMapSevenTrains/@Area2D@990720" to="TileMapSevenTrains/@Area2D@990720" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_pressed"]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=35 format=3 uid="uid://cr1fwtyf4x8x8"]
+[gd_scene load_steps=37 format=3 uid="uid://cr1fwtyf4x8x8"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_os7g4"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_d24kf"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_s5ea6"]
+[ext_resource type="Texture2D" uid="uid://bto3gaw2qnrdy" path="res://art_assets/back_button_shadow.png" id="3_feu7p"]
 [ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://scenes/down_right_junction.tscn" id="3_txj7v"]
 [ext_resource type="PackedScene" uid="uid://blckcooogvd6y" path="res://scenes/junctions/down_left_junction.tscn" id="4_bj342"]
+[ext_resource type="Script" path="res://scripts/back_button.gd" id="4_fmh6s"]
 [ext_resource type="PackedScene" uid="uid://cbhb5rqlqobs2" path="res://scenes/junctions/left_down_junction.tscn" id="5_cy7yv"]
 [ext_resource type="PackedScene" uid="uid://dexyaq8gdjgt6" path="res://scenes/junctions/left_up_junction.tscn" id="6_vsm0o"]
 [ext_resource type="PackedScene" uid="uid://dp6xpqxpo0fat" path="res://scenes/junctions/right_down_junction.tscn" id="7_ja5ab"]
@@ -78,7 +80,7 @@ sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
 sources/0 = SubResource("TileSetAtlasSource_ynvvt")
 sources/5 = SubResource("TileSetAtlasSource_5ofp7")
 
-[node name="Game" type="Node2D" groups=["4_train_map", "game"]]
+[node name="Game2" type="Node2D" groups=["4_train_map", "game"]]
 position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_os7g4")
@@ -97,6 +99,16 @@ offset_bottom = 266.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_d24kf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Back" type="Button" parent="CanvasLayer"]
+offset_left = 17.0
+offset_top = 20.0
+offset_right = 265.0
+offset_bottom = 176.0
+icon = ExtResource("3_feu7p")
+flat = true
+script = ExtResource("4_fmh6s")
 
 [node name="TileMapFourTrains" type="TileMap" parent="."]
 visibility_layer = 3
@@ -114,14 +126,7 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(371.219, 31.173)
 
-[connection signal="area_entered" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@700721" to="TileMapFourTrains/@Area2D@700721" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@700722" to="TileMapFourTrains/@Area2D@700722" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@700723" to="TileMapFourTrains/@Area2D@700723" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@700723" to="TileMapFourTrains/@Area2D@700723" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@700724" to="TileMapFourTrains/@Area2D@700724" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@700724" to="TileMapFourTrains/@Area2D@700724" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@700725" to="TileMapFourTrains/@Area2D@700725" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@700726" to="TileMapFourTrains/@Area2D@700726" method="_on_area_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

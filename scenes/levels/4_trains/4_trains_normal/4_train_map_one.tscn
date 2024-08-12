@@ -1,10 +1,12 @@
-[gd_scene load_steps=36 format=3 uid="uid://0n6rmhyudfb7"]
+[gd_scene load_steps=38 format=3 uid="uid://0n6rmhyudfb7"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_accgt"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_51u8g"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_va5f2"]
 [ext_resource type="PackedScene" uid="uid://bubficg50scye" path="res://scenes/down_right_junction.tscn" id="3_caljk"]
+[ext_resource type="Texture2D" uid="uid://bto3gaw2qnrdy" path="res://art_assets/back_button_shadow.png" id="3_mj8bg"]
 [ext_resource type="PackedScene" uid="uid://blckcooogvd6y" path="res://scenes/junctions/down_left_junction.tscn" id="4_1i8yv"]
+[ext_resource type="Script" path="res://scripts/back_button.gd" id="4_knply"]
 [ext_resource type="PackedScene" uid="uid://cbhb5rqlqobs2" path="res://scenes/junctions/left_down_junction.tscn" id="5_wdpbp"]
 [ext_resource type="PackedScene" uid="uid://dexyaq8gdjgt6" path="res://scenes/junctions/left_up_junction.tscn" id="6_t5kl5"]
 [ext_resource type="PackedScene" uid="uid://dp6xpqxpo0fat" path="res://scenes/junctions/right_down_junction.tscn" id="7_4ycua"]
@@ -101,6 +103,15 @@ grow_vertical = 2
 texture = ExtResource("2_va5f2")
 metadata/_edit_use_anchors_ = true
 
+[node name="Back" type="Button" parent="CanvasLayer"]
+offset_left = 17.0
+offset_top = 20.0
+offset_right = 265.0
+offset_bottom = 176.0
+icon = ExtResource("3_mj8bg")
+flat = true
+script = ExtResource("4_knply")
+
 [node name="TileMapFourTrains" type="TileMap" parent="."]
 position = Vector2(-23.0213, -50.656)
 scale = Vector2(4, 4)
@@ -116,4 +127,7 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-246.52, -19.4831)
 
+[connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
