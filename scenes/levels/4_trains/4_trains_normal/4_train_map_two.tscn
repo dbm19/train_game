@@ -72,7 +72,7 @@ sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
 sources/0 = SubResource("TileSetAtlasSource_ro1x8")
 sources/5 = SubResource("TileSetAtlasSource_tx84g")
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" groups=["4_train_map"]]
 position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_2s12r")
@@ -102,14 +102,4 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-0.959231, -353.618)
 
-[connection signal="area_entered" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@248658" to="TileMapFourTrains/@Area2D@248658" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@248658" to="TileMapFourTrains/@Area2D@248658" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@248659" to="TileMapFourTrains/@Area2D@248659" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@248660" to="TileMapFourTrains/@Area2D@248660" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@248660" to="TileMapFourTrains/@Area2D@248660" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@248661" to="TileMapFourTrains/@Area2D@248661" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@248662" to="TileMapFourTrains/@Area2D@248662" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@248663" to="TileMapFourTrains/@Area2D@248663" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

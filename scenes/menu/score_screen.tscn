@@ -34,10 +34,17 @@ grow_vertical = 2
 texture = ExtResource("2_rac68")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 725.0
-offset_top = 304.0
-offset_right = 1245.0
-offset_bottom = 412.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.001
+offset_top = -54.0
+offset_right = 260.001
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_iesvy")
 
 [node name="Back" type="Button" parent="CanvasLayer"]
@@ -50,10 +57,17 @@ flat = true
 script = ExtResource("4_vjarx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-offset_left = 754.777
-offset_top = 441.408
-offset_right = 1196.78
-offset_bottom = 597.408
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = 58.0
+offset_right = 240.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label1" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2

@@ -45,7 +45,7 @@ func _ready():
 	if self.has_node("TileMapThreeTrains"):
 		for n in range(1, 4):
 			random_numbers.append(n)
-	elif self.has_node("TileMapFourTrains"):
+	elif self.is_in_group("4_train_map"):
 		for n in range(1, 5):
 			random_numbers.append(n)
 	elif self.has_node("TileMapFiveTrains"):

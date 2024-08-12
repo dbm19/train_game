@@ -80,17 +80,26 @@ sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
 sources/0 = SubResource("TileSetAtlasSource_ynvvt")
 sources/5 = SubResource("TileSetAtlasSource_5ofp7")
 
-[node name="Game" type="Node2D" groups=["game"]]
+[node name="Game" type="Node2D" groups=["4_train_map", "game"]]
 position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_accgt")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1129.97
-offset_top = -1001.43
-offset_right = 1258.03
-offset_bottom = 666.57
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+offset_top = -322.0
+offset_right = 154.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_va5f2")
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMapFourTrains" type="TileMap" parent="."]
 position = Vector2(-23.0213, -50.656)
@@ -99,9 +108,6 @@ tile_set = SubResource("TileSet_28vtv")
 format = 2
 layer_0/name = "Track"
 layer_0/tile_data = PackedInt32Array(65532, 7, 196608, 65533, 0, 0, 65534, 1, 458752, 65535, 0, 0, 0, 1, 393216, 1, 0, 0, 2, 1, 458752, -2, 5, 0, 65536, 5, 0, -65534, 5, 0, 3, 0, 0, -65538, 4, 65536, 131072, 4, 458752, -131070, 4, 393216, 4, 4, 262144)
-layer_1/name = "Background"
-layer_1/z_index = -1
-layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 196612, 3, 0, 196610, 3, 0, 131074, 3, 0, 65538, 3, 0, -65531, 3, 0, -65532, 3, 0, -65533, 3, 0, -65534, 3, 0, -131070, 3, 0, -196605, 3, 0, -196604, 3, 0, -131068, 3, 0, -131067, 3, 0, -131069, 3, 0, -196603, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 3, 0, -262142, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 131072, 3, 0, 131073, 3, 0, 196607, 3, 0, 196606, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -262143, 3, 0, -262144, 3, 0, -131072, 3, 0, -65536, 3, 0, 0, 3, 0, 65535, 3, 0, -1, 3, 0, -65537, 3, 0, -131073, 3, 0, -196609, 3, 0, -131074, 3, 0, -65538, 3, 0, 65534, 3, 0, -196610, 3, 0, -196611, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -131075, 3, 0, 131069, 3, 0, 196605, 3, 0, 262141, 3, 0, 262140, 3, 0, 131068, 3, 0, -262148, 3, 0, 196613, 3, 0, -327675, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 65540, 3, 0, 5, 3, 0, 65541, 3, 0, 131077, 3, 0, -196612, 3, 0, -131076, 3, 0, -65540, 3, 0, 65532, 3, 0, 65533, 3, 0, -3, 3, 0, 196604, 3, 0, -65539, 3, 0, -2, 3, 0, -4, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 262149, 3, 0, 327685, 3, 0, 327684, 3, 0, 327683, 3, 0, 327682, 3, 0, 327681, 3, 0, 327680, 3, 0, 393215, 3, 0, 393214, 3, 0, 393213, 3, 0, 393212, 3, 0, 458748, 3, 0, 458749, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, -196606, 3, 0, -196607, 3, 0, -196608, 3, 0, 393222, 3, 0, 327686, 3, 0, 262150, 3, 0, 196614, 3, 0, 131078, 3, 0, 65542, 3, 0, 6, 3, 0, -65530, 3, 0, -131066, 3, 0, -196602, 3, 0, -262138, 3, 0, -327674, 3, 0)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -110,14 +116,4 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-246.52, -19.4831)
 
-[connection signal="area_entered" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@237262" to="TileMapFourTrains/@Area2D@237262" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@237262" to="TileMapFourTrains/@Area2D@237262" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@237263" to="TileMapFourTrains/@Area2D@237263" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@237263" to="TileMapFourTrains/@Area2D@237263" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@237264" to="TileMapFourTrains/@Area2D@237264" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@237265" to="TileMapFourTrains/@Area2D@237265" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@237266" to="TileMapFourTrains/@Area2D@237266" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@237267" to="TileMapFourTrains/@Area2D@237267" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

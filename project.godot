@@ -28,3 +28,4 @@ window/size/viewport_height=1080
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
+viewport/size/viewport_width=1920
