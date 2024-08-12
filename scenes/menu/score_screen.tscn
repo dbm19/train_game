@@ -19,43 +19,50 @@ font_color = Color(0, 0, 0, 1)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_4jhxx")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-offset_left = -306.951
-offset_top = -491.949
-offset_right = 2081.05
-offset_bottom = 1176.05
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+offset_top = -322.0
+offset_right = 154.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_rac68")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 695.437
-offset_top = 296.143
-offset_right = 1215.44
-offset_bottom = 404.143
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 725.0
+offset_top = 304.0
+offset_right = 1245.0
+offset_bottom = 412.0
 texture = ExtResource("2_iesvy")
 
-[node name="Back" type="Button" parent="."]
-offset_left = 17.0
-offset_top = 20.0
-offset_right = 197.0
-offset_bottom = 136.0
+[node name="Back" type="Button" parent="CanvasLayer"]
+offset_left = 17.7227
+offset_top = 20.5306
+offset_right = 197.723
+offset_bottom = 136.531
 icon = ExtResource("3_cdeyj")
 flat = true
 script = ExtResource("4_vjarx")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 724.0
-offset_top = 430.0
-offset_right = 1166.0
-offset_bottom = 586.0
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 754.777
+offset_top = 441.408
+offset_right = 1196.78
+offset_bottom = 597.408
 
-[node name="Label1" type="Label" parent="VBoxContainer"]
+[node name="Label1" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_yraji")
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_61qpk")
 horizontal_alignment = 1
 
-[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_pressed"]

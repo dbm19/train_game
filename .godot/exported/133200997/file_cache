@@ -6,7 +6,7 @@ res://scenes/junctions/right_up_junction.tscn::332e20495404a4989db94ffe994c641d:
 res://scenes/junctions/up_left_junction.tscn::899bebaf3e8d54341962ee984af7436a::1722955942::res://.godot/exported/133200997/export-15145c1b3dc22bdb9dcdd5a083b758fb-up_left_junction.scn
 res://scenes/junctions/up_right_junction.tscn::05fefd7c18aee2887369f79a6d95d911::1722955942::res://.godot/exported/133200997/export-986aa339e606431e484b9ffbfd9f27a0-up_right_junction.scn
 res://scenes/levels/8_trains/tile_map.tscn::d39a3465ee1f4803a30c0e0f33189f22::1723127426::res://.godot/exported/133200997/export-81e330ecfca9ff5d678d791b4ce1b2e8-tile_map.scn
-res://scenes/levels/8_trains/tile_map_2.tscn::9a406b55dcfb9cc1ab21abc04b405b8d::1723466919::res://.godot/exported/133200997/export-7b5f8adbe6588a3a8390448f5947b809-tile_map_2.scn
+res://scenes/levels/8_trains/tile_map_2.tscn::bcfd9638f228c23b14cc1eb83d2d11dd::1723468805::res://.godot/exported/133200997/export-7b5f8adbe6588a3a8390448f5947b809-tile_map_2.scn
 res://scenes/levels/8_trains/tile_map_3.tscn::f2e3124f8d1f88e67549753378e602de::1723127426::res://.godot/exported/133200997/export-9f69d5b8ddc8e0b8228ef9fd128a2a2b-tile_map_3.scn
 res://scenes/levels/8_trains/tile_map_4.tscn::9f1ae1983baa11cca4c0caebd8fee5e4::1723127426::res://.godot/exported/133200997/export-59ecb5eda9a3b72ba5eef7e1e0b2bb3e-tile_map_4.scn
 res://scenes/levels/9_trains/9_train_map_one.tscn::e96abededf45df4c9d5f3af726941dc5::1723127426::res://.godot/exported/133200997/export-929be2308409c1274cf68c834c85eeb0-9_train_map_one.scn
@@ -21,8 +21,8 @@ res://scenes/levels/11_trains/11_train_map_four.tscn::cd2212fed479d14b405afb5bbb
 res://scenes/levels/11_trains/11_train_map_one.tscn::a2d32ef2b934c1f5001877bf821be9d0::1723127426::res://.godot/exported/133200997/export-d6f458d1d49101469ff6c32d61d36391-11_train_map_one.scn
 res://scenes/levels/11_trains/11_train_map_three.tscn::d6c6b1f49280716c8bda37253d6599c9::1723127426::res://.godot/exported/133200997/export-c095b9c90b3bbc0feffdae43cb9a771b-11_train_map_three.scn
 res://scenes/levels/11_trains/11_train_map_two.tscn::ccddcfdf57449f12aa9e795a1312853a::1723127426::res://.godot/exported/133200997/export-46284070c3554b9b8877086be681c801-11_train_map_two.scn
-res://scenes/menu/difficulty_select.tscn::9111dc5820b1326abde670838266a57b::1723466995::res://.godot/exported/133200997/export-f80972b90c1f8856703c8924a1e630dd-difficulty_select.scn
-res://scenes/menu/tutorial.tscn::8bdd322515e7bd142834647882fa1b27::1723467039::res://.godot/exported/133200997/export-06f9221e4ccb124cf1002229cbb8dc7e-tutorial.scn
+res://scenes/menu/difficulty_select.tscn::9111dc5820b1326abde670838266a57b::1723468838::res://.godot/exported/133200997/export-f80972b90c1f8856703c8924a1e630dd-difficulty_select.scn
+res://scenes/menu/tutorial.tscn::6832699678443f740e11b6770c0f6f2a::1723468898::res://.godot/exported/133200997/export-06f9221e4ccb124cf1002229cbb8dc7e-tutorial.scn
 res://scenes/spawn/spawn_down.tscn::e2c9a8a0c22d94d709db4841efbe2251::1722955966::res://.godot/exported/133200997/export-6ff752470c903ae63f97602f2856fb5c-spawn_down.scn
 res://scenes/spawn/spawn_left.tscn::d057c1243a9377d9417997eb4bfe15fa::1722955966::res://.godot/exported/133200997/export-050e14feb4fc855b23ad16342ec64f3d-spawn_left.scn
 res://scenes/spawn/spawn_right.tscn::7f81c40a2c04cd1d48e1a023d68973a4::1722955966::res://.godot/exported/133200997/export-8386da382c83faaec8c3295c99878b67-spawn_right.scn
@@ -81,9 +81,9 @@ res://scenes/levels/7_trains/7_trains_normal/7_train_map_one.tscn::d3dfbcfc310f9
 res://scenes/levels/7_trains/7_trains_normal/7_train_map_three.tscn::ef79c302a0e7862b3ec108d9f15a2c3c::1723127426::res://.godot/exported/133200997/export-a61f00e68eedc3c02a13c66c22169be2-7_train_map_three.scn
 res://scenes/levels/7_trains/7_trains_normal/7_train_map_two.tscn::a374ad2dc119f06a690fd93f08311721::1723127426::res://.godot/exported/133200997/export-a5870b8579813b670f5d6515ec87055c-7_train_map_two.scn
 res://scenes/menu/hard_train_select_menu.tscn::fad5a9d6a122632e0c5cc222d68ceb4b::1723467060::res://.godot/exported/133200997/export-1ed7861cbbf7f406e4fc89ccc19efaaf-hard_train_select_menu.scn
-res://scenes/menu/main_menu.tscn::b10acc470b90ccda074fef6e5fa93cdc::1723466995::res://.godot/exported/133200997/export-9ae7820dfc5b492c0424e6a9127ac776-main_menu.scn
-res://scenes/menu/normal_train_select_menu.tscn::064c524a2cd6dc74fa6806c115a80a12::1723466995::res://.godot/exported/133200997/export-f4374da26bb1dcc391220d62e681b384-normal_train_select_menu.scn
-res://scenes/menu/score_screen.tscn::65c4eaa9dfdb2dfba3948e893748750e::1723138931::res://.godot/exported/133200997/export-0d831d6985cb03db588e4480be4b8e09-score_screen.scn
+res://scenes/menu/main_menu.tscn::b10acc470b90ccda074fef6e5fa93cdc::1723468838::res://.godot/exported/133200997/export-9ae7820dfc5b492c0424e6a9127ac776-main_menu.scn
+res://scenes/menu/normal_train_select_menu.tscn::064c524a2cd6dc74fa6806c115a80a12::1723468838::res://.godot/exported/133200997/export-f4374da26bb1dcc391220d62e681b384-normal_train_select_menu.scn
+res://scenes/menu/score_screen.tscn::37a2067d5ea5f2294454544c52898c71::1723468839::res://.godot/exported/133200997/export-0d831d6985cb03db588e4480be4b8e09-score_screen.scn
 res://scenes/tracks/down_left_track.tscn::275b8bab8db4a4eb3467aa63996c5eaf::1723127421::res://.godot/exported/133200997/export-abb4b63dbe6b994c5e0ff84a5023509c-down_left_track.scn
 res://scenes/tracks/down_right_track.tscn::68f54cc884c3f5854a8d7de47b0a2063::1723127451::res://.godot/exported/133200997/export-614fefccbf051539f50fbd462073be31-down_right_track.scn
 res://scenes/tracks/left_down_track.tscn::3ffd6d160290445cd6d0dff83891cd48::1723127708::res://.godot/exported/133200997/export-880b53e05fedaa1d9569bdb9474dcaf4-left_down_track.scn

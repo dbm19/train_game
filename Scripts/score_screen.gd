@@ -4,8 +4,8 @@ var label2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	label = get_node("VBoxContainer/Label1")
-	label2 = get_node("VBoxContainer/Label2")
+	label = get_node("CanvasLayer/VBoxContainer/Label1")
+	label2 = get_node("CanvasLayer/VBoxContainer/Label2")
 	label.text = str(GameSingleton.score) + " / 15"
 	
 	if GameSingleton.score == 15:
