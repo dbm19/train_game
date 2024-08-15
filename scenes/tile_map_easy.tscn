@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://ni56ouk55n4w"]
+[gd_scene load_steps=37 format=4 uid="uid://ni56ouk55n4w"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_kfypg"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_8q5qm"]
@@ -85,13 +85,12 @@ position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_kfypg")
 
-[node name="TileMapThreeTrains" type="TileMap" parent="."]
+[node name="Track" type="TileMapLayer" parent="."]
+use_parent_material = true
 position = Vector2(-96.8816, -31.173)
 scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAABAAUABQAAAAAAAAABAAQABQAAAAAAAAABAAMAAQAAAAAACQABAAIABQAAAAAAAAABAAEABQAAAAAAAAABAP//BQAAAAAAAAABAAAAAQAAAAAACAAAAAAAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMABAAAAAAAAQD//wAABAAAAAAABwABAP7/BAAAAAAABgABAAYABwAAAAAABAA=")
 tile_set = SubResource("TileSet_28vtv")
-format = 2
-layer_0/name = "Track"
-layer_0/tile_data = PackedInt32Array(327681, 5, 0, 262145, 5, 0, 196609, 1, 589824, 131073, 5, 0, 65537, 5, 0, -65535, 5, 0, 1, 1, 524288, 0, 0, 0, 196610, 0, 0, 196611, 4, 65536, 65535, 4, 458752, -131071, 4, 393216, 393217, 7, 262144)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -125,6 +124,13 @@ icon = ExtResource("27_5j861")
 flat = true
 script = ExtResource("29_jibfu")
 
+[connection signal="area_entered" from="Track/Area2D" to="Track/Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/Area2D" to="Track/Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@31992" to="Track/@Area2D@31992" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@31992" to="Track/@Area2D@31992" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@31993" to="Track/@Area2D@31993" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@31994" to="Track/@Area2D@31994" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@31995" to="Track/@Area2D@31995" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]

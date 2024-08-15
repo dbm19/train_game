@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://c6uvsrxq5r2pj"]
+[gd_scene load_steps=37 format=4 uid="uid://c6uvsrxq5r2pj"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_r5f7r"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_3ya64"]
@@ -85,17 +85,16 @@ position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_r5f7r")
 
+[node name="Track" type="TileMapLayer" parent="."]
+use_parent_material = true
+position = Vector2(65.2272, -192.883)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD8/wUABQAAAAAAAAD8/wQABQAAAAAAAAD8/wMAAQAAAAAACQD8/wIABQAAAAAAAAD8/wYABwAAAAAABAD9/wMAAAAAAAAAAAD+/wMAAQAAAAAABgAAAAMAAQAAAAAABwABAAMAAAAAAAAAAAAAAAIABQAAAAAAAAD//wMAAAAAAAAAAAD+/wUABAAAAAAABwACAAMABAAAAAAABAD+/wQABQAAAAAAAAD8/wEABAAAAAAABgAAAAEABAAAAAAAAQA=")
+tile_set = SubResource("TileSet_28vtv")
+
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-158.272, 228.927)
 scale = Vector2(0.999999, 1)
-
-[node name="TileMapFourTrains" type="TileMap" parent="."]
-position = Vector2(65.2272, -192.883)
-scale = Vector2(4, 4)
-tile_set = SubResource("TileSet_28vtv")
-format = 2
-layer_0/name = "Track"
-layer_0/tile_data = PackedInt32Array(393212, 5, 0, 327676, 5, 0, 262140, 1, 589824, 196604, 5, 0, 458748, 7, 262144, 262141, 0, 0, 262142, 1, 393216, 196608, 1, 458752, 196609, 0, 0, 131072, 5, 0, 262143, 0, 0, 393214, 4, 458752, 196610, 4, 262144, 327678, 5, 0, 131068, 4, 393216, 65536, 4, 65536)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -127,16 +126,16 @@ metadata/_edit_use_anchors_ = true
 wait_time = 2.0
 autostart = true
 
-[connection signal="area_entered" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/Area2D" to="TileMapFourTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@26600" to="TileMapFourTrains/@Area2D@26600" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@26600" to="TileMapFourTrains/@Area2D@26600" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@26601" to="TileMapFourTrains/@Area2D@26601" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapFourTrains/@Area2D@26601" to="TileMapFourTrains/@Area2D@26601" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@26602" to="TileMapFourTrains/@Area2D@26602" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@26603" to="TileMapFourTrains/@Area2D@26603" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@26604" to="TileMapFourTrains/@Area2D@26604" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapFourTrains/@Area2D@26605" to="TileMapFourTrains/@Area2D@26605" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/Area2D" to="Track/Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/Area2D" to="Track/Area2D" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@30747" to="Track/@Area2D@30747" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@30747" to="Track/@Area2D@30747" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@30748" to="Track/@Area2D@30748" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@30748" to="Track/@Area2D@30748" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@30749" to="Track/@Area2D@30749" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@30750" to="Track/@Area2D@30750" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@30751" to="Track/@Area2D@30751" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@30752" to="Track/@Area2D@30752" method="_on_area_entered"]
 [connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_pressed"]

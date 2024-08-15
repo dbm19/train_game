@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://0n6rmhyudfb7"]
+[gd_scene load_steps=38 format=4 uid="uid://0n6rmhyudfb7"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_accgt"]
 [ext_resource type="Texture2D" uid="uid://cta048upofd5m" path="res://art_assets/horizontal_track.png" id="2_51u8g"]
@@ -87,6 +87,13 @@ position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_accgt")
 
+[node name="Track" type="TileMapLayer" parent="."]
+use_parent_material = true
+position = Vector2(-23.0213, -50.656)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD8/wAABwAAAAAAAwD9/wAAAAAAAAAAAAD+/wAAAQAAAAAABwD//wAAAAAAAAAAAAAAAAAAAQAAAAAABgABAAAAAAAAAAAAAAACAAAAAQAAAAAABwD+////BQAAAAAAAAAAAAEABQAAAAAAAAACAP//BQAAAAAAAAADAAAAAAAAAAAAAAD+//7/BAAAAAAAAQAAAAIABAAAAAAABwACAP7/BAAAAAAABgAEAAAABAAAAAAABAA=")
+tile_set = SubResource("TileSet_28vtv")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
@@ -112,14 +119,6 @@ icon = ExtResource("3_mj8bg")
 flat = true
 script = ExtResource("4_knply")
 
-[node name="TileMapFourTrains" type="TileMap" parent="."]
-position = Vector2(-23.0213, -50.656)
-scale = Vector2(4, 4)
-tile_set = SubResource("TileSet_28vtv")
-format = 2
-layer_0/name = "Track"
-layer_0/tile_data = PackedInt32Array(65532, 7, 196608, 65533, 0, 0, 65534, 1, 458752, 65535, 0, 0, 0, 1, 393216, 1, 0, 0, 2, 1, 458752, -2, 5, 0, 65536, 5, 0, -65534, 5, 0, 3, 0, 0, -65538, 4, 65536, 131072, 4, 458752, -131070, 4, 393216, 4, 4, 262144)
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
@@ -127,6 +126,16 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-246.52, -19.4831)
 
+[connection signal="area_entered" from="Track/@Area2D@33132" to="Track/@Area2D@33132" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@33132" to="Track/@Area2D@33132" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@33133" to="Track/@Area2D@33133" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@33133" to="Track/@Area2D@33133" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@33134" to="Track/@Area2D@33134" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@33134" to="Track/@Area2D@33134" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@33135" to="Track/@Area2D@33135" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@33136" to="Track/@Area2D@33136" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@33137" to="Track/@Area2D@33137" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@33138" to="Track/@Area2D@33138" method="_on_area_entered"]
 [connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_pressed"]

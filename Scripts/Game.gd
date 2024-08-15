@@ -42,7 +42,7 @@ func _ready():
 	SoundSingleton.play_background_ocean_sound()
 	GameSingleton._ready()
 	
-	if self.has_node("TileMapThreeTrains"):
+	if self.has_node("3_train_map"):
 		for n in range(1, 4):
 			random_numbers.append(n)
 	elif self.is_in_group("4_train_map"):

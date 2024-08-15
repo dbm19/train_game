@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b7fdyw4qbtfwu"]
+[gd_scene load_steps=34 format=4 uid="uid://b7fdyw4qbtfwu"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_2s12r"]
 [ext_resource type="Texture2D" uid="uid://mcg0yqpa4vpk" path="res://art_assets/vertical_track.png" id="2_jeiy3"]
@@ -79,6 +79,13 @@ position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_2s12r")
 
+[node name="Track" type="TileMapLayer" parent="."]
+use_parent_material = true
+position = Vector2(-97.8408, -66.2426)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAABAPz/AAAAAAAAAAABAP3/AQAAAAAAAQABAP7/AAAAAAAAAAAAAP//BQAAAAAAAAD/////AQAAAAAABQABAAAAAAAAAAAAAAD///3/BAAAAAAABgD///7/AAAAAAAAAAABAPv/BwAAAAAAAgACAP3/BQAAAAAAAAABAP//AQAAAAAAAwABAAEABAAAAAAABwADAP3/BAAAAAAABAD9////BAAAAAAAAQD+////BQAAAAAAAAA=")
+tile_set = SubResource("TileSet_28vtv")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
@@ -103,14 +110,6 @@ offset_bottom = 176.0
 icon = ExtResource("24_xcn0j")
 flat = true
 script = ExtResource("25_p5uk7")
-
-[node name="TileMapFourTrains" type="TileMap" parent="."]
-position = Vector2(-97.8408, -66.2426)
-scale = Vector2(4, 4)
-tile_set = SubResource("TileSet_28vtv")
-format = 2
-layer_0/name = "Track"
-layer_0/tile_data = PackedInt32Array(-262143, 0, 0, -196607, 1, 65536, -131071, 0, 0, -65536, 5, 0, -1, 1, 327680, 1, 0, 0, -131073, 4, 393216, -65537, 0, 0, -327679, 7, 131072, -196606, 5, 0, -65535, 1, 196608, 65537, 4, 458752, -196605, 4, 262144, -3, 4, 65536, -2, 5, 0)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0

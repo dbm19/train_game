@@ -61,4 +61,3 @@ func _on_area_entered(area):
 	if GameSingleton.train_count == 0:
 		GameSingleton.end_timer()
 	area.queue_free()
-
