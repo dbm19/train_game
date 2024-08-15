@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ennngfmrxvl5"]
+[gd_scene load_steps=38 format=4 uid="uid://ennngfmrxvl5"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_e0noj"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_8e5r4"]
@@ -82,18 +82,17 @@ sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
 sources/0 = SubResource("TileSetAtlasSource_ynvvt")
 sources/5 = SubResource("TileSetAtlasSource_5ofp7")
 
-[node name="Game" type="Node2D" groups=["game"]]
+[node name="Game" type="Node2D" groups=["9_train_map", "game"]]
 position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_e0noj")
 
-[node name="TileMapNineTrains" type="TileMap" parent="."]
-position = Vector2(-44.1242, -0.974091)
+[node name="Track" type="TileMapLayer" parent="."]
+use_parent_material = true
+position = Vector2(-44.1242, -0.974121)
 scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAGAAAABwAAAAAAAQAFAAAAAAAAAAAAAAAEAAAAAQAAAAAABQAEAP//BQAAAAAAAAAEAPz/BAAAAAAAAQADAAAAAAAAAAAAAAACAAEABQAAAAAAAAACAAAAAQAAAAAABAAEAP7/AQAAAAAACQAFAP7/AAAAAAAAAAAEAP3/BQAAAAAAAAAGAP7/BAAAAAAABwAAAP7/AQAAAAAACQD+/wAABAAAAAAABgAAAP//BQAAAAAAAAABAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAQAAAAAABQACAP7/BAAAAAAACQABAP7/AAAAAAAAAAAAAP3/BQAAAAAAAAAAAAIABAAAAAAAAgACAAMABQAAAAAAAAACAAIAAQAAAAAAAwABAAIAAAAAAAAAAAD+//z/BAAAAAAAAwAEAAQABAAAAAAABQAAAPr/BAAAAAAACAACAAYABAAAAAAABAD///z/AAAAAAAAAAADAAQAAAAAAAAAAAACAAQAAQAAAAAAAQAAAPz/AQAAAAAACAACAAUABQAAAAAAAAAAAPv/BQAAAAAAAAA=")
 tile_set = SubResource("TileSet_28vtv")
-format = 2
-layer_0/name = "Track"
-layer_0/tile_data = PackedInt32Array(6, 7, 65536, 5, 0, 0, 4, 1, 327680, -65532, 5, 0, -262140, 4, 65536, 3, 0, 0, 65538, 5, 0, 2, 1, 262144, -131068, 1, 589824, -131067, 0, 0, -196604, 5, 0, -131066, 4, 458752, -131072, 1, 589824, 65534, 4, 393216, -65536, 5, 0, 1, 0, 0, 65535, 0, 0, 0, 1, 327680, -131070, 4, 589824, -131071, 0, 0, -196608, 5, 0, 131072, 4, 131072, 196610, 5, 0, 131074, 1, 196608, 131073, 0, 0, -196610, 4, 196608, 262148, 4, 327680, -393216, 4, 524288, 393218, 4, 262144, -196609, 0, 0, 262147, 0, 0, 262146, 1, 65536, -262144, 1, 524288, 327682, 5, 0, -327680, 5, 0)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -127,31 +126,31 @@ icon = ExtResource("28_s7lva")
 flat = true
 script = ExtResource("29_f370s")
 
-[connection signal="area_entered" from="TileMapNineTrains/Area2D" to="TileMapNineTrains/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapNineTrains/Area2D" to="TileMapNineTrains/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015490" to="TileMapNineTrains/@Area2D@1015490" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015491" to="TileMapNineTrains/@Area2D@1015491" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapNineTrains/@Area2D@1015491" to="TileMapNineTrains/@Area2D@1015491" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015492" to="TileMapNineTrains/@Area2D@1015492" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapNineTrains/@Area2D@1015492" to="TileMapNineTrains/@Area2D@1015492" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015493" to="TileMapNineTrains/@Area2D@1015493" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015494" to="TileMapNineTrains/@Area2D@1015494" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapNineTrains/@Area2D@1015494" to="TileMapNineTrains/@Area2D@1015494" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015495" to="TileMapNineTrains/@Area2D@1015495" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015496" to="TileMapNineTrains/@Area2D@1015496" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapNineTrains/@Area2D@1015496" to="TileMapNineTrains/@Area2D@1015496" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015497" to="TileMapNineTrains/@Area2D@1015497" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015498" to="TileMapNineTrains/@Area2D@1015498" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015499" to="TileMapNineTrains/@Area2D@1015499" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapNineTrains/@Area2D@1015499" to="TileMapNineTrains/@Area2D@1015499" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015500" to="TileMapNineTrains/@Area2D@1015500" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015501" to="TileMapNineTrains/@Area2D@1015501" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015502" to="TileMapNineTrains/@Area2D@1015502" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015503" to="TileMapNineTrains/@Area2D@1015503" method="_on_area_entered"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015504" to="TileMapNineTrains/@Area2D@1015504" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapNineTrains/@Area2D@1015504" to="TileMapNineTrains/@Area2D@1015504" method="_on_area_exited"]
-[connection signal="area_entered" from="TileMapNineTrains/@Area2D@1015505" to="TileMapNineTrains/@Area2D@1015505" method="_on_area_entered"]
-[connection signal="area_exited" from="TileMapNineTrains/@Area2D@1015505" to="TileMapNineTrains/@Area2D@1015505" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@73877" to="Track/@Area2D@73877" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@73877" to="Track/@Area2D@73877" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@73878" to="Track/@Area2D@73878" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@73879" to="Track/@Area2D@73879" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@73879" to="Track/@Area2D@73879" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@73880" to="Track/@Area2D@73880" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@73880" to="Track/@Area2D@73880" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@73881" to="Track/@Area2D@73881" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@73882" to="Track/@Area2D@73882" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@73882" to="Track/@Area2D@73882" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@73883" to="Track/@Area2D@73883" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@73884" to="Track/@Area2D@73884" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@73884" to="Track/@Area2D@73884" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@73885" to="Track/@Area2D@73885" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@73886" to="Track/@Area2D@73886" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@73887" to="Track/@Area2D@73887" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@73887" to="Track/@Area2D@73887" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@73888" to="Track/@Area2D@73888" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@73889" to="Track/@Area2D@73889" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@73890" to="Track/@Area2D@73890" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@73891" to="Track/@Area2D@73891" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@73892" to="Track/@Area2D@73892" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@73892" to="Track/@Area2D@73892" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@73893" to="Track/@Area2D@73893" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@73893" to="Track/@Area2D@73893" method="_on_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]

@@ -42,31 +42,31 @@ func _ready():
 	SoundSingleton.play_background_ocean_sound()
 	GameSingleton._ready()
 	
-	if self.has_node("3_train_map"):
+	if self.is_in_group("3_train_map"):
 		for n in range(1, 4):
 			random_numbers.append(n)
 	elif self.is_in_group("4_train_map"):
 		for n in range(1, 5):
 			random_numbers.append(n)
-	elif self.has_node("TileMapFiveTrains"):
+	elif self.is_in_group("5_train_map"):
 		for n in range(1, 6):
 			random_numbers.append(n)
-	elif self.has_node("TileMapSixTrains"):
+	elif self.is_in_group("6_train_map"):
 		for n in range(1, 7):
 			random_numbers.append(n)
-	elif self.has_node("TileMapSevenTrains"):
+	elif self.is_in_group("7_train_map"):
 		for n in range(1, 8):
 			random_numbers.append(n)
-	elif self.has_node("TileMapEightTrains"):
+	elif self.is_in_group("8_train_map"):
 		for n in range(1, 9):
 			random_numbers.append(n)
-	elif self.has_node("TileMapNineTrains"):
+	elif self.is_in_group("9_train_map"):
 		for n in range(1, 10):
 			random_numbers.append(n)
-	elif self.has_node("TileMapTenTrains"):
+	elif self.is_in_group("10_train_map"):
 		for n in range(1, 11):
 			random_numbers.append(n)
-	else:
+	elif self.is_in_group("11_train_map"):
 		for n in range(1, 12):
 			random_numbers.append(n)
 	random_numbers.shuffle()

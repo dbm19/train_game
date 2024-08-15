@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://ba7g77p3iwoc6"]
+[gd_scene load_steps=34 format=4 uid="uid://ba7g77p3iwoc6"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_4mwuq"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_2obi5"]
@@ -74,18 +74,10 @@ sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
 sources/0 = SubResource("TileSetAtlasSource_ro1x8")
 sources/5 = SubResource("TileSetAtlasSource_tx84g")
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" groups=["5_train_map"]]
 position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_4mwuq")
-
-[node name="TileMapFiveTrains" type="TileMap" parent="."]
-position = Vector2(-97.8408, -66.2426)
-scale = Vector2(4, 4)
-tile_set = SubResource("TileSet_28vtv")
-format = 2
-layer_0/name = "Track"
-layer_0/tile_data = PackedInt32Array(-262143, 0, 0, -196607, 1, 65536, -131071, 0, 0, -65536, 5, 0, -1, 1, 327680, 1, 0, 0, -327679, 7, 131072, -196606, 5, 0, -65535, 1, 196608, 65537, 4, 458752, -196605, 4, 262144, -3, 4, 65536, -2, 5, 0, -131075, 4, 524288, -262145, 4, 393216, -131074, 5, 0, -65537, 0, 0, -196609, 0, 0, -131073, 1, 524288)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -118,6 +110,13 @@ offset_bottom = 176.0
 icon = ExtResource("24_oq7mv")
 flat = true
 script = ExtResource("25_45bi5")
+
+[node name="Track" type="TileMapLayer" parent="."]
+use_parent_material = true
+position = Vector2(-97.8408, -66.2426)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAABAPz/AAAAAAAAAAABAP3/AQAAAAAAAQABAP7/AAAAAAAAAAAAAP//BQAAAAAAAAD/////AQAAAAAABQABAAAAAAAAAAAAAAABAPv/BwAAAAAAAgACAP3/BQAAAAAAAAABAP//AQAAAAAAAwABAAEABAAAAAAABwADAP3/BAAAAAAABAD9////BAAAAAAAAQD+////BQAAAAAAAAD9//3/BAAAAAAACAD///v/BAAAAAAABgD+//3/BQAAAAAAAAD///7/AAAAAAAAAAD///z/AAAAAAAAAAD///3/AQAAAAAACAA=")
+tile_set = SubResource("TileSet_28vtv")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
