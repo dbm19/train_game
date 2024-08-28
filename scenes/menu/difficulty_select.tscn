@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://ds5c73ts28chl"]
 
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="1_l8f6r"]
+[ext_resource type="Texture2D" uid="uid://bvy0xbb6cinw7" path="res://art_assets/new_difficulty.png" id="2_1bs17"]
 [ext_resource type="Texture2D" uid="uid://bto3gaw2qnrdy" path="res://art_assets/back_button_shadow.png" id="3_yv3xr"]
-[ext_resource type="Texture2D" uid="uid://d0h8hxirqktfb" path="res://art_assets/difficulty_select_title.png" id="4_bcusl"]
 [ext_resource type="Texture2D" uid="uid://cyf4o4gs10liq" path="res://art_assets/normal_button_shadow.png" id="5_jbvnx"]
 [ext_resource type="Script" path="res://scripts/normal_button.gd" id="6_lw7vj"]
 [ext_resource type="Texture2D" uid="uid://b10y5t7lfhii8" path="res://art_assets/hard_button_shadow.png" id="7_4kc3r"]
@@ -34,9 +34,10 @@ texture = ExtResource("1_l8f6r")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -446.0
-offset_right = 446.0
-offset_bottom = 276.0
+offset_left = -447.0
+offset_top = 155.0
+offset_right = 457.0
+offset_bottom = 747.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 120
 theme_override_constants/margin_top = 80
@@ -45,7 +46,7 @@ theme_override_constants/margin_bottom = 80
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("4_bcusl")
+texture = ExtResource("2_1bs17")
 stretch_mode = 2
 
 [node name="Back" type="Button" parent="CanvasLayer"]

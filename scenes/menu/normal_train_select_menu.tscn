@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://c3p6dkwo1n4g7"]
 
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="1_l8f6r"]
-[ext_resource type="Texture2D" uid="uid://nc44owcahv83" path="res://art_assets/train_select_title.png" id="2_kjikk"]
+[ext_resource type="Texture2D" uid="uid://klm00em3jojy" path="res://art_assets/number_of_trains.png" id="2_uyuqj"]
 [ext_resource type="Texture2D" uid="uid://k26q3063txsr" path="res://art_assets/4_trains_new.png" id="3_4r5xk"]
 [ext_resource type="Script" path="res://scripts/train_select_menu.gd" id="3_fvup8"]
 [ext_resource type="Texture2D" uid="uid://b8tjbbu782ut0" path="res://art_assets/5_trains_new.png" id="5_7w4be"]
@@ -48,7 +48,7 @@ grow_horizontal = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("2_kjikk")
+texture = ExtResource("2_uyuqj")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 15

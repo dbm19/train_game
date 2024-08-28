@@ -15,3 +15,6 @@ res://scenes/levels/6_trains/6_trains_hard/6_train_hard_map_four.tscn
 res://scenes/levels/6_trains/6_trains_hard/6_train_hard_map_one.tscn
 res://scenes/levels/6_trains/6_trains_hard/6_train_hard_map_three.tscn
 res://scenes/levels/6_trains/6_trains_hard/6_train_hard_map_two.tscn
+res://scenes/menu/hard_train_select_menu.tscn
+res://scenes/menu/normal_train_select_menu.tscn
+res://scenes/menu/difficulty_select.tscn
