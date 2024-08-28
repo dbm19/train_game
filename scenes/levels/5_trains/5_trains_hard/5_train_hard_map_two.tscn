@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://y5ivjjm570mu"]
+[gd_scene load_steps=37 format=4 uid="uid://y5ivjjm570mu"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_g5aya"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_37ffc"]
@@ -83,7 +83,7 @@ sources/0 = SubResource("TileSetAtlasSource_ro1x8")
 sources/5 = SubResource("TileSetAtlasSource_tx84g")
 sources/6 = SubResource("TileSetScenesCollectionSource_rp5n5")
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" groups=["5_train_map"]]
 position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_g5aya")
@@ -95,16 +95,12 @@ offset_right = 1258.03
 offset_bottom = 666.57
 texture = ExtResource("2_37ffc")
 
-[node name="TileMapFiveTrains" type="TileMap" parent="."]
+[node name="Track" type="TileMapLayer" parent="."]
+use_parent_material = true
 position = Vector2(-97.8408, -66.2426)
 scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD7/wEABwAAAAAAAQD8/wEABQAAAAAAAAD+/wEABQAAAAAAAAD9/wEABQAAAAAAAAD//wEABgAAAAAABQD//wMAAQAAAAAAAQABAAMABgAAAAAABgABAP//BgAAAAAABwAAAP//AQAAAAAABQD+////AQAAAAAABQD+//7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAAAAAAAAAAAAAAABAAIAAAAAAAAAAAD//wQAAAAAAAAAAAD//wIAAAAAAAAAAAABAAEAAQAAAAAACQAAAAMABQAAAAAAAAACAAEABQAAAAAAAAD/////BQAAAAAAAAD9////BQAAAAAAAAD//wUABAAAAAAAAQADAAEABAAAAAAABAD+//3/BAAAAAAABgAAAP3/BAAAAAAACAD8////BAAAAAAABwA=")
 tile_set = SubResource("TileSet_28vtv")
-format = 2
-layer_0/name = "Track"
-layer_0/tile_data = PackedInt32Array(131067, 7, 65536, 131068, 5, 0, 131070, 5, 0, 131069, 5, 0, 131071, 6, 327680, 262143, 1, 65536, 196609, 6, 393216, -65535, 6, 458752, -65536, 1, 327680, -2, 1, 327680, -65538, 0, 0, -131072, 0, 0, 1, 0, 0, 131073, 0, 0, 327679, 0, 0, 196607, 0, 0, 65537, 1, 589824, 196608, 5, 0, 65538, 5, 0, -1, 5, 0, -3, 5, 0, 393215, 4, 65536, 65539, 4, 262144, -131074, 4, 393216, -196608, 4, 524288, -4, 4, 458752)
-layer_1/name = "Background"
-layer_1/z_index = -1
-layer_1/tile_data = PackedInt32Array(131076, 3, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 196612, 3, 0, 196610, 3, 0, 131074, 3, 0, 65538, 3, 0, -65531, 3, 0, -65532, 3, 0, -65533, 3, 0, -65534, 3, 0, -131070, 3, 0, -196605, 3, 0, -196604, 3, 0, -131068, 3, 0, -131067, 3, 0, -131069, 3, 0, -196603, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 3, 0, -262142, 3, 0, 196609, 3, 0, 196608, 3, 0, 262143, 3, 0, 262142, 3, 0, 131072, 3, 0, 131073, 3, 0, 196607, 3, 0, 196606, 3, 0, 131070, 3, 0, 131071, 3, 0, 65536, 3, 0, 65537, 3, 0, 1, 3, 0, -65535, 3, 0, -131071, 3, 0, -262143, 3, 0, -262144, 3, 0, -131072, 3, 0, -65536, 3, 0, 0, 3, 0, 65535, 3, 0, -1, 3, 0, -65537, 3, 0, -131073, 3, 0, -196609, 3, 0, -131074, 3, 0, -65538, 3, 0, 65534, 3, 0, -196610, 3, 0, -196611, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -131075, 3, 0, 131069, 3, 0, 196605, 3, 0, 262141, 3, 0, 262140, 3, 0, 131068, 3, 0, -262148, 3, 0, 196613, 3, 0, -327675, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 65540, 3, 0, 5, 3, 0, 65541, 3, 0, 131077, 3, 0, -196612, 3, 0, -131076, 3, 0, -65540, 3, 0, 65532, 3, 0, 65533, 3, 0, -3, 3, 0, 196604, 3, 0, -65539, 3, 0, -2, 3, 0, -4, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262146, 3, 0, 262147, 3, 0, 262148, 3, 0, 262149, 3, 0, 327685, 3, 0, 327684, 3, 0, 327683, 3, 0, 327682, 3, 0, 327681, 3, 0, 327680, 3, 0, 393215, 3, 0, 393214, 3, 0, 393213, 3, 0, 393212, 3, 0, 458748, 3, 0, 458749, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, -196606, 3, 0, -196607, 3, 0, -196608, 3, 0, 393222, 3, 0, 327686, 3, 0, 262150, 3, 0, 196614, 3, 0, 131078, 3, 0, 65542, 3, 0, 6, 3, 0, -65530, 3, 0, -131066, 3, 0, -196602, 3, 0, -262138, 3, 0, -327674, 3, 0)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -113,4 +109,22 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-385.608, 32.1471)
 
+[connection signal="area_entered" from="Track/@Area2D@62880" to="Track/@Area2D@62880" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@62880" to="Track/@Area2D@62880" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@62881" to="Track/@Area2D@62881" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@62881" to="Track/@Area2D@62881" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@62882" to="Track/@Area2D@62882" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@62882" to="Track/@Area2D@62882" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@62883" to="Track/@Area2D@62883" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@62884" to="Track/@Area2D@62884" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@62884" to="Track/@Area2D@62884" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@62885" to="Track/@Area2D@62885" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@62885" to="Track/@Area2D@62885" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@62886" to="Track/@Area2D@62886" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@62886" to="Track/@Area2D@62886" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@62887" to="Track/@Area2D@62887" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@62888" to="Track/@Area2D@62888" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@62889" to="Track/@Area2D@62889" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@62890" to="Track/@Area2D@62890" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@62891" to="Track/@Area2D@62891" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
