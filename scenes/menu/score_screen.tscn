@@ -1,19 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://0q0gjhr0wior"]
+[gd_scene load_steps=11 format=3 uid="uid://0q0gjhr0wior"]
 
 [ext_resource type="Script" path="res://scripts/score_screen.gd" id="1_4jhxx"]
-[ext_resource type="Texture2D" uid="uid://dr2frl3do3p78" path="res://art_assets/your_score.png" id="2_iesvy"]
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="2_rac68"]
+[ext_resource type="Texture2D" uid="uid://c4xqbjtu8er0i" path="res://art_assets/score.png" id="3_qox3r"]
 [ext_resource type="Texture2D" uid="uid://bto3gaw2qnrdy" path="res://art_assets/back_button_shadow.png" id="4_pwelh"]
 [ext_resource type="Script" path="res://scripts/back_button.gd" id="4_vjarx"]
+[ext_resource type="Texture2D" uid="uid://bx20ysmska8r" path="res://art_assets/actual_score_card.png" id="6_6lt2r"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_yraji"]
-font_size = 30
-font_color = Color(0, 0, 0, 1)
+[sub_resource type="SystemFont" id="SystemFont_3ly32"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dfekq"]
+font = SubResource("SystemFont_3ly32")
+font_size = 50
+
+[sub_resource type="SystemFont" id="SystemFont_pd88h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_61qpk"]
 line_spacing = 30.0
-font_size = 30
-font_color = Color(0, 0, 0, 1)
+font = SubResource("SystemFont_pd88h")
+font_size = 50
 
 [node name="ScoreScreen" type="Node2D" groups=["game"]]
 scale = Vector2(1.04251, 1.02653)
@@ -45,7 +50,21 @@ offset_right = 260.001
 offset_bottom = 54.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_iesvy")
+texture = ExtResource("3_qox3r")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -430.0
+offset_right = 260.0
+offset_bottom = -195.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_6lt2r")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
@@ -53,16 +72,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -202.0
-offset_top = 58.0
-offset_right = 240.0
-offset_bottom = 214.0
+offset_left = -221.0
+offset_top = 135.0
+offset_right = 221.0
+offset_bottom = 291.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label1" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-label_settings = SubResource("LabelSettings_yraji")
+label_settings = SubResource("LabelSettings_dfekq")
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]

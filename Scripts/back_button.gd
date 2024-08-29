@@ -13,10 +13,7 @@ func _process(delta):
 func _on_pressed():
 	SoundSingleton.play_menu_sound()
 	SoundSingleton.background_chug_sound.playing = false
-	if get_tree().get_current_scene().name == "Tutorial" || get_tree().get_current_scene().name == "DifficultySelect" || get_tree().get_current_scene().name == "TutorialMap":
-		get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
-	else:
-		get_tree().change_scene_to_file("res://scenes/menu/difficulty_select.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
 
 func _on_mouse_entered():
 	icon = load("res://art_assets/back_button_hovered.png")

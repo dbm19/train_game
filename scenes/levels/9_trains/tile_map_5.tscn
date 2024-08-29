@@ -82,7 +82,7 @@ sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
 sources/0 = SubResource("TileSetAtlasSource_ynvvt")
 sources/5 = SubResource("TileSetAtlasSource_5ofp7")
 
-[node name="Game" type="Node2D" groups=["game"]]
+[node name="Game" type="Node2D" groups=["9_train_map", "game"]]
 position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_kwsmm")
@@ -126,31 +126,6 @@ icon = ExtResource("28_oinqo")
 flat = true
 script = ExtResource("29_q01gb")
 
-[connection signal="area_entered" from="Track/@Area2D@68240" to="Track/@Area2D@68240" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/@Area2D@68240" to="Track/@Area2D@68240" method="_on_area_exited"]
-[connection signal="area_entered" from="Track/@Area2D@68241" to="Track/@Area2D@68241" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/@Area2D@68241" to="Track/@Area2D@68241" method="_on_area_exited"]
-[connection signal="area_entered" from="Track/@Area2D@68242" to="Track/@Area2D@68242" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/@Area2D@68242" to="Track/@Area2D@68242" method="_on_area_exited"]
-[connection signal="area_entered" from="Track/@Area2D@68243" to="Track/@Area2D@68243" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/@Area2D@68243" to="Track/@Area2D@68243" method="_on_area_exited"]
-[connection signal="area_entered" from="Track/@Area2D@68244" to="Track/@Area2D@68244" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@68245" to="Track/@Area2D@68245" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@68246" to="Track/@Area2D@68246" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@68247" to="Track/@Area2D@68247" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@68248" to="Track/@Area2D@68248" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/@Area2D@68248" to="Track/@Area2D@68248" method="_on_area_exited"]
-[connection signal="area_entered" from="Track/@Area2D@68249" to="Track/@Area2D@68249" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/@Area2D@68249" to="Track/@Area2D@68249" method="_on_area_exited"]
-[connection signal="area_entered" from="Track/@Area2D@68250" to="Track/@Area2D@68250" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/@Area2D@68250" to="Track/@Area2D@68250" method="_on_area_exited"]
-[connection signal="area_entered" from="Track/@Area2D@68251" to="Track/@Area2D@68251" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@68252" to="Track/@Area2D@68252" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@68253" to="Track/@Area2D@68253" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@68254" to="Track/@Area2D@68254" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@68255" to="Track/@Area2D@68255" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@68256" to="Track/@Area2D@68256" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/@Area2D@68256" to="Track/@Area2D@68256" method="_on_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]

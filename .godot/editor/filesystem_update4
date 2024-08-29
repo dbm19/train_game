@@ -18,3 +18,16 @@ res://scenes/levels/6_trains/6_trains_hard/6_train_hard_map_two.tscn
 res://scenes/menu/hard_train_select_menu.tscn
 res://scenes/menu/normal_train_select_menu.tscn
 res://scenes/menu/difficulty_select.tscn
+res://scripts/new_game_button.gd
+res://scripts/back_button.gd
+res://scenes/tile_map_easy.tscn
+res://scenes/menu/tutorial.tscn
+res://scenes/menu/score_screen.tscn
+res://scenes/levels/9_trains/tile_map_5.tscn
+res://scenes/levels/9_trains/9_train_map_one.tscn
+res://scenes/levels/9_trains/9_train_map_three.tscn
+res://scenes/levels/9_trains/9_train_map_two.tscn
+res://scripts/score_screen.gd
+res://scenes/levels/10_trains/10_train_map_two.tscn
+res://scenes/levels/10_trains/10_train_map_one.tscn
+res://scenes/levels/10_trains/10_train_map_four.tscn

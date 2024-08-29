@@ -28,7 +28,7 @@ func add_never_give_up_label():
 	label2.text = "Never give up"
 
 func add_improvement_label():
-	label2.text = "Improvement is inevitable"
+	label2.text = "You will improve"
 
 func add_perfection_is_near_label():
 	label2.text = "Perfection is near"

@@ -80,7 +80,7 @@ sources/7 = SubResource("TileSetScenesCollectionSource_kf4yd")
 sources/0 = SubResource("TileSetAtlasSource_ynvvt")
 sources/5 = SubResource("TileSetAtlasSource_5ofp7")
 
-[node name="TutorialMap" type="Node2D" groups=["game"]]
+[node name="TutorialMap" type="Node2D" groups=["3_train_map", "game"]]
 position = Vector2(960, 540)
 scale = Vector2(1.04251, 1.02653)
 script = ExtResource("1_kfypg")
@@ -124,13 +124,6 @@ icon = ExtResource("27_5j861")
 flat = true
 script = ExtResource("29_jibfu")
 
-[connection signal="area_entered" from="Track/Area2D" to="Track/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/Area2D" to="Track/Area2D" method="_on_area_exited"]
-[connection signal="area_entered" from="Track/@Area2D@31992" to="Track/@Area2D@31992" method="_on_area_entered"]
-[connection signal="area_exited" from="Track/@Area2D@31992" to="Track/@Area2D@31992" method="_on_area_exited"]
-[connection signal="area_entered" from="Track/@Area2D@31993" to="Track/@Area2D@31993" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@31994" to="Track/@Area2D@31994" method="_on_area_entered"]
-[connection signal="area_entered" from="Track/@Area2D@31995" to="Track/@Area2D@31995" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Back" to="CanvasLayer/Back" method="_on_mouse_exited"]
