@@ -1,14 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://cble8cf0s65u7"]
+[gd_scene load_steps=10 format=3 uid="uid://cble8cf0s65u7"]
 
 [ext_resource type="Texture2D" uid="uid://b6c311aw7je22" path="res://art_assets/Untitled_Artwork.png" id="1_2omle"]
-[ext_resource type="Texture2D" uid="uid://cq0ipjr7qckts" path="res://art_assets/Screenshot 2024-08-01 at 14.27.48.png" id="1_wm8cd"]
-[ext_resource type="Texture2D" uid="uid://pc6adlj87j38" path="res://art_assets/Screenshot 2024-08-01 at 14.28.17.png" id="2_hsucq"]
+[ext_resource type="Texture2D" uid="uid://d1cxm7tb0kka3" path="res://art_assets/tutorial_1.png" id="2_oisvg"]
+[ext_resource type="Texture2D" uid="uid://bicfwie5wa0ft" path="res://art_assets/tutorial_2.png" id="3_k4g4j"]
 [ext_resource type="Texture2D" uid="uid://bcmvmv2unys8w" path="res://art_assets/begin_practice_button_shadow.png" id="4_orcoq"]
+[ext_resource type="FontFile" uid="uid://bpf1ieo2xemqv" path="res://fonts/spartan/Spartan-Medium.ttf" id="4_pmhbb"]
 [ext_resource type="Script" path="res://scripts/practice_round_button.gd" id="4_y7tso"]
 [ext_resource type="Script" path="res://scripts/back_button.gd" id="6_etgne"]
 [ext_resource type="Texture2D" uid="uid://bto3gaw2qnrdy" path="res://art_assets/back_button_shadow.png" id="6_f628n"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8n4bv"]
+font = ExtResource("4_pmhbb")
 font_size = 20
 font_color = Color(0, 0, 0, 1)
 
@@ -61,18 +63,18 @@ alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MarginContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_wm8cd")
+texture = ExtResource("2_oisvg")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_hsucq")
+texture = ExtResource("3_k4g4j")
+expand_mode = 3
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
-text = "The objective of this game is conduct the coloured trains to their respective coloured terminals. For example, the yellow trains should arrive at the yellow terminus.
-
-Click on the junctions to alter the track in order to redirect the trains."
+text = "The objective of this game is conduct the coloured trains to their respective coloured terminals. For example, the blue trains should arrive at the blue terminal. Click on the junctions to alter the track in order to redirect the trains."
 label_settings = SubResource("LabelSettings_8n4bv")
+autowrap_mode = 3
 
 [node name="Button" type="Button" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
