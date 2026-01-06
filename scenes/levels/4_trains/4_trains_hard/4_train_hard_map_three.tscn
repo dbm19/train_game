@@ -113,4 +113,17 @@ autostart = true
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(317.503, 29.2246)
 
+[connection signal="area_entered" from="Track/@Area2D@72635" to="Track/@Area2D@72635" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@72636" to="Track/@Area2D@72636" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@72637" to="Track/@Area2D@72637" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@72638" to="Track/@Area2D@72638" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@72638" to="Track/@Area2D@72638" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@72639" to="Track/@Area2D@72639" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@72639" to="Track/@Area2D@72639" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@72640" to="Track/@Area2D@72640" method="_on_area_entered"]
+[connection signal="area_exited" from="Track/@Area2D@72640" to="Track/@Area2D@72640" method="_on_area_exited"]
+[connection signal="area_entered" from="Track/@Area2D@72641" to="Track/@Area2D@72641" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@72642" to="Track/@Area2D@72642" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@72643" to="Track/@Area2D@72643" method="_on_area_entered"]
+[connection signal="area_entered" from="Track/@Area2D@72644" to="Track/@Area2D@72644" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
